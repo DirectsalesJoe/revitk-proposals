@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revitk — Client Proposals</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0F1923;
+    --black: #0B1120;
+    --red: #E63946;
+    --gold: #C5A572;
+    --warm-white: #F5F0EB;
+    --mid-grey: #8a8e96;
+    --border-dark: rgba(197,165,114,0.25);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--black);
+    color: var(--warm-white);
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 48px;
+    width: 100%;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    padding: 48px 0 0;
+  }
+  .header-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 1px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 100px 0 80px;
+  }
+  .hero-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--warm-white);
+    margin-bottom: 20px;
+    max-width: 700px;
+  }
+  .hero p {
+    font-size: 18px;
+    color: var(--mid-grey);
+    max-width: 560px;
+    line-height: 1.6;
+  }
+  .gold-rule {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 36px 0;
+  }
+
+  /* ── PROPOSALS GRID ── */
+  .proposals-section {
+    padding: 0 0 120px;
+  }
+  .proposals-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .proposal-card {
+    display: block;
+    text-decoration: none;
+    background: var(--navy);
+    border: 1px solid var(--border-dark);
+    border-radius: 6px;
+    padding: 40px 44px;
+    transition: border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .proposal-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(197,165,114,0.08);
+  }
+  .proposal-card::after {
+    content: '→';
+    position: absolute;
+    top: 40px;
+    right: 44px;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--gold);
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .proposal-card:hover::after {
+    opacity: 1;
+  }
+
+  .card-meta {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .card-status {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 3px;
+  }
+  .status-live {
+    background: rgba(197,165,114,0.15);
+    color: var(--gold);
+  }
+  .card-date {
+    font-size: 12px;
+    color: var(--mid-grey);
+    letter-spacing: 0.5px;
+  }
+
+  .card-company {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--warm-white);
+    margin-bottom: 6px;
+    line-height: 1.25;
+  }
+  .card-headline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--gold);
+    margin-bottom: 16px;
+    max-width: 600px;
+  }
+  .card-contact {
+    font-size: 14px;
+    color: var(--mid-grey);
+  }
+  .card-investment {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+    padding: 6px 16px;
+    border: 1px solid var(--border-dark);
+    border-radius: 4px;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    margin-top: auto;
+    background: var(--black);
+    padding: 40px 0;
+    border-top: 1px solid var(--border-dark);
+    text-align: center;
+    font-size: 13px;
+    color: var(--mid-grey);
+  }
+  .footer a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+  .footer strong {
+    color: var(--warm-white);
+  }
+
+  @media (max-width: 640px) {
+    .page { padding: 0 24px; }
+    .hero { padding: 60px 0 48px; }
+    .proposal-card { padding: 28px; }
+    .proposal-card::after { top: 28px; right: 28px; }
+    .card-company { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="page">
+      <div class="header-brand">Revitk</div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="page">
+      <div class="hero-label">The Sync Selling System</div>
+      <h1>Client Proposals</h1>
+      <div class="gold-rule"></div>
+      <p>Each proposal below is a complete, scrollable presentation built for the client. Click to view.</p>
+    </div>
+  </div>
+
+  <div class="proposals-section">
+    <div class="page">
+      <div class="proposals-grid">
+
+        <!-- SPLINTERWORKS -->
+        <a href="proposals/splinterworks/" class="proposal-card">
+          <div class="card-meta">
+            <span class="card-status status-live">Live</span>
+            <span class="card-date">March 2026</span>
+          </div>
+          <div class="card-company">SplinterWorks</div>
+          <div class="card-headline">How SplinterWorks Can Increase Conversion from 1.5% to 3.9% and Beyond in 12 Weeks</div>
+          <div class="card-contact">Prepared for Miles Hartwell &amp; Matt Withington</div>
+          <div class="card-investment">&pound;5,000 + VAT &mdash; 30-Day Proof of Concept</div>
+        </a>
+
+        <!-- ERP LOGICAL -->
+        <a href="proposals/erp-logical/" class="proposal-card">
+          <div class="card-meta">
+            <span class="card-status status-live">Live</span>
+            <span class="card-date">March 2026</span>
+          </div>
+          <div class="card-company">ERP Logical</div>
+          <div class="card-headline">How ERP Logical Can Go From Zero to &pound;5K/Month Without Gambling on a Cold Caller</div>
+          <div class="card-contact">Prepared for Michael Docemo</div>
+          <div class="card-investment">&pound;2,500 + VAT</div>
+        </a>
+
+        <!-- BENNETT ALEXANDER -->
+        <a href="proposals/bennett-alexander/" class="proposal-card">
+          <div class="card-meta">
+            <span class="card-status status-live">Live</span>
+            <span class="card-date">March 2025</span>
+          </div>
+          <div class="card-company">Bennett Alexander</div>
+          <div class="card-headline">How Bennett Alexander Can Close 5 Landlords a Week Without Ralph on Every Call</div>
+          <div class="card-contact">Prepared for Raouf Belmouloud</div>
+          <div class="card-investment">&pound;7,500 + VAT &mdash; Founder Programme &mdash; 12 Weeks</div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="page">
+      <strong>Revitk Ltd</strong> &mdash; The Sync Selling System<br>
+      <a href="https://revitk.com" target="_blank">revitk.com</a>
+    </div>
+  </div>
+
+</body>
+</html>

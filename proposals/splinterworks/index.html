@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SplinterWorks — The Sync Selling System</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0F1923;
+    --red: #E63946;
+    --gold: #C5A572;
+    --warm-white: #F5F0EB;
+    --deep-black: #0B1120;
+    --white: #FFFFFF;
+    --text-on-dark: #F5F0EB;
+    --text-on-light: #0F1923;
+    --text-muted-dark: rgba(245,240,235,0.7);
+    --text-muted-light: #4A5568;
+    --border-dark: rgba(197,165,114,0.25);
+    --border-light: rgba(15,25,35,0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--navy);
+    color: var(--text-on-dark);
+  }
+
+  .page { max-width: 860px; margin: 0 auto; padding: 0 48px; }
+
+  /* --- DARK SECTIONS --- */
+  .section-dark {
+    background: var(--navy);
+    color: var(--text-on-dark);
+    padding: 100px 0;
+    border-bottom: 1px solid var(--border-dark);
+  }
+  .section-dark p { color: var(--text-muted-dark); }
+  .section-dark h2, .section-dark h3 { color: var(--text-on-dark); }
+
+  /* --- LIGHT SECTIONS --- */
+  .section-light {
+    background: var(--warm-white);
+    color: var(--text-on-light);
+    padding: 100px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .section-light p { color: var(--text-muted-light); }
+  .section-light h2, .section-light h3 { color: var(--text-on-light); }
+
+  /* --- COVER --- */
+  .cover {
+    background: var(--deep-black);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+  }
+  .cover-inner { width: 100%; }
+  .cover-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px; font-weight: 600; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 32px;
+  }
+  .cover h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px; font-weight: 700; line-height: 1.15;
+    color: var(--white); margin-bottom: 28px; max-width: 700px;
+  }
+  .cover h1 em {
+    color: var(--gold); font-style: italic;
+  }
+  .cover-sub {
+    font-size: 19px; color: var(--text-muted-dark); line-height: 1.65;
+    margin-bottom: 56px; max-width: 580px;
+  }
+  .cover-meta { font-size: 14px; color: var(--text-muted-dark); line-height: 2.4; }
+  .cover-meta strong { color: var(--gold); font-weight: 500; }
+
+  /* --- TYPOGRAPHY --- */
+  .section-num {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; font-weight: 600; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+  }
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px; font-weight: 700; line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .section-sub {
+    font-size: 17px; font-style: italic; margin-bottom: 44px;
+  }
+  .section-dark .section-sub { color: var(--gold); }
+  .section-light .section-sub { color: var(--gold); }
+
+  p { margin-bottom: 20px; }
+  p:last-child { margin-bottom: 0; }
+
+  blockquote {
+    border-left: 3px solid var(--gold);
+    padding: 16px 0 16px 24px; margin: 32px 0;
+    font-style: italic; font-size: 18px; line-height: 1.6;
+  }
+  .section-dark blockquote { color: var(--text-muted-dark); }
+  .section-light blockquote { color: var(--text-muted-light); }
+  blockquote cite {
+    display: block; margin-top: 8px; font-size: 14px;
+    font-style: normal; font-weight: 600; color: var(--gold);
+  }
+
+  /* --- CALLOUTS --- */
+  .callout-row { display: flex; gap: 24px; margin: 44px 0; flex-wrap: wrap; }
+  .callout {
+    flex: 1; min-width: 180px; text-align: center;
+    padding: 36px 20px; border-radius: 6px;
+  }
+  .section-dark .callout { background: rgba(197,165,114,0.08); border: 1px solid var(--border-dark); }
+  .section-light .callout { background: var(--white); border: 1px solid var(--border-light); box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+  .callout-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px; font-weight: 700; line-height: 1; margin-bottom: 8px;
+  }
+  .section-dark .callout-num { color: var(--gold); }
+  .section-light .callout-num { color: var(--navy); }
+  .callout-label { font-size: 13px; }
+  .section-dark .callout-label { color: var(--text-muted-dark); }
+  .section-light .callout-label { color: var(--text-muted-light); }
+
+  /* --- FINDINGS --- */
+  .finding { padding: 32px 0; }
+  .section-dark .finding { border-bottom: 1px solid var(--border-dark); }
+  .section-light .finding { border-bottom: 1px solid var(--border-light); }
+  .finding:last-child { border-bottom: none; }
+  .finding-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 12px; }
+  .finding-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px; font-weight: 700; color: var(--gold);
+    flex-shrink: 0; width: 32px;
+  }
+  .finding h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 600; line-height: 1.3;
+  }
+  .finding-body {
+    padding-left: 48px; font-size: 16px; line-height: 1.7;
+  }
+  .section-dark .finding-body { color: var(--text-muted-dark); }
+  .section-light .finding-body { color: var(--text-muted-light); }
+  .finding-tags { display: flex; gap: 8px; margin-top: 12px; padding-left: 48px; }
+  .tag {
+    font-size: 11px; font-weight: 600; letter-spacing: 1px;
+    text-transform: uppercase; padding: 4px 12px; border-radius: 3px;
+  }
+  .tag-effort-low { background: rgba(27,127,55,0.12); color: #1B7F37; }
+  .tag-effort-med { background: rgba(176,108,0,0.12); color: #B06C00; }
+  .tag-impact-high { background: rgba(197,165,114,0.15); color: var(--gold); }
+  .tag-impact-vhigh { background: rgba(230,57,70,0.12); color: var(--red); }
+  .effort-label {
+    font-size: 12px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--gold);
+    margin: 48px 0 8px; padding-bottom: 8px;
+  }
+  .section-dark .effort-label { border-bottom: 2px solid var(--gold); }
+  .section-light .effort-label { border-bottom: 2px solid var(--gold); }
+
+  /* --- OPTIONS --- */
+  .option { padding: 24px 0; }
+  .section-dark .option { border-bottom: 1px solid var(--border-dark); }
+  .section-light .option { border-bottom: 1px solid var(--border-light); }
+  .option:last-child { border-bottom: none; }
+  .option h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; font-weight: 600; margin-bottom: 8px;
+  }
+  .option p { font-size: 16px; }
+
+  /* --- OUTCOMES --- */
+  .outcome { padding: 20px 0; }
+  .section-dark .outcome { border-bottom: 1px solid var(--border-dark); }
+  .section-light .outcome { border-bottom: 1px solid var(--border-light); }
+  .outcome:last-child { border-bottom: none; }
+  .outcome strong { font-weight: 600; }
+  .section-dark .outcome strong { color: var(--white); }
+  .section-light .outcome strong { color: var(--navy); }
+  .outcome p { font-size: 16px; margin: 0; }
+
+  /* --- PHASES / DELIVERABLES --- */
+  .phase { margin-bottom: 48px; }
+  .phase-label {
+    font-size: 12px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 8px;
+  }
+  .phase h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; font-weight: 600; margin-bottom: 20px;
+  }
+  .deliverable {
+    padding: 12px 0 12px 20px; margin-bottom: 12px;
+  }
+  .section-dark .deliverable { border-left: 2px solid var(--border-dark); }
+  .section-light .deliverable { border-left: 2px solid var(--border-light); }
+  .deliverable-name { font-weight: 600; margin-bottom: 2px; }
+  .section-dark .deliverable-name { color: var(--white); }
+  .section-light .deliverable-name { color: var(--navy); }
+  .deliverable-benefit { font-size: 15px; margin: 0; }
+  .section-dark .deliverable-benefit { color: var(--text-muted-dark); }
+  .section-light .deliverable-benefit { color: var(--text-muted-light); }
+
+  /* --- TOOLKIT BOX --- */
+  .toolkit-box {
+    background: var(--deep-black);
+    color: var(--white);
+    padding: 44px; border-radius: 8px; margin: 44px 0;
+    border: 1px solid var(--border-dark);
+  }
+  .toolkit-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px; font-weight: 700; margin-bottom: 20px; color: var(--white);
+  }
+  .toolkit-box p { color: var(--text-muted-dark); font-size: 16px; margin-bottom: 16px; }
+  .toolkit-box p:last-child { margin-bottom: 0; }
+  .toolkit-item { padding: 12px 0; border-bottom: 1px solid var(--border-dark); }
+  .toolkit-item:last-child { border-bottom: none; }
+  .toolkit-item strong { color: var(--gold); font-weight: 600; }
+
+  /* --- TABLE --- */
+  table { width: 100%; border-collapse: collapse; margin: 32px 0; font-size: 15px; }
+  .section-dark th {
+    text-align: left; font-weight: 600; font-size: 12px;
+    letter-spacing: 1px; text-transform: uppercase; color: var(--gold);
+    padding: 12px 16px; border-bottom: 2px solid var(--gold);
+  }
+  .section-dark td { padding: 14px 16px; border-bottom: 1px solid var(--border-dark); color: var(--text-muted-dark); }
+  .section-light th {
+    text-align: left; font-weight: 600; font-size: 12px;
+    letter-spacing: 1px; text-transform: uppercase; color: var(--navy);
+    padding: 12px 16px; border-bottom: 2px solid var(--navy);
+  }
+  .section-light td { padding: 14px 16px; border-bottom: 1px solid var(--border-light); color: var(--text-muted-light); }
+  tr:last-child td { border-bottom: none; }
+
+  /* --- PRICE BOX --- */
+  .price-box {
+    border: 2px solid var(--gold);
+    padding: 52px; border-radius: 8px; margin: 44px 0; text-align: center;
+  }
+  .section-dark .price-box { background: rgba(197,165,114,0.06); }
+  .section-light .price-box { background: var(--white); }
+  .price-label {
+    font-size: 13px; font-weight: 600; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 8px;
+  }
+  .price-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px; font-weight: 700;
+    line-height: 1; margin-bottom: 8px;
+  }
+  .section-dark .price-amount { color: var(--white); }
+  .section-light .price-amount { color: var(--navy); }
+  .price-note { font-size: 14px; color: var(--text-muted-dark); }
+
+  /* --- PILOT BOX --- */
+  .pilot-box {
+    background: rgba(197,165,114,0.1);
+    border: 1px solid var(--gold);
+    padding: 44px; border-radius: 8px; margin: 36px 0;
+  }
+  .pilot-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px; font-weight: 700; margin-bottom: 16px;
+  }
+  .section-dark .pilot-box h3 { color: var(--gold); }
+  .section-light .pilot-box h3 { color: var(--navy); }
+  .pilot-box p { font-size: 16px; }
+  .pilot-box .step {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border-dark);
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
+  }
+  .pilot-box .step:last-child { border-bottom: none; }
+  .pilot-box .step-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 700; color: var(--gold);
+    flex-shrink: 0; width: 28px;
+  }
+  .pilot-box .step-text { font-size: 16px; }
+  .section-dark .pilot-box .step-text { color: var(--text-muted-dark); }
+  .section-light .pilot-box .step-text { color: var(--text-muted-light); }
+
+  /* --- ONGOING BOX --- */
+  .ongoing-box {
+    padding: 36px; border-radius: 8px; margin: 36px 0;
+  }
+  .section-dark .ongoing-box { background: rgba(245,240,235,0.04); border: 1px solid var(--border-dark); }
+  .section-light .ongoing-box { background: var(--white); border: 1px solid var(--border-light); }
+  .ongoing-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 600; margin-bottom: 16px;
+  }
+
+  /* --- GUARANTEE BOX --- */
+  .guarantee-box {
+    background: var(--red);
+    color: var(--white);
+    padding: 52px; border-radius: 8px; margin: 44px 0; text-align: center;
+  }
+  .guarantee-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px; font-weight: 700; color: var(--white); margin-bottom: 16px;
+  }
+  .guarantee-box p {
+    color: rgba(255,255,255,0.92); font-size: 17px;
+    max-width: 620px; margin: 0 auto 16px;
+  }
+  .guarantee-box p:last-child { margin-bottom: 0; }
+
+  /* --- FAQ --- */
+  .faq { padding: 28px 0; }
+  .section-dark .faq { border-bottom: 1px solid var(--border-dark); }
+  .section-light .faq { border-bottom: 1px solid var(--border-light); }
+  .faq:last-child { border-bottom: none; }
+  .faq-q {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; font-weight: 600; margin-bottom: 10px; line-height: 1.3;
+  }
+  .faq-a { font-size: 16px; line-height: 1.7; }
+  .section-dark .faq-a { color: var(--text-muted-dark); }
+  .section-light .faq-a { color: var(--text-muted-light); }
+
+  /* --- PROOF --- */
+  .proof-result {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px; font-weight: 700;
+    text-align: center; margin: 36px 0 8px; line-height: 1.2;
+  }
+  .section-dark .proof-result { color: var(--gold); }
+  .section-light .proof-result { color: var(--navy); }
+  .proof-context { text-align: center; font-size: 14px; margin-bottom: 32px; }
+  .section-dark .proof-context { color: var(--text-muted-dark); }
+  .section-light .proof-context { color: var(--text-muted-light); }
+  .anchor-stat {
+    text-align: center; font-size: 15px; font-weight: 600; color: var(--gold);
+    letter-spacing: 0.5px; margin-top: 36px; padding-top: 28px;
+  }
+  .section-dark .anchor-stat { border-top: 1px solid var(--border-dark); }
+  .section-light .anchor-stat { border-top: 1px solid var(--border-light); }
+
+  /* --- CTA SECTION --- */
+  .cta-section {
+    background: var(--deep-black);
+    text-align: center;
+    padding: 120px 0;
+  }
+  .cta-section h2 { color: var(--white); }
+  .cta-section p {
+    font-size: 18px; color: var(--text-muted-dark);
+    max-width: 540px; margin: 0 auto 20px;
+  }
+  .cta-highlight {
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px; font-weight: 700; color: var(--gold);
+    margin: 24px 0;
+  }
+  .cta-button {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px; font-weight: 600;
+    padding: 16px 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    margin-top: 32px;
+    transition: background 0.2s;
+  }
+  .cta-button:hover { background: #c5303c; }
+
+  /* --- FOOTER --- */
+  .footer {
+    background: var(--deep-black);
+    padding: 48px 0; text-align: center; font-size: 14px;
+    color: var(--text-muted-dark);
+    border-top: 1px solid var(--border-dark);
+  }
+  .footer a { color: var(--gold); text-decoration: none; }
+  .footer strong { color: var(--white); }
+
+  /* --- GOLD DIVIDER --- */
+  .gold-divider {
+    width: 60px; height: 2px; background: var(--gold);
+    margin: 20px 0 0;
+  }
+  .gold-divider-center {
+    width: 60px; height: 2px; background: var(--gold);
+    margin: 20px auto 0;
+  }
+
+  /* --- RESPONSIVE --- */
+  @media (max-width: 640px) {
+    .page { padding: 0 24px; }
+    .cover h1 { font-size: 34px; }
+    h2 { font-size: 30px; }
+    .callout-row { flex-direction: column; gap: 16px; }
+    .callout { min-width: 100%; }
+    .price-box, .toolkit-box, .guarantee-box, .pilot-box { padding: 28px; }
+    .price-amount { font-size: 42px; }
+    .section-dark, .section-light { padding: 64px 0; }
+    .cover { padding: 60px 0; }
+    .cta-section { padding: 80px 0; }
+  }
+
+  @media print {
+    .section-dark, .section-light { page-break-inside: avoid; }
+    .cover { min-height: auto; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ========== COVER ========== -->
+  <div class="cover">
+    <div class="page cover-inner">
+      <div class="cover-label">The Sync Selling System</div>
+      <h1>How SplinterWorks Can Close <em>1&nbsp;in&nbsp;2</em> Without Scripts or&nbsp;Pressure</h1>
+      <p class="cover-sub">A complete sales system diagnosed, built, and coached into your team. Same enquiries. Same people. Higher conversion.</p>
+      <div class="cover-meta">
+        <strong>Prepared for</strong> Miles Hartwell &amp; Matt Withington<br>
+        <strong>Date</strong> March 2026<br>
+        <strong>Investment</strong> &pound;15,000 + VAT
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 01: WHAT WE UNDERSTAND ========== -->
+  <div class="section-light">
+    <div class="page">
+      <div class="section-num">01</div>
+      <h2>What We Understand</h2>
+      <p class="section-sub">Functional sculpture. Emotional sale. &pound;125K average deal.</p>
+
+      <p>SplinterWorks sells art that happens to be a pool slide. Beautiful product. Beautiful marketing. Around 30 projects a year from roughly 100 deals in the pipeline. Average deal size around &pound;125,000. Two product lines: slides and baths. Slides are the big-ticket items.</p>
+
+      <p>Three salespeople. Chuck in Connecticut. Phone-first, 40 years in sales, charming, top performer, organisational black hole. Francesca in the UK. Diligent, detailed, builds beautiful bespoke presentations, had an 18-month dip nobody can fully explain. James, 24, youngest, growing but behind on numbers.</p>
+
+      <p>75-80% of revenue comes from the US. Half the time you're speaking to end users directly. The other half, you're working through architects, designers, and client reps who control access to the buyer. Two distinct sales motions running through the same pipeline. Neither is documented.</p>
+
+      <p>You missed target last year. First time. The territory restructure goes live this month. Matt's getting more involved in proactive selling. And you're both here because of the same question: what's actually happening inside the sales process, and how do you fix what you can't see?</p>
+
+      <blockquote>"We speculate, and we have some gut feel, but we could be wrong."<cite>Matt Withington, GTM Workshop</cite></blockquote>
+    </div>
+  </div>
+
+  <!-- ========== 02: WHAT WE FOUND ========== -->
+  <div class="section-dark">
+    <div class="page">
+      <div class="section-num">02</div>
+      <h2>What We Found</h2>
+      <p class="section-sub">Six findings from the workshop. Ranked by how quickly you'll see results.</p>
+
+      <div class="effort-label">Minimal Behaviour Change</div>
+
+      <div class="finding">
+        <div class="finding-header">
+          <div class="finding-num">1</div>
+          <h3>Estimates break the emotional thread</h3>
+        </div>
+        <p class="finding-body">Your marketing is world-class. The flybys are stunning. Then the estimate arrives as a dry spreadsheet. The emotional journey stops dead. Francesca is already building bespoke presentation packages. Chuck and James aren't. The fix is systemising what Francesca does across all three reps and threading discovery language into every estimate.</p>
+        <div class="finding-tags">
+          <span class="tag tag-effort-low">Minimal effort</span>
+          <span class="tag tag-impact-high">High impact</span>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-header">
+          <div class="finding-num">2</div>
+          <h3>Discovery covers the technical. Not the commercial.</h3>
+        </div>
+        <p class="finding-body">Your team asks the right questions to spec a project. The emotional and commercial questions happen by instinct, or they don't happen at all. Why this. Why now. Who hosts. How do they want guests to feel when they walk into the garden. Documenting the areas to cover doesn't mean scripts. It means consistency across all three reps and a way to measure whether those conversations are happening.</p>
+        <blockquote style="margin-left: 48px; margin-top: 16px; margin-bottom: 0;">"I encourage the team to ask those questions, but I don't document it, and I don't track it."<cite>Miles Hartwell</cite></blockquote>
+        <div class="finding-tags">
+          <span class="tag tag-effort-low">Minimal effort</span>
+          <span class="tag tag-impact-high">High impact</span>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-header">
+          <div class="finding-num">3</div>
+          <h3>Qualification sends a price list before value is built</h3>
+        </div>
+        <p class="finding-body">First thing a new enquiry gets is a price list. It qualifies fast. But it frames the entire conversation around cost before anyone has talked about what this will mean to them. Miles, you were already questioning this yourself. Your instinct is right. The qualification can still happen early. The sequence just needs adjusting so value leads. A &pound;150K slide is expensive. A &pound;150K sculpture that transforms how you live is a different conversation entirely.</p>
+        <div class="finding-tags">
+          <span class="tag tag-effort-low">Minimal effort</span>
+          <span class="tag tag-impact-high">High impact</span>
+        </div>
+      </div>
+
+      <div class="effort-label">Medium Behaviour Change</div>
+
+      <div class="finding">
+        <div class="finding-header">
+          <div class="finding-num">4</div>
+          <h3>Next steps are client-driven. On a 6-18 month cycle.</h3>
+        </div>
+        <p class="finding-body">Matt confirmed it: next steps happen when the client drives them. Your buyers assign half a day a month to their project. Waiting for them to drive the next conversation is handing over control of your pipeline. The fix is engineering plausible, value-based reasons to schedule the next call. Not pressure. Value. "We've done some further work on your design. When's a good time to walk you through it?" Pipeline velocity and information quality both improve. You stop sitting in the dark wondering where things stand.</p>
+        <div class="finding-tags">
+          <span class="tag tag-effort-med">Medium effort</span>
+          <span class="tag tag-impact-vhigh">Very high impact</span>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-header">
+          <div class="finding-num">5</div>
+          <h3>No objective way to measure what's actually happening</h3>
+        </div>
+        <p class="finding-body">This is the smoking gun. Three salespeople. Wild revenue swings quarter to quarter. A deal size where one bluebird makes someone look like a top performer for six months. You don't know if the gap between reps is discovery quality, emotional connection, follow-up cadence, or next steps. You don't know what's luck and what's skill. You're managing a &pound;3.75M pipeline on gut feel.</p>
+        <p class="finding-body" style="margin-top: 16px;">This doesn't require recording every call. The CRM stages get mandatory fields populated as deals progress. Reps are prompted to capture decision progress, timeline expectations, reasons to buy, and emotional drivers at each gate. Next steps are labelled. The best calls get recorded automatically through a note-taker that sits in the background. The framing to the client: "We record so nothing's lost in translation to the technical team." Optional on any call. The real measurement comes from the CRM gates, not surveillance.</p>
+        <div class="finding-tags">
+          <span class="tag tag-effort-med">Built into programme</span>
+          <span class="tag tag-impact-vhigh">Very high impact</span>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-header">
+          <div class="finding-num">6</div>
+          <h3>Enquiry follow-up can extend across channels</h3>
+        </div>
+        <p class="finding-body">Your FUP sequence works for what it does. It brings back unresponsive new enquiries with a clear cadence. Miles built it, and it reflects the philosophy you've instilled across the team: always give something, never just check in. The opportunity is extending that thinking into text and WhatsApp for engaged prospects over longer cycles. "Hey, noticed you'd submitted an enquiry for one of our slides. Would it help if you could see how it would look in your property?" Curiosity. Value. Your philosophy, new channels.</p>
+        <div class="finding-tags">
+          <span class="tag tag-effort-low">Minimal effort</span>
+          <span class="tag tag-impact-high">Moderate impact</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 03: THE PROBLEM ========== -->
+  <div class="section-light">
+    <div class="page">
+      <div class="section-num">03</div>
+      <h2>The Problem</h2>
+      <p class="section-sub">Three reps. Wild swings. No way to know why.</p>
+
+      <div class="callout-row">
+        <div class="callout">
+          <div class="callout-num">~30%</div>
+          <div class="callout-label">Current close rate on deals</div>
+        </div>
+        <div class="callout">
+          <div class="callout-num">&pound;125K</div>
+          <div class="callout-label">Average deal value</div>
+        </div>
+        <div class="callout">
+          <div class="callout-num">&pound;2.45M</div>
+          <div class="callout-label">In discovery right now</div>
+        </div>
+      </div>
+
+      <p>Francesca had an 18-month dip. For the first six months, you put it down to luck. After a year, you started thinking it was a pattern. At 18 months, you knew something was wrong. But you still couldn't say what. Because the only metric available was revenue, and one large deal can mask months of poor process.</p>
+
+      <p>James is behind on numbers right now. He's also got a &pound;200K deal on the verge. If it lands, he's top performer this month. If it doesn't, he's bottom. Neither outcome tells you anything about how he's actually selling.</p>
+
+      <p>The visible symptoms: missed target last year, performance swings, deals dying in silence, months spent waiting for feedback that never arrives.</p>
+
+      <p>The root cause: no process to measure what's happening between enquiry and close. Revenue tells you the result. It tells you nothing about why.</p>
+
+      <div class="callout-row">
+        <div class="callout">
+          <div class="callout-num">&pound;500K+</div>
+          <div class="callout-label">Annual cost of one extra lost deal per quarter</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 04: WHAT ARE THE OPTIONS ========== -->
+  <div class="section-dark">
+    <div class="page">
+      <div class="section-num">04</div>
+      <h2>What Are The Options</h2>
+      <p class="section-sub">Four roads. Three dead ends.</p>
+
+      <div class="option">
+        <h3>Keep doing what you're doing</h3>
+        <p>The territory restructure helps with clarity. But without a documented process underneath, each rep becomes an island with no way to compare what's working. At &pound;125K per deal, every quarter without visibility is another two or three deals you might have won. &pound;250-375K per year, sitting in the gap between what you know and what you don't.</p>
+      </div>
+
+      <div class="option">
+        <h3>Build it yourself</h3>
+        <p>Miles, you could document all of this. You've been living it for years. But you cut the weekly sales catch-ups to fortnightly because four and a half hours a week was too much alongside running the business. Building the system, training the team, implementing the tools, and measuring performance is a six-month project minimum. May, June, July will be gone.</p>
+      </div>
+
+      <div class="option">
+        <h3>Hire a fourth salesperson</h3>
+        <p>You're already exploring this for the mid-west territory. A new hire into an undocumented process learns by osmosis. Without playbooks, without a framework, without coaching tools, they take 6-12 months to ramp. &pound;40K+ loaded cost before they close their first deal. The system should exist before the next hire walks through the door.</p>
+      </div>
+
+      <div class="option">
+        <h3>Work with us</h3>
+        <p>We build the system, the playbooks, and the tools in 30 days. Coach the team through live deals for eight weeks. You keep everything we build. If it doesn't work, you get your money back.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 05: WHAT YOU GET ========== -->
+  <div class="section-light">
+    <div class="page">
+      <div class="section-num">05</div>
+      <h2>What You Get</h2>
+      <div class="gold-divider" style="margin-bottom: 44px;"></div>
+
+      <div class="outcome">
+        <p><strong>An increasing close rate from the same enquiries.</strong> At your deal size, even one additional closed deal per quarter is an extra half a million pounds a year. That's a 110x return on investment from a single extra conversion.</p>
+      </div>
+      <div class="outcome">
+        <p><strong>Objective visibility on every rep, every deal, every stage.</strong> Know within weeks if performance is process or luck. Stop managing on gut feel and stop waiting for revenue to tell you something's wrong.</p>
+      </div>
+      <div class="outcome">
+        <p><strong>A documented discovery framework for emotional and commercial questions.</strong> Consistent across Chuck, Francesca, and James. Their voice. Your standards. Measurable.</p>
+      </div>
+      <div class="outcome">
+        <p><strong>Estimates and proposals that carry the emotional thread.</strong> From first enquiry through to signature. No more dry spreadsheets breaking the dream.</p>
+      </div>
+      <div class="outcome">
+        <p><strong>Engineered next steps on every deal.</strong> No more waiting months for a client to resurface. Plausible, value-based reasons to keep the conversation moving.</p>
+      </div>
+      <div class="outcome">
+        <p><strong>A system the next hire walks into on day one.</strong> Playbooks. Training. AI coaching tools. When the fourth rep starts for the mid-west territory, onboarding takes weeks, not months.</p>
+      </div>
+      <div class="outcome">
+        <p><strong>Time and headspace back.</strong> A partner completely focused on getting the best out of your team, so you can run the business knowing this is taken care of.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 06: HOW WE DO IT ========== -->
+  <div class="section-dark">
+    <div class="page">
+      <div class="section-num">06</div>
+      <h2>How We Do It</h2>
+      <p class="section-sub">Build the track before you ask people to run on it.</p>
+
+      <p>Most companies try to fix low conversion by training reps harder. Send them on a course. Buy a book on closing. Hope something sticks. It rarely does, because there's no system underneath. Training people to sell harder on a process that doesn't exist is noise.</p>
+
+      <p>The Sync Selling System works differently. We reverse-engineer from your actual conversations and actual deals. We diagnosed where revenue is leaking from two hours of workshop, your email templates, your estimates, your Zoho pipeline data, and a detailed breakdown of how Chuck, Francesca, and James each handle deals differently.</p>
+
+      <p>We build a step-by-step process around how your buyers actually decide. For SplinterWorks, that means two distinct journeys: end users who need to fall in love, and intermediaries who need ammunition to sell internally. Both get a playbook. Both get a framework. Both get measured.</p>
+
+      <p>Then we coach the team through live deals until they execute without thinking.</p>
+
+      <p>The team workshop isn't a lecture. Chuck, Francesca, and James shape the process with us. Their instincts are exactly what we're documenting. When experienced reps see their own patterns reflected in the framework, they adopt it because it's theirs. The IKEA effect. If they helped build it, they'll use it.</p>
+    </div>
+  </div>
+
+  <!-- ========== 07: PROOF ========== -->
+  <div class="section-light">
+    <div class="page">
+      <div class="section-num">07</div>
+      <h2>Proof</h2>
+      <p class="section-sub">Vohkus scaled from &pound;0 to &pound;1.2M monthly revenue in under a year.</p>
+
+      <p>Vohkus had new sales reps with zero experience. No playbook. The founder was involved in every deal. We built a complete sales system. The reps were given structure, not just motivation. The system did the heavy lifting.</p>
+
+      <div class="proof-result">&pound;0 to &pound;1.2M/month</div>
+      <div class="proof-context">Within the first year. Team operated independently. Included a &pound;1M+ single deal.</div>
+
+      <blockquote>"The ROI comes. I have seen it with my own eyes."<cite>Steve Williams, Vohkus</cite></blockquote>
+
+      <p>The industry is different. The pattern is identical. Your team has far more experience than graduates starting from scratch. They already have the instincts. What they need is the system to make those instincts consistent, measurable, and coachable.</p>
+
+      <div class="anchor-stat">300+ founders coached. &pound;185M+ in client revenue generated.</div>
+    </div>
+  </div>
+
+  <!-- ========== 08: WHAT'S INCLUDED ========== -->
+  <div class="section-dark">
+    <div class="page">
+      <div class="section-num">08</div>
+      <h2>What's Included</h2>
+      <div class="gold-divider" style="margin-bottom: 44px;"></div>
+
+      <div class="phase">
+        <div class="phase-label">Phase 01 — Weeks 1-2</div>
+        <h3>Clarity and Foundation</h3>
+        <div class="deliverable">
+          <div class="deliverable-name">GTM Diagnostic Report and Market Research</div>
+          <p class="deliverable-benefit">Every lever mapped. Every leak identified. Prioritised by impact and effort. You've seen a glimpse today.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">Wireframed Sales Playbook</div>
+          <p class="deliverable-benefit">The entire SplinterWorks sales process mapped. End user journey and intermediary journey. Clear entry and exit criteria at each stage.</p>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-label">Phase 02 — Weeks 2-4</div>
+        <h3>Sales Arsenal and Training</h3>
+        <div class="deliverable">
+          <div class="deliverable-name">Inbound and Discovery Playbook</div>
+          <p class="deliverable-benefit">Every enquiry handled consistently. The emotional and commercial questions that capture what the team needs to sell the dream. Not scripts. Frameworks.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">Selling the Emotion Playbook</div>
+          <p class="deliverable-benefit">Sell the sculpture, not the slide. The garden party, not the price list. Frameworks for articulating aspiration to end users and arming intermediaries to sell internally.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">Proposal and Estimate Playbook</div>
+          <p class="deliverable-benefit">Estimates that carry the emotional thread. Francesca's bespoke approach, systemised for the whole team.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">Objection and Price Defence Playbook</div>
+          <p class="deliverable-benefit">Every scenario scripted for SplinterWorks. Defend price without discounting. Handle "it's just a slide" before it kills the deal.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">Follow-Up and Lead Nurture Playbook</div>
+          <p class="deliverable-benefit">Multi-channel nurture for 6-18 month sales cycles. Text, email, WhatsApp. Every touch gives something. Built on Miles' FUP philosophy, extended across new channels.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">Triage and Qualification Playbook</div>
+          <p class="deliverable-benefit">Qualify without killing the emotional journey. Identify the prospects who won't buy. Reclaim time for the ones who will.</p>
+        </div>
+      </div>
+
+      <div class="toolkit-box">
+        <h3>The AI Sales Toolkit</h3>
+        <p>Built on the Sync Selling methodology, loaded with SplinterWorks' voice, case studies, and process. Makes it instant for the team to sell the right way.</p>
+        <div class="toolkit-item">
+          <p><strong>AI Sales Coach.</strong> Drop a call transcript in. Get a scored review against the SplinterWorks playbook in minutes. What went well. What was missed. At-a-glance visibility on how each rep is performing without sitting on every call.</p>
+        </div>
+        <div class="toolkit-item">
+          <p><strong>AI Proposal Writer.</strong> Transcript in, positioned proposal out. Sells the dream, not the spec sheet.</p>
+        </div>
+        <div class="toolkit-item">
+          <p><strong>AI Email Writer.</strong> Follow-up emails that add value. Built on your voice, your brand, and the language that lands with your buyers. No more "just checking in."</p>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-label">Phase 03 — Weeks 4-12</div>
+        <h3>Coaching and Implementation</h3>
+        <div class="deliverable">
+          <div class="deliverable-name">Team Workshop Launch</div>
+          <p class="deliverable-benefit">Chuck, Francesca, and James shape the process together. Their input. Their ownership. Adoption built in from day one.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">Unlimited Deal Reviews</div>
+          <p class="deliverable-benefit">Video feedback within 48 hours on live deals. Real deals. Real coaching. Not theory.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">Group Coaching and Q&amp;A Sessions</div>
+          <p class="deliverable-benefit">16 live sessions across 8 weeks. Discovery, selling the emotion, objection handling, proposals, deal clinics. Participate live for the sessions that resonate, watch the recordings for the rest, or drop in for the quick Q&amp;A when you need a specific answer. You decide how to use it.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">1:1 Strategic Consultations</div>
+          <p class="deliverable-benefit">Direct access to Joe for pipeline strategy, deal reviews, and sales management coaching.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">Direct Support Channel</div>
+          <p class="deliverable-benefit">Real-time questions answered. Deal support when you need it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 09: THE NUMBERS ========== -->
+  <div class="section-light">
+    <div class="page">
+      <div class="section-num">09</div>
+      <h2>The Numbers</h2>
+      <p class="section-sub">The maths works at every level.</p>
+
+      <table>
+        <thead>
+          <tr><th>Metric</th><th>Now</th><th>Target</th><th>Timeframe</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Close rate on deals</td><td>~30%</td><td>Increasing</td><td>90 days</td></tr>
+          <tr><td>Deals closed per year</td><td>~30</td><td>34+</td><td>12 months</td></tr>
+          <tr><td>Revenue per year</td><td>~&pound;3.75M</td><td>&pound;4.25M+</td><td>12 months</td></tr>
+          <tr><td>Rep performance visibility</td><td>Gut feel</td><td>Objective, per-stage</td><td>30 days</td></tr>
+        </tbody>
+      </table>
+
+      <p>It would be impossible to imagine a scenario where implementing these recommendations would not yield a significant increase. One additional closed deal pays for the programme more than eight times over. One extra deal per quarter is an additional half a million pounds a year. And that doesn't account for all the time and headspace you'll get back, knowing this is taken care of and you've got a partner completely focused on getting the best out of your team.</p>
+
+      <div class="price-box">
+        <div class="price-label">Total Programme Investment</div>
+        <div class="price-amount">&pound;15,000</div>
+        <div class="price-note">+ VAT</div>
+      </div>
+
+      <p style="font-size: 18px; text-align: center; font-weight: 500; color: var(--navy); margin-bottom: 12px;">We don't want you to wait.</p>
+      <p style="text-align: center;">So we've made an irresistible offer.</p>
+
+      <div class="pilot-box">
+        <h3>&pound;5,000 to Start. Then You Decide.</h3>
+        <p style="margin-bottom: 24px;">We're not going to ask you for 95% upfront before we build. We're just going to ask for &pound;5,000 to trigger a risk-free pilot.</p>
+
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-text">Pay &pound;5,000 today to get started. We've got enough to start building the high-leverage assets straight away.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-text">We build the playbooks, present to you, launch with the team.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-text">If at any point in the first 30 days you're not convinced this will move the needle, let us know. We return your money and walk away.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-text">You only commit the further &pound;10,000 once you've seen we can make an impact and are confident the team are going to get benefit.</div>
+        </div>
+      </div>
+
+      <div class="ongoing-box">
+        <h3>Ongoing Support: &pound;2,700 + VAT per quarter</h3>
+        <p style="margin-bottom: 20px;">After the programme, you own the system permanently. The playbooks, the AI tools, the templates. If you want ongoing support:</p>
+        <div class="deliverable">
+          <div class="deliverable-name">Two team workshops per quarter</div>
+          <p class="deliverable-benefit">Fresh coaching, new scenarios, continued development for Chuck, Francesca, James, and any future hires.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">Weekly sales session</div>
+          <p class="deliverable-benefit">Discovery, selling the emotion, objection handling, proposals. A live session every week covering the areas that move the needle.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">Live Q&amp;A for deal reviews</div>
+          <p class="deliverable-benefit">Bring specific deals. Get specific advice. Pipeline coaching on live opportunities.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">Live one-on-one support and AI Sales Coach access</div>
+          <p class="deliverable-benefit">Direct access to Joe for pipeline strategy and sales management. The AI toolkit keeps coaching: call reviews, follow-up emails, and proposals generated in minutes.</p>
+        </div>
+        <p style="margin-top: 20px; font-size: 15px;">&pound;2,700 per quarter against a pipeline of this size. The maths speaks for itself.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 10: WORST CASE ========== -->
+  <div class="section-dark">
+    <div class="page">
+      <div class="section-num">10</div>
+      <h2>Worst Case Scenario</h2>
+
+      <p>For this not to pay for itself, almost nothing would have to change. Your close rate would need to stay exactly where it is. All three reps would need to reject the playbooks entirely. The AI tools would need to gather dust. And every improvement, from better estimates to engineered next steps to multi-channel follow-up, would need to produce zero results.</p>
+
+      <p>Even a marginal improvement, one extra deal in an entire year, returns over &pound;125K against a &pound;15K investment.</p>
+
+      <div class="guarantee-box">
+        <h3>The 30-Day Guarantee</h3>
+        <p>Pay &pound;5,000. Use the first 30 days to test everything. See the playbooks built. Watch the team workshop. Use the AI tools on real deals.</p>
+        <p>If at any point you think this won't move the needle, or your team isn't bought in, you get a full refund. No questions asked. You keep everything we've built.</p>
+        <p style="margin-bottom: 0;">We carry the risk because we've seen this work 300+ times.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 11: FAQs ========== -->
+  <div class="section-light">
+    <div class="page">
+      <div class="section-num">11</div>
+      <h2>FAQs</h2>
+
+      <div class="faq">
+        <div class="faq-q">"You haven't worked with luxury goods before. How do I know this transfers?"</div>
+        <p class="faq-a">The principles of how buyers make decisions don't change by price point. They change by sales motion. Your sale has two motions: emotional end-user decisions and intermediary-influenced specifications. We've built systems for both. This process has worked on CROs of $25 billion companies. It's worked on founders of $20K-a-month organisations. It's worked on CTOs of blue-chip companies. The diagnostic you've already seen was specific to SplinterWorks. Not a template.</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">"Most of our business is in the US. Does this work across cultures?"</div>
+        <p class="faq-a">Chuck sells differently from Francesca. Both close deals. The process isn't about changing how they converse. It's about making sure the right information is captured and used regardless of style, personality, or geography. The framework adapts to the rep. The standards stay consistent.</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">"I don't have time to review every call. How does the visibility actually work?"</div>
+        <p class="faq-a">You don't review calls. The AI Sales Coach scores them against the playbook and gives you an at-a-glance dashboard: where each rep is strong, where they're slipping, what to work on. The CRM gates capture decision progress, timeline, and emotional drivers at each stage. You get leading indicators without adding hours to your week.</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">"My team are experienced. Will they resist this?"</div>
+        <p class="faq-a">Chuck has 40 years in sales. If we handed him a script, he'd rightly laugh. The workshop has the team shaping the process with us. Their instincts are what we're documenting. When experienced reps see their own patterns in the framework, they adopt it because it validates what they already do. It doesn't replace them. It makes them consistent.</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">"Is this the right time?"</div>
+        <p class="faq-a">You told yourself you don't want to miss another year. There's never a right time. If you believe what we do is going to help you move the needle, the question is: when would you like to start improving your sales performance? May, June, and July are your biggest months. Every week without the system running is another high-season opportunity handled on gut feel.</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">"What if our clients don't like their calls being recorded?"</div>
+        <p class="faq-a">That's fine. If you can record calls and frame it correctly, it gives you a massive advantage: automatic context that accelerates how you capture and use information. But it's not essential. What we can say is that across 60 different industries, we have never had clients take issue with call recording. It just has to be framed correctly: "We record so nothing's lost in translation to the technical team." Optional on any call.</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">"How much of the team's time does this take?"</div>
+        <p class="faq-a">Three hours for the team workshop. Access to live coaching sessions or recordings as suits their schedule. Use the playbooks and AI tools on every deal. That's it. Less time than your team currently spends on one stalled deal.</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">"What happens after the programme ends?"</div>
+        <p class="faq-a">You own the system permanently. The playbooks, the AI tools, the templates. Your team runs it. New hires walk into a documented process on day one. If you want ongoing support, coaching continues at &pound;2,700/quarter: two team workshops, weekly sales sessions, live deal reviews, 1:1 support, and full AI Sales Coach access.</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">"We make decisions together. What does Matt need to see?"</div>
+        <p class="faq-a">Matt was in the workshop. He's heard the analysis. This proposal is designed to stand on its own. Anyone who reads it should understand the problem, the cost of doing nothing, and why this is the fix. If he wants a second conversation, happy to do that.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 12: NEXT STEPS ========== -->
+  <div class="cta-section">
+    <div class="page">
+      <div class="section-num">12</div>
+      <h2>One Decision</h2>
+
+      <div class="gold-divider-center" style="margin-bottom: 36px;"></div>
+
+      <p>Book the kickoff call. We map the build schedule, lock in the team workshop date, and get the AI toolkit loaded with your context.</p>
+
+      <p>May, June, and July are your biggest months. Every week without a process is another batch of high-value enquiries handled the old way. You said it yourself: "I don't want to miss another year."</p>
+
+      <div class="cta-highlight">&pound;5,000 + VAT to start</div>
+
+      <p>Full refund if it doesn't land. You keep everything we build.</p>
+
+      <a href="https://app.revitk.com/widget/bookings/syncselling" class="cta-button">Book the Kickoff Call</a>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <div class="footer">
+    <div class="page">
+      <p><strong>Joe Milnes</strong><br>
+      <a href="https://revitk.com">revitk.com</a><br>
+      Prepared March 2026</p>
+    </div>
+  </div>
+
+</body>
+</html>

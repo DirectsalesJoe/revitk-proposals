@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERP Logical — Zero to £5K/Month Without Gambling on a Cold Caller</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Wistia Player -->
+<script src="https://fast.wistia.com/player.js" async></script>
+<script src="https://fast.wistia.com/embed/h4akkgj8si.js" async type="module"></script>
+<script src="https://fast.wistia.com/embed/iyot7g3u08.js" async type="module"></script>
+<style>
+  :root {
+    --navy: #0F1923;
+    --red: #E63946;
+    --gold: #C5A572;
+    --warm-white: #F5F0EB;
+    --deep-black: #0B1120;
+    --white: #FFFFFF;
+    --text-on-dark: #F5F0EB;
+    --text-on-light: #0F1923;
+    --text-muted-dark: rgba(245,240,235,0.7);
+    --text-muted-light: #4A5568;
+    --border-dark: rgba(197,165,114,0.25);
+    --border-light: rgba(15,25,35,0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--navy);
+    color: var(--text-on-dark);
+  }
+
+  .page { max-width: 860px; margin: 0 auto; padding: 0 48px; }
+
+  /* --- DARK SECTIONS --- */
+  .section-dark {
+    background: var(--navy);
+    color: var(--text-on-dark);
+    padding: 100px 0;
+    border-bottom: 1px solid var(--border-dark);
+  }
+  .section-dark p { color: var(--text-muted-dark); }
+  .section-dark h2, .section-dark h3 { color: var(--text-on-dark); }
+
+  /* --- LIGHT SECTIONS --- */
+  .section-light {
+    background: var(--warm-white);
+    color: var(--text-on-light);
+    padding: 100px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .section-light p { color: var(--text-muted-light); }
+  .section-light h2, .section-light h3 { color: var(--text-on-light); }
+
+  /* --- COVER --- */
+  .cover {
+    background: var(--deep-black);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+  }
+  .cover-inner { width: 100%; }
+  .cover-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px; font-weight: 600; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 32px;
+  }
+  .cover h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px; font-weight: 700; line-height: 1.15;
+    color: var(--white); margin-bottom: 28px; max-width: 700px;
+  }
+  .cover h1 em { color: var(--gold); font-style: italic; }
+  .cover-sub {
+    font-size: 19px; color: var(--text-muted-dark); line-height: 1.65;
+    margin-bottom: 56px; max-width: 580px;
+  }
+  .cover-meta { font-size: 14px; color: var(--text-muted-dark); line-height: 2.4; }
+  .cover-meta strong { color: var(--gold); font-weight: 500; }
+
+  /* --- TYPOGRAPHY --- */
+  .section-num {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; font-weight: 600; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+  }
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px; font-weight: 700; line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .section-sub {
+    font-size: 17px; font-style: italic; margin-bottom: 44px;
+  }
+  .section-dark .section-sub { color: var(--gold); }
+  .section-light .section-sub { color: var(--gold); }
+
+  p { margin-bottom: 20px; }
+  p:last-child { margin-bottom: 0; }
+
+  blockquote {
+    border-left: 3px solid var(--gold);
+    padding: 16px 0 16px 24px; margin: 32px 0;
+    font-style: italic; font-size: 18px; line-height: 1.6;
+  }
+  .section-dark blockquote { color: var(--text-muted-dark); }
+  .section-light blockquote { color: var(--text-muted-light); }
+  blockquote cite {
+    display: block; margin-top: 8px; font-size: 14px;
+    font-style: normal; font-weight: 600; color: var(--gold);
+  }
+
+  /* --- CALLOUTS --- */
+  .callout-row { display: flex; gap: 24px; margin: 44px 0; flex-wrap: wrap; }
+  .callout {
+    flex: 1; min-width: 180px; text-align: center;
+    padding: 36px 20px; border-radius: 6px;
+  }
+  .section-dark .callout { background: rgba(197,165,114,0.08); border: 1px solid var(--border-dark); }
+  .section-light .callout { background: var(--white); border: 1px solid var(--border-light); box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+  .callout-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px; font-weight: 700; line-height: 1; margin-bottom: 8px;
+  }
+  .section-dark .callout-num { color: var(--gold); }
+  .section-light .callout-num { color: var(--navy); }
+  .callout-label { font-size: 13px; }
+  .section-dark .callout-label { color: var(--text-muted-dark); }
+  .section-light .callout-label { color: var(--text-muted-light); }
+
+  /* --- OPTIONS --- */
+  .option { padding: 24px 0; }
+  .section-dark .option { border-bottom: 1px solid var(--border-dark); }
+  .section-light .option { border-bottom: 1px solid var(--border-light); }
+  .option:last-child { border-bottom: none; }
+  .option h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; font-weight: 600; margin-bottom: 8px;
+  }
+  .option p { font-size: 16px; }
+
+  /* --- OUTCOMES / BULLET BLOCKS --- */
+  .outcome { padding: 28px 0; }
+  .section-dark .outcome { border-bottom: 1px solid var(--border-dark); }
+  .section-light .outcome { border-bottom: 1px solid var(--border-light); }
+  .outcome:last-child { border-bottom: none; }
+  .outcome strong { font-weight: 600; }
+  .section-dark .outcome strong { color: var(--white); }
+  .section-light .outcome strong { color: var(--navy); }
+  .outcome p { font-size: 16px; margin: 0; }
+
+  /* --- PHASES / DELIVERABLES --- */
+  .phase { margin-bottom: 48px; }
+  .phase-label {
+    font-size: 12px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 8px;
+  }
+  .phase h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; font-weight: 600; margin-bottom: 20px;
+  }
+  .deliverable {
+    padding: 12px 0 12px 20px; margin-bottom: 12px;
+  }
+  .section-dark .deliverable { border-left: 2px solid var(--border-dark); }
+  .section-light .deliverable { border-left: 2px solid var(--border-light); }
+  .deliverable-name { font-weight: 600; margin-bottom: 2px; }
+  .section-dark .deliverable-name { color: var(--white); }
+  .section-light .deliverable-name { color: var(--navy); }
+  .deliverable-benefit { font-size: 15px; margin: 0; }
+  .section-dark .deliverable-benefit { color: var(--text-muted-dark); }
+  .section-light .deliverable-benefit { color: var(--text-muted-light); }
+
+  /* --- HOW WE DO IT BLOCKS --- */
+  .hwdi-block {
+    padding: 32px 0;
+  }
+  .section-dark .hwdi-block { border-bottom: 1px solid var(--border-dark); }
+  .section-light .hwdi-block { border-bottom: 1px solid var(--border-light); }
+  .hwdi-block:last-child { border-bottom: none; }
+  .hwdi-quote {
+    font-size: 15px; font-weight: 600; font-style: italic;
+    margin-bottom: 12px; padding-left: 16px;
+    border-left: 2px solid var(--gold);
+  }
+  .section-dark .hwdi-quote { color: var(--gold); }
+  .section-light .hwdi-quote { color: #8B7340; }
+  .hwdi-answer { font-size: 16px; line-height: 1.7; }
+
+  /* --- TABLE --- */
+  table { width: 100%; border-collapse: collapse; margin: 32px 0; font-size: 15px; }
+  .section-dark th {
+    text-align: left; font-weight: 600; font-size: 12px;
+    letter-spacing: 1px; text-transform: uppercase; color: var(--gold);
+    padding: 12px 16px; border-bottom: 2px solid var(--gold);
+  }
+  .section-dark td { padding: 14px 16px; border-bottom: 1px solid var(--border-dark); color: var(--text-muted-dark); }
+  .section-light th {
+    text-align: left; font-weight: 600; font-size: 12px;
+    letter-spacing: 1px; text-transform: uppercase; color: var(--navy);
+    padding: 12px 16px; border-bottom: 2px solid var(--navy);
+  }
+  .section-light td { padding: 14px 16px; border-bottom: 1px solid var(--border-light); color: var(--text-muted-light); }
+  tr:last-child td { border-bottom: none; }
+
+  /* --- PRICE BOX --- */
+  .price-box {
+    border: 2px solid var(--gold);
+    padding: 52px; border-radius: 8px; margin: 44px 0; text-align: center;
+  }
+  .section-dark .price-box { background: rgba(197,165,114,0.06); }
+  .section-light .price-box { background: var(--white); }
+  .price-label {
+    font-size: 13px; font-weight: 600; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 8px;
+  }
+  .price-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px; font-weight: 700;
+    line-height: 1; margin-bottom: 8px;
+  }
+  .section-dark .price-amount { color: var(--white); }
+  .section-light .price-amount { color: var(--navy); }
+  .price-note { font-size: 14px; color: var(--text-muted-dark); }
+
+  /* --- GUARANTEE BOX --- */
+  .guarantee-box {
+    background: var(--red);
+    color: var(--white);
+    padding: 52px; border-radius: 8px; margin: 44px 0; text-align: center;
+  }
+  .guarantee-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px; font-weight: 700; color: var(--white); margin-bottom: 16px;
+  }
+  .guarantee-box p {
+    color: rgba(255,255,255,0.92); font-size: 17px;
+    max-width: 620px; margin: 0 auto 16px;
+  }
+  .guarantee-box p:last-child { margin-bottom: 0; }
+
+  /* --- FAQ --- */
+  .faq { padding: 28px 0; }
+  .section-dark .faq { border-bottom: 1px solid var(--border-dark); }
+  .section-light .faq { border-bottom: 1px solid var(--border-light); }
+  .faq:last-child { border-bottom: none; }
+  .faq-q {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; font-weight: 600; margin-bottom: 10px; line-height: 1.3;
+  }
+  .faq-a { font-size: 16px; line-height: 1.7; }
+  .section-dark .faq-a { color: var(--text-muted-dark); }
+  .section-light .faq-a { color: var(--text-muted-light); }
+
+  /* --- PROOF / VIDEO SECTION --- */
+  .proof-result {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px; font-weight: 700;
+    text-align: center; margin: 36px 0 8px; line-height: 1.2;
+  }
+  .section-dark .proof-result { color: var(--gold); }
+  .section-light .proof-result { color: var(--navy); }
+  .proof-context { text-align: center; font-size: 14px; margin-bottom: 32px; }
+  .section-dark .proof-context { color: var(--text-muted-dark); }
+  .section-light .proof-context { color: var(--text-muted-light); }
+  .anchor-stat {
+    text-align: center; font-size: 15px; font-weight: 600; color: var(--gold);
+    letter-spacing: 0.5px; margin-top: 36px; padding-top: 28px;
+  }
+  .section-dark .anchor-stat { border-top: 1px solid var(--border-dark); }
+  .section-light .anchor-stat { border-top: 1px solid var(--border-light); }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin: 44px 0;
+  }
+  .video-card {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .section-dark .video-card { background: rgba(197,165,114,0.08); border: 1px solid var(--border-dark); }
+  .section-light .video-card { background: var(--white); border: 1px solid var(--border-light); box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+  .video-card .video-wrap {
+    aspect-ratio: 16/9;
+    background: #000;
+  }
+  .video-card .video-info {
+    padding: 20px 24px;
+  }
+  .video-card .video-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px; font-weight: 600; margin-bottom: 6px;
+  }
+  .section-dark .video-card .video-name { color: var(--white); }
+  .section-light .video-card .video-name { color: var(--navy); }
+  .video-card .video-desc { font-size: 14px; margin: 0; }
+  .section-dark .video-card .video-desc { color: var(--text-muted-dark); }
+  .section-light .video-card .video-desc { color: var(--text-muted-light); }
+
+  /* --- CTA SECTION --- */
+  .cta-section {
+    background: var(--deep-black);
+    text-align: center;
+    padding: 120px 0;
+  }
+  .cta-section h2 { color: var(--white); }
+  .cta-section p {
+    font-size: 18px; color: var(--text-muted-dark);
+    max-width: 540px; margin: 0 auto 20px;
+  }
+  .cta-highlight {
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px; font-weight: 700; color: var(--gold);
+    margin: 24px 0;
+  }
+  .cta-button {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px; font-weight: 600;
+    padding: 16px 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    margin-top: 32px;
+    transition: background 0.2s;
+  }
+  .cta-button:hover { background: #c5303c; }
+
+  /* --- FOOTER --- */
+  .footer {
+    background: var(--deep-black);
+    padding: 48px 0; text-align: center; font-size: 14px;
+    color: var(--text-muted-dark);
+    border-top: 1px solid var(--border-dark);
+  }
+  .footer a { color: var(--gold); text-decoration: none; }
+  .footer strong { color: var(--white); }
+
+  /* --- GOLD DIVIDER --- */
+  .gold-divider {
+    width: 60px; height: 2px; background: var(--gold);
+    margin: 20px 0 0;
+  }
+  .gold-divider-center {
+    width: 60px; height: 2px; background: var(--gold);
+    margin: 20px auto 0;
+  }
+
+  /* --- RESPONSIVE --- */
+  @media (max-width: 640px) {
+    .page { padding: 0 24px; }
+    .cover h1 { font-size: 34px; }
+    h2 { font-size: 30px; }
+    .callout-row { flex-direction: column; gap: 16px; }
+    .callout { min-width: 100%; }
+    .price-box, .guarantee-box { padding: 28px; }
+    .price-amount { font-size: 42px; }
+    .section-dark, .section-light { padding: 64px 0; }
+    .cover { padding: 60px 0; }
+    .cta-section { padding: 80px 0; }
+    .video-grid { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    .section-dark, .section-light { page-break-inside: avoid; }
+    .cover { min-height: auto; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ========== COVER ========== -->
+  <div class="cover">
+    <div class="page cover-inner">
+      <div class="cover-label">The Sync Selling System</div>
+      <h1>How ERP Logical Can Go From <em>Zero&nbsp;to&nbsp;&pound;5K/Month</em> Without Gambling on&nbsp;a&nbsp;Cold&nbsp;Caller</h1>
+      <p class="cover-sub">A complete go-to-market system diagnosed, built, and handed to your business. Same expertise. Same contacts. A real plan to monetise them.</p>
+      <div class="cover-meta">
+        <strong>Prepared for</strong> Michael Docemo<br>
+        <strong>Date</strong> March 2026<br>
+        <strong>Investment</strong> &pound;2,500 + VAT
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 01 — WHAT WE UNDERSTAND ========== -->
+  <div class="section-light">
+    <div class="page">
+      <div class="section-num">01</div>
+      <h2>What We Understand</h2>
+      <p class="section-sub">You've got the expertise. You haven't got the engine.</p>
+
+      <p>Michael, you've spent 20+ years in Microsoft Dynamics and ERP consulting. You've delivered on massive projects. You've maintained 7&ndash;8 clients through Docemo while working full-time. And now, with your current contract winding down, you're committed to making ERP Logical your full-time business.</p>
+
+      <p>The challenge: you stopped advertising, stopped promoting, and stopped actively selling seven and a half years ago.</p>
+
+      <blockquote>
+        &ldquo;I've not given anything to even promote the business.&rdquo;
+        <cite>Michael Docemo</cite>
+      </blockquote>
+
+      <p>You want to get to &pound;4&ndash;5K/month within six months and grow toward &pound;60&ndash;70K/year. You know the technical side inside out. What's missing is a structured plan to turn that expertise into consistent revenue. Who to target. How to package the offer. How to take a conversation from first contact to signed contract.</p>
+
+      <p>You've been here before with cold callers and Chamber of Commerce leads. This time, you want a process that works before anyone picks up the phone.</p>
+    </div>
+  </div>
+
+  <!-- ========== 02 — THE PROBLEM ========== -->
+  <div class="section-dark">
+    <div class="page">
+      <div class="section-num">02</div>
+      <h2>The Problem</h2>
+      <p class="section-sub">The numbers tell the story.</p>
+
+      <div class="callout-row">
+        <div class="callout">
+          <div class="callout-num">&pound;0</div>
+          <div class="callout-label">Active new business revenue right now</div>
+        </div>
+        <div class="callout">
+          <div class="callout-num">7.5</div>
+          <div class="callout-label">Years since you last actively sold</div>
+        </div>
+        <div class="callout">
+          <div class="callout-num">0</div>
+          <div class="callout-label">Documented sales processes</div>
+        </div>
+      </div>
+
+      <p>Seven clients maintained on autopilot. No outbound. No inbound system. No structured approach to converting the contacts you already have.</p>
+
+      <p>The market has moved. Your competitors have too. The way businesses buy IT services and ERP consulting has changed, and everything you have is built for how it worked nearly a decade ago.</p>
+
+      <p>The visible symptoms: stale website, no advertising, no active pipeline, uncertainty about which business to focus on.</p>
+
+      <p>The root cause is simpler. There is no sales process. No documented playbook. No offer packaging. No way to measure whether any commercial activity is working. You could hire a cold caller tomorrow and have no way to know if they're doing anything right for three to four months.</p>
+
+      <p>That's the pattern you've already lived through.</p>
+    </div>
+  </div>
+
+  <!-- ========== 03 — WHAT ARE THE OPTIONS ========== -->
+  <div class="section-light">
+    <div class="page">
+      <div class="section-num">03</div>
+      <h2>What Are The Options</h2>
+      <p class="section-sub">Four roads. Three dead ends.</p>
+
+      <div class="option">
+        <h3>Go back to the old cold calling approach</h3>
+        <p>Makes sense on paper. It worked before. But by your own admission, you committed three to four months to a cold caller last time with no process for them to follow, no way to measure performance, and no playbook for converting the appointments they booked. Repeating that without fixing the system underneath means you're hoping for a different outcome with the same setup.</p>
+      </div>
+
+      <div class="option">
+        <h3>Invest in SEO, social media, and advertising</h3>
+        <p>All valid channels. But channels without a sales process just mean more conversations going nowhere. Ads bring traffic. SEO brings traffic. Neither closes business. Without a structured offer and a clear conversion path, you'll spend money driving people to a website that hasn't been touched in years, with no plan for what happens when they enquire.</p>
+      </div>
+
+      <div class="option">
+        <h3>Use Chamber of Commerce leads or pre-qualified lists</h3>
+        <p>Lead lists give you names. They don't give you a process. The cost isn't the list. The cost is your time spent visiting prospects with low intent because there's no triage system to sort the serious buyers from the tyre-kickers.</p>
+      </div>
+
+      <div class="option">
+        <h3>Do nothing and figure it out as you go</h3>
+        <p>Your contract is winding down now. Every month without a plan is a month closer to zero income with no pipeline to fall back on. At &pound;5K/month target income, each month of inaction costs you exactly that.</p>
+      </div>
+
+      <p style="margin-top: 32px;"><strong style="color: var(--text-on-light);">The pattern across all four:</strong> channels and contacts exist, but the system to convert them doesn't.</p>
+    </div>
+  </div>
+
+  <!-- ========== 04 — WHAT YOU GET ========== -->
+  <div class="section-dark">
+    <div class="page">
+      <div class="section-num">04</div>
+      <h2>What You Get</h2>
+      <p class="section-sub">A plan. A process. A playbook.</p>
+
+      <p style="margin-bottom: 40px;">Right now, you don't know what you don't know. Everything's changed. You need clarity before activity. Here's what changes in 30 days:</p>
+
+      <div class="outcome">
+        <p><strong>You'll know exactly which companies to target,</strong> what size, what sector, and what problems to lead with for ERP Logical. No more guessing between infrastructure and Dynamics.</p>
+      </div>
+
+      <div class="outcome">
+        <p><strong>Your offer is packaged</strong> so a cold caller can pitch it in 30 seconds and a prospect can understand the value in one conversation.</p>
+      </div>
+
+      <div class="outcome">
+        <p><strong>You have a step-by-step playbook</strong> for going back to your existing contacts and shaking the trees for quick revenue. Not guessing. Not winging it. A process.</p>
+      </div>
+
+      <div class="outcome">
+        <p><strong>A cold caller can walk in on day one</strong> with everything mapped out. Who to phone. What to say. How to book. What a good appointment looks like.</p>
+      </div>
+
+      <div class="outcome">
+        <p><strong>You can measure whether any commercial activity is working from week one.</strong> No more committing blind for three months.</p>
+      </div>
+
+      <div class="outcome">
+        <p><strong>You feel in control</strong> of the commercial side of the business for the first time in seven years.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 05 — HOW WE DO IT ========== -->
+  <div class="section-light">
+    <div class="page">
+      <div class="section-num">05</div>
+      <h2>How We Do It</h2>
+      <p class="section-sub">Build the track before you ask people to run on it.</p>
+
+      <p>Most founders in your position do one of two things. They hire a cold caller and hope for the best. Or they throw money at ads and SEO before the website or offer is ready. Both fail for the same reason: the system underneath doesn't exist. Training people to run faster on a broken track doesn't fix the track.</p>
+
+      <p>We build the track first. The Sync Selling System reverse-engineers the commercial engine your business needs from your actual market, your actual expertise, and how your buyers actually decide.</p>
+
+      <div class="hwdi-block">
+        <p class="hwdi-quote">&ldquo;You said you've got no sales process mapped out. If a salesperson started tomorrow, nothing's documented.&rdquo;</p>
+        <p class="hwdi-answer">We build the full go-to-market playbook. Your offer, your positioning, your target market. Every step from first contact to signed contract documented with clear entry and exit criteria. A cold caller can follow it from day one without needing to understand ERP consulting.</p>
+      </div>
+
+      <div class="hwdi-block">
+        <p class="hwdi-quote">&ldquo;You said you don't know how to measure whether a salesperson is performing.&rdquo;</p>
+        <p class="hwdi-answer">We define the KPIs and activity metrics that tell you within weeks whether things are working. Leading indicators, not just revenue. You'll see exactly what's happening and whether it's heading in the right direction.</p>
+      </div>
+
+      <div class="hwdi-block">
+        <p class="hwdi-quote">&ldquo;You've maintained 7&ndash;8 clients for seven years but haven't grown.&rdquo;</p>
+        <p class="hwdi-answer">We build a playbook specifically for re-engaging your existing network. Not blind phone calls. A structured approach to uncovering what they need now, packaging it, and proposing it in a way that makes saying yes straightforward.</p>
+      </div>
+
+      <div class="hwdi-block">
+        <p class="hwdi-quote">&ldquo;You're unsure whether to focus on Docemo or ERP Logical.&rdquo;</p>
+        <p class="hwdi-answer">We run the market research and competitive analysis in the first workshop. But based on what you told me, your 20 years of Dynamics experience, higher margins, easier delivery, and a more targeted market, ERP Logical is where the growth sits. We'll validate that with data and build the plan around it.</p>
+      </div>
+
+      <div class="hwdi-block">
+        <p class="hwdi-quote">&ldquo;Last time you hired a cold caller, you committed blind for months and hoped revenue came out.&rdquo;</p>
+        <p class="hwdi-answer">We build the appointment-setting playbook before a caller is hired. Who they phone. What they say. What qualifies as a good appointment. How to triage so you're only visiting high-intent prospects. Plus a recruitment plan so you hire the right person.</p>
+      </div>
+
+      <p style="margin-top: 32px;">On the call, you described how you'd just commit to three or four months with a cold caller and see what happened. That's the textbook pattern of activity without a system. Every piece of this engagement is designed to eliminate that.</p>
+    </div>
+  </div>
+
+  <!-- ========== 06 — CASE STUDIES ========== -->
+  <div class="section-dark">
+    <div class="page">
+      <div class="section-num">06</div>
+      <h2>Proof It Works</h2>
+      <p class="section-sub">Complex sales. Technical buyers. Same engine.</p>
+
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-wrap">
+            <wistia-player media-id="h4akkgj8si" aspect="1.7777777777777777"></wistia-player>
+          </div>
+          <div class="video-info">
+            <div class="video-name">Vohkus: &pound;0 to &pound;1.2M/Month</div>
+            <p class="video-desc">Steve Williams rolled out Joe's system to graduates with zero experience. New team hit &pound;1.2M monthly revenue, including a &pound;1M+ deal in oil and gas.</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-wrap">
+            <wistia-player media-id="iyot7g3u08" aspect="1.7777777777777777"></wistia-player>
+          </div>
+          <div class="video-info">
+            <div class="video-name">MORPH: Closed Over &pound;500K</div>
+            <p class="video-desc">Matej increased his close rate and prices sixfold. Calls it &ldquo;the founder's way of doing sales.&rdquo;</p>
+          </div>
+        </div>
+      </div>
+
+      <p>Vohkus had graduate sales reps with zero experience. No playbook. No system. The founder was involved in every deal. They were selling complex managed services and technology solutions into businesses that needed hand-holding through a technical sales cycle.</p>
+
+      <p>We built a complete sales system. Graduates who had never sold anything were given structure, process, and a playbook built around how their buyers actually decide. Not motivation. Not closing techniques. A system.</p>
+
+      <p>The result: &pound;0 to &pound;1.2M in monthly revenue within the first year. The team operated independently. That included a single deal worth over &pound;1M in oil and gas.</p>
+
+      <blockquote>
+        &ldquo;The ROI comes. I have seen it with my own eyes.&rdquo;
+        <cite>Steve Williams, Vohkus</cite>
+      </blockquote>
+
+      <p>This is your world, Michael. Complex IT services. Technical sales cycles. Buyers who need to trust the expertise before they commit. The playbook we built for Vohkus is the same pattern we'll build for ERP Logical. Different company. Same engine.</p>
+
+      <div class="anchor-stat">300+ founders coached. &pound;185M+ in client revenue generated.</div>
+    </div>
+  </div>
+
+  <!-- ========== 07 — WHAT'S INCLUDED ========== -->
+  <div class="section-light">
+    <div class="page">
+      <div class="section-num">07</div>
+      <h2>What's Included</h2>
+      <p class="section-sub">Everything you need. Nothing you don't.</p>
+
+      <p style="margin-bottom: 44px;">This is a focused 30-day pilot designed to solve the problems that need solving first, before any full programme or sales hire.</p>
+
+      <div class="phase">
+        <div class="phase-label">Phase 01</div>
+        <h3>Clarity and Foundation</h3>
+        <div class="deliverable">
+          <div class="deliverable-name">Go-to-market workshop with Joe</div>
+          <p class="deliverable-benefit">Market research, competitor analysis, ideal customer identification for ERP Logical. You'll leave knowing exactly who to target, with what message, and why.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">Offer packaging</div>
+          <p class="deliverable-benefit">Your Dynamics expertise packaged into a clear, compelling product that a prospect can understand in one conversation and a cold caller can pitch in 30 seconds.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">Full positioning for ERP Logical</div>
+          <p class="deliverable-benefit">Market sizing, competitor mapping, and a clear view of where the opportunity sits for companies with 50&ndash;225 users on the Microsoft stack.</p>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-label">Phase 02</div>
+        <h3>Playbooks and Assets</h3>
+        <div class="deliverable">
+          <div class="deliverable-name">Existing contact playbook</div>
+          <p class="deliverable-benefit">Step-by-step process for re-engaging your current network, identifying what they need now, and packaging a proposal. Revenue from day one, not waiting for a cold caller.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">Appointment-setting playbook</div>
+          <p class="deliverable-benefit">Everything mapped out for a caller to follow: who to phone, what to say, how to qualify, what a good appointment looks like, how to book the technical assessment.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">Proposal framework and templates</div>
+          <p class="deliverable-benefit">So your technical assessment translates into a compelling commercial proposal. Not an invoice disguised as a quote.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">Email templates for outreach</div>
+          <p class="deliverable-benefit">What to send, when, and how to follow up without chasing.</p>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-label">Phase 03</div>
+        <h3>Recruitment and Measurement</h3>
+        <div class="deliverable">
+          <div class="deliverable-name">Appointment setter recruitment plan</div>
+          <p class="deliverable-benefit">Who to hire, where to find them, what to pay, how to brief them, and how to measure them from week one.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">KPIs and activity framework</div>
+          <p class="deliverable-benefit">So you know within weeks whether commercial activity is working. Leading indicators, not just revenue.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">Two group calls per week with Joe</div>
+          <p class="deliverable-benefit">Bring your deals, your conversations, your questions. We work through them together.</p>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-name">1:1 access to Joe throughout the 30 days</div>
+          <p class="deliverable-benefit">Proposals reviewed, deals coached, questions answered.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 08 — THE NUMBERS ========== -->
+  <div class="section-dark">
+    <div class="page">
+      <div class="section-num">08</div>
+      <h2>The Numbers</h2>
+      <p class="section-sub">The maths works at every level.</p>
+
+      <p><strong style="color: var(--white);">By week 2,</strong> you'll have your go-to-market plan, your offer packaged, and your positioning locked for ERP Logical. <strong style="color: var(--white);">By week 4,</strong> you'll have the full playbook suite built, your existing contacts re-engaged, and everything ready for an appointment setter to walk in and start.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Now</th>
+            <th>Target</th>
+            <th>Timeframe</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Active outbound process</td>
+            <td>None</td>
+            <td>Fully documented playbook</td>
+            <td>Week 4</td>
+          </tr>
+          <tr>
+            <td>Monthly revenue</td>
+            <td>~&pound;0 new business</td>
+            <td>&pound;4&ndash;5K/month</td>
+            <td>6 months</td>
+          </tr>
+          <tr>
+            <td>Existing contacts re-engaged</td>
+            <td>0</td>
+            <td>All 7&ndash;8 clients + wider network</td>
+            <td>Week 3</td>
+          </tr>
+          <tr>
+            <td>Appointment setter readiness</td>
+            <td>No playbook, no plan</td>
+            <td>Recruitment-ready with full system</td>
+            <td>Week 4</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="price-box">
+        <div class="price-label">Total Investment</div>
+        <div class="price-amount">&pound;2,500</div>
+        <div class="price-note">+ VAT</div>
+      </div>
+
+      <p>One new ERP Logical client covers the entire investment. Based on your target of &pound;60&ndash;70K/year from a relatively small number of clients, the payback period is a single engagement.</p>
+
+      <p><strong style="color: var(--white);">What's required from you:</strong> 3&ndash;4 hours across the 30 days for workshops and check-ins. Access to your existing client list and technical assessment process. That's it.</p>
+
+      <p>At &pound;5K/month target, every month without a plan costs you exactly &pound;5K. The pilot costs half of one month's target income.</p>
+    </div>
+  </div>
+
+  <!-- ========== 09 — WORST CASE SCENARIO ========== -->
+  <div class="section-light">
+    <div class="page">
+      <div class="section-num">09</div>
+      <h2>Worst Case Scenario</h2>
+      <div class="gold-divider" style="margin-bottom: 44px;"></div>
+
+      <p>For this not to work, almost nothing would have to change. You'd need to go through the full workshop, build the playbooks, re-engage your existing contacts, and generate zero interest from companies who already know you and already use your services.</p>
+
+      <p>Even one conversation from your existing network that turns into a proposal covers the full investment.</p>
+
+      <div class="guarantee-box">
+        <h3>Full Money-Back Guarantee</h3>
+        <p>Pay in full. Use the first 30 days to test everything. If at any point you think this won't move the needle, you get a full refund. No questions asked. You keep everything we've built.</p>
+        <p>We carry the risk because we've seen this work 300+ times.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 10 — FAQs ========== -->
+  <div class="section-dark">
+    <div class="page">
+      <div class="section-num">10</div>
+      <h2>FAQs</h2>
+      <div class="gold-divider" style="margin-bottom: 44px;"></div>
+
+      <div class="faq">
+        <div class="faq-q">&ldquo;Why not just go straight to the full programme?&rdquo;</div>
+        <p class="faq-a">Because you don't need to solve problems you haven't got yet. The full programme includes coaching and developing a team. You don't have a team yet. The pilot builds the foundation. Once you've got quick wins, a clear pipeline, and a caller on board, we can talk about the next stage.</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">&ldquo;Can this work for ERP consulting specifically?&rdquo;</div>
+        <p class="faq-a">Vohkus sold complex managed IT services and technology solutions. We built the system that took them from zero to &pound;1.2M/month. Joe spent his corporate career heading up sales for IT services businesses. This is the exact market we built the methodology around.</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">&ldquo;What if the cold caller still doesn't perform?&rdquo;</div>
+        <p class="faq-a">The difference this time: they'll have a playbook, defined targets, qualification criteria, and measurable KPIs from day one. If they're not performing, you'll know within weeks, not months. That visibility alone saves you from burning another three to four months on a bad hire.</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">&ldquo;How much of my time does this take?&rdquo;</div>
+        <p class="faq-a">Three to four hours total across the 30 days. One workshop. A couple of check-ins. Access to the group calls whenever you need them. Everything else is built for you.</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">&ldquo;What happens after the 30 days?&rdquo;</div>
+        <p class="faq-a">You own everything built. Playbooks, templates, frameworks, recruitment plan. If you want ongoing support and coaching as you bring on a caller and start closing, we can discuss the full Sync Selling programme at that point. The pilot is designed to give you enough to act on immediately. The full programme is there when you're ready to scale.</p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">&ldquo;I want someone I can work with long-term. Is that possible?&rdquo;</div>
+        <p class="faq-a">That's exactly how this is designed. The pilot proves the working relationship. If we're a good fit, and I'm confident we are, the full programme and ongoing coaching are the natural next step. You're not committing to a long-term contract. You're testing a partnership.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 11 — CTA ========== -->
+  <div class="cta-section">
+    <div class="page">
+      <div class="section-num">11</div>
+      <h2>One Decision.</h2>
+      <div class="gold-divider-center" style="margin-bottom: 32px;"></div>
+      <p>Book the kickoff workshop. We'll map out the build schedule, lock in your go-to-market positioning, and get moving.</p>
+      <p>Your contract is winding down now. Every week without a plan is another week closer to zero income with no pipeline behind you. The contacts you have won't wait forever. The market moves.</p>
+      <div class="cta-highlight">&pound;2,500 + VAT</div>
+      <br>
+      <a href="https://link.revitk.com/widget/bookings/revitk-discovery" class="cta-button" target="_blank">Book the Kickoff Call</a>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <div class="footer">
+    <div class="page">
+      <strong>Revitk Ltd</strong> &mdash; The Sync Selling System<br>
+      <a href="https://revitk.com" target="_blank">revitk.com</a>
+    </div>
+  </div>
+
+</body>
+</html>

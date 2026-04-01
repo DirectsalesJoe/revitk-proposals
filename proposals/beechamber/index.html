@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BEEChamber — Ongoing Support &amp; Sales Enablement</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #0F1923;
+    color: #F5F0EB;
+    min-height: 100vh;
+    padding: 40px;
+  }
+
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #0B1120;
+    border: 1px solid rgba(197, 165, 114, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .header {
+    padding: 48px 48px 32px 48px;
+    border-bottom: 1px solid rgba(197, 165, 114, 0.15);
+  }
+
+  .header .logo-line {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #C5A572;
+    margin-bottom: 24px;
+  }
+
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #F5F0EB;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .header .subtitle {
+    font-size: 15px;
+    color: rgba(245, 240, 235, 0.6);
+  }
+
+  .body-content {
+    padding: 36px 48px 48px 48px;
+  }
+
+  .section-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #C5A572;
+    margin-bottom: 16px;
+  }
+
+  .includes-list {
+    list-style: none;
+    margin-bottom: 36px;
+  }
+
+  .includes-list li {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(197, 165, 114, 0.08);
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba(245, 240, 235, 0.9);
+  }
+
+  .includes-list li:last-child {
+    border-bottom: none;
+  }
+
+  .check {
+    color: #C5A572;
+    font-size: 14px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .item-label {
+    font-weight: 600;
+    color: #F5F0EB;
+  }
+
+  .pricing-block {
+    background: rgba(197, 165, 114, 0.06);
+    border: 1px solid rgba(197, 165, 114, 0.15);
+    border-radius: 4px;
+    padding: 32px;
+    margin-bottom: 32px;
+  }
+
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+  }
+
+  .price-label {
+    font-size: 13px;
+    color: rgba(245, 240, 235, 0.5);
+    text-decoration: line-through;
+  }
+
+  .price-standard {
+    font-size: 14px;
+    color: rgba(245, 240, 235, 0.4);
+    text-decoration: line-through;
+  }
+
+  .price-row-current {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+  }
+
+  .price-current-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #F5F0EB;
+  }
+
+  .price-current {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #C5A572;
+  }
+
+  .price-current span {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(245, 240, 235, 0.5);
+  }
+
+  .price-note {
+    font-size: 13px;
+    color: rgba(245, 240, 235, 0.5);
+    line-height: 1.5;
+    border-top: 1px solid rgba(197, 165, 114, 0.1);
+    padding-top: 16px;
+  }
+
+  .price-note strong {
+    color: rgba(245, 240, 235, 0.7);
+  }
+
+  .context-block {
+    font-size: 14px;
+    color: rgba(245, 240, 235, 0.6);
+    line-height: 1.65;
+    margin-bottom: 32px;
+  }
+
+  .footer {
+    padding: 24px 48px;
+    border-top: 1px solid rgba(197, 165, 114, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-left {
+    font-size: 13px;
+    color: rgba(245, 240, 235, 0.4);
+  }
+
+  .footer-right {
+    font-size: 13px;
+    color: rgba(245, 240, 235, 0.4);
+  }
+
+  .beta-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #0B1120;
+    background: #C5A572;
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-left: 6px;
+    vertical-align: middle;
+    font-weight: 600;
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { border: none; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="logo-line">Revitk &middot; Sync Selling</div>
+      <h1>Ongoing Support &amp; Sales Enablement</h1>
+      <div class="subtitle">Prepared for Etienne Arnulphy — The BEEChamber &middot; March 2026</div>
+    </div>
+
+    <div class="body-content">
+
+      <div class="context-block">
+        You've built the foundation. The playbook is compiled, the team training kicks off Friday, and the business cases are landing. This keeps the momentum going — access to coaching, tools, and support as you roll it out across the sales team and sharpen execution on live deals.
+      </div>
+
+      <div class="section-title">What's Included</div>
+      <ul class="includes-list">
+        <li>
+          <span class="check">&#10003;</span>
+          <div><span class="item-label">AI Sales Coach</span> — drop any call transcript in, get a scored review against the playbook within minutes. See exactly what was covered, what was missed, and what to coach. Works for your calls and the wider team's.</div>
+        </li>
+        <li>
+          <span class="check">&#10003;</span>
+          <div><span class="item-label">One Workshop Per Quarter</span> — a focused session with the sales team. Role-playing, call reviews, scenario work. Built around whatever's live at that point — new objections, stalled deals, team gaps.</div>
+        </li>
+        <li>
+          <span class="check">&#10003;</span>
+          <div><span class="item-label">Monthly 1:1 Session With Joe</span> — one hour per month. Bounce ideas, review business cases, work through specific deals or positioning challenges. Your direct line for the things that matter.</div>
+        </li>
+        <li>
+          <span class="check">&#10003;</span>
+          <div><span class="item-label">Q&amp;A Calls &amp; Presentation Calls</span> — ongoing access to the group sessions. Drop in live or catch the recordings. Ask questions, hear how others are applying the framework.</div>
+        </li>
+        <li>
+          <span class="check">&#10003;</span>
+          <div><span class="item-label">Slack Channel Access</span> — async support between sessions. Post a question, share a deal scenario, get feedback without waiting for the next call.</div>
+        </li>
+        <li>
+          <span class="check">&#10003;</span>
+          <div><span class="item-label">AI Sales Dashboard</span> <span class="beta-tag">Beta</span> — view rep performance against the sales process at a glance. See who's following the playbook, where calls are falling short, and where coaching is needed — without sitting on every call.</div>
+        </li>
+      </ul>
+
+      <div class="section-title">Investment</div>
+      <div class="pricing-block">
+        <div class="price-row">
+          <span class="price-label">Team rate</span>
+          <span class="price-standard">£2,700 / quarter excl. VAT</span>
+        </div>
+        <div class="price-row-current">
+          <span class="price-current-label">Founder's rate</span>
+          <span class="price-current">£1,800 <span>/ quarter excl. VAT</span></span>
+        </div>
+        <div class="price-note" style="margin-bottom: 16px;">
+          The team rate is £2,700/quarter — and that's what we're selling it at today for teams coming in. But you were genuinely one of the founding members of the original programme. So we want to give you the opportunity to have it at the founder's rate for your team — £1,800/quarter.
+        </div>
+        <div class="price-note">
+          <strong>Lock it in.</strong> Commit to 6 or 12 months and this rate is yours for the duration. It will be going up from next quarter. Payable quarterly in advance.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <div class="footer-left">Joe Milnes &middot; joe@revitk.com</div>
+      <div class="footer-right">revitk.com</div>
+    </div>
+  </div>
+</body>
+</html>

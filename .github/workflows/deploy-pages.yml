@@ -1,0 +1,52 @@
+# Save this file as: .github/workflows/deploy-pages.yml
+# (relative to the root of the revitk-proposals repo)
+#
+# Deploys the static site to GitHub Pages on every push to main.
+# Serves from the root of the repo, so /proposals/[slug]/index.html
+# becomes accessible at https://[domain]/proposals/[slug]/.
+
+name: Deploy proposals to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Grant the workflow permission to publish to Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one deploy at a time. Cancel outdated deploys.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build artifact
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload entire repo as Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    name: Deploy to Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

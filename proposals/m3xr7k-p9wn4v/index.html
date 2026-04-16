@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>FlowCity — The Sync Selling System</title>
+<meta name="description" content="A complete sales system diagnosed, built, and coached into FlowCity." />
+
+<!-- Social preview -->
+<meta property="og:title" content="FlowCity — The Sync Selling System" />
+<meta property="og:description" content="Proposal for FlowCity. Prepared by Revitk." />
+<meta property="og:type" content="website" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&display=swap" rel="stylesheet" />
+
+<!-- Wistia player (loaded once, individual embeds reference by media-id below) -->
+<script src="https://fast.wistia.com/player.js" async></script>
+
+<style>
+  :root {
+    --navy: #0F1923;
+    --black: #0B1120;
+    --red: #E63946;
+    --gold: #C5A572;
+    --warm: #F5F0EB;
+    --ink: #0F1923;
+    --muted: #4B5968;
+    --rule: rgba(197, 165, 114, 0.25);
+    --shadow: 0 24px 60px rgba(11, 17, 32, 0.12);
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--warm);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.4em;
+    color: var(--ink);
+  }
+
+  h1 { font-size: 3rem; line-height: 1.1; }
+  h2 { font-size: 2.25rem; line-height: 1.15; }
+  h3 { font-size: 1.4rem; line-height: 1.25; margin-top: 1.6em; }
+  h4 { font-size: 1.1rem; line-height: 1.3; }
+
+  /* Gold italic = inline word-level highlight ONLY. Never apply to full lines or whole headlines. */
+  .gold-italic {
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  p { margin: 0 0 1em; }
+  p + p { margin-top: 0; }
+
+  ul, ol { padding-left: 1.3em; margin: 0 0 1em; }
+  li { margin-bottom: 0.5em; }
+
+  blockquote {
+    border-left: 3px solid var(--gold);
+    background: rgba(197, 165, 114, 0.08);
+    padding: 1em 1.2em;
+    margin: 1.5em 0;
+    font-style: italic;
+    color: var(--ink);
+    border-radius: 0 6px 6px 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  th, td {
+    padding: 0.8em 1em;
+    text-align: left;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  th {
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: var(--navy);
+    color: var(--warm);
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  a { color: var(--red); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 120ms; }
+  a:hover { border-bottom-color: var(--red); }
+
+  /* Sections */
+  section {
+    padding: 5rem 0;
+    position: relative;
+  }
+
+  section.dark {
+    background: var(--navy);
+    color: var(--warm);
+  }
+  section.dark h1,
+  section.dark h2,
+  section.dark h3,
+  section.dark h4 {
+    color: var(--warm);
+  }
+  section.dark th { background: var(--black); }
+  section.dark td { border-bottom-color: rgba(245, 240, 235, 0.15); }
+  section.dark table { background: rgba(245, 240, 235, 0.04); }
+  section.dark blockquote {
+    background: rgba(197, 165, 114, 0.1);
+    color: var(--warm);
+    border-left-color: var(--gold);
+  }
+  section.dark a { color: var(--gold); }
+  section.dark a:hover { border-bottom-color: var(--gold); }
+
+  /* Section label (tiny uppercase above section headline) */
+  .eyebrow {
+    font-family: 'DM Sans';
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1em;
+    display: block;
+  }
+
+  /* Subhead = DM Sans, italic, muted. Not Playfair. Not gold. */
+  .subhead {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.15rem;
+    color: var(--muted);
+    margin: 0 0 2rem;
+    line-height: 1.45;
+    max-width: 640px;
+  }
+  section.dark .subhead { color: rgba(245, 240, 235, 0.75); }
+
+  /* Cover */
+  .cover {
+    background: var(--black);
+    color: var(--warm);
+    padding: 6rem 0 5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .cover h1 {
+    color: var(--warm);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-style: normal;
+  }
+  .cover .tag {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    display: block;
+  }
+  .cover .prepared {
+    font-family: 'DM Sans';
+    font-size: 0.95rem;
+    color: rgba(245, 240, 235, 0.7);
+    margin-top: 2rem;
+    letter-spacing: 0.02em;
+  }
+  .cover .line {
+    max-width: 520px;
+    color: rgba(245, 240, 235, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  /* Callout blocks (for guarantee, pricing) */
+  .callout {
+    background: rgba(197, 165, 114, 0.08);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+  section.dark .callout {
+    background: rgba(197, 165, 114, 0.1);
+  }
+  .callout h3 {
+    color: var(--ink);
+    margin-top: 0;
+  }
+  section.dark .callout h3 { color: var(--warm); }
+  .callout .big-number {
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--gold);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Price block */
+  .price-block {
+    background: var(--black);
+    color: var(--warm);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+  }
+  section.dark .price-block { background: rgba(245, 240, 235, 0.06); }
+  .price-block .label {
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .price-block .amount {
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--warm);
+    line-height: 1;
+    margin: 0.5rem 0;
+  }
+  .price-block .terms {
+    color: rgba(245, 240, 235, 0.8);
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* CTA button */
+  .cta-wrap { text-align: center; padding: 1rem 0; }
+  .cta {
+    display: inline-block;
+    background: var(--red);
+    color: var(--warm) !important;
+    padding: 1.1rem 2.4rem;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 6px;
+    border: none;
+    border-bottom: none !important;
+    box-shadow: 0 10px 30px rgba(230, 57, 70, 0.35);
+    transition: transform 150ms, box-shadow 150ms;
+  }
+  .cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 40px rgba(230, 57, 70, 0.45);
+    border-bottom: none !important;
+  }
+
+  /* Video embed wrapper */
+  .video-embed {
+    margin: 2rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  wistia-player { display: block; width: 100%; }
+
+  /* Gold divider */
+  .divider {
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.4;
+    margin: 3rem 0;
+    max-width: 60px;
+  }
+
+  /* FAQ item */
+  .faq-item {
+    border-bottom: 1px solid var(--rule);
+    padding: 1.5rem 0;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-item h4 {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+  }
+  section.dark .faq-item h4 { color: var(--warm); }
+  .faq-item p { color: inherit; }
+
+  /* Phase cards in What's Included */
+  .phase {
+    margin: 1.5rem 0 2rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--gold);
+  }
+  .phase h4 {
+    color: var(--gold);
+    font-family: 'DM Sans';
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--black);
+    color: rgba(245, 240, 235, 0.6);
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+  footer .mark {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    color: var(--warm);
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  /* Print styles */
+  @media print {
+    body { font-size: 11pt; }
+    section { padding: 2rem 0; page-break-inside: avoid; }
+    .cover, section.dark { background: white !important; color: var(--ink) !important; }
+    section.dark h1, section.dark h2, section.dark h3, section.dark h4, .cover h1 { color: var(--ink) !important; }
+    section.dark .subhead, .cover .tag, .eyebrow, .price-block .label, .callout h3 { color: var(--ink) !important; }
+    .price-block { background: #f5f0eb !important; color: var(--ink) !important; }
+    .price-block .amount { color: var(--ink) !important; }
+    .cta { display: none; }
+    .video-embed { display: none; }
+    footer { background: white; color: var(--ink); }
+    a { color: var(--ink); border-bottom: 1px solid var(--ink); }
+    @page { margin: 2cm; }
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.25rem; }
+    .cover h1 { font-size: 2.4rem; }
+    .cover .tag { font-size: 1.15rem; }
+    section { padding: 3.5rem 0; }
+    .callout, .price-block { padding: 1.5rem; }
+    .price-block .amount { font-size: 2.2rem; }
+    table { font-size: 0.85rem; }
+    th, td { padding: 0.6em 0.7em; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- COVER                                                         -->
+<!-- ============================================================ -->
+<section class="cover">
+  <div class="wrap">
+    <span class="tag">The Sync Selling System</span>
+    <h1>How FlowCity Can<br /><span class="gold-italic">Break Past &pound;10M in Revenue</span><br />Without Hiring a Sales Team</h1>
+    <p class="line">A complete sales system diagnosed, built, and coached into your business.</p>
+    <p class="prepared">Prepared for <strong>Dagny Lacka</strong> · April 2026</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 01 WHAT WE UNDERSTAND (warm white)                            -->
+<!-- ============================================================ -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">01 · Context</span>
+    <h2>What We Understand</h2>
+    <p class="subhead">Stuck in the &pound;1M&ndash;&pound;10M swamp. A product that converts 20&ndash;40% of demos. And no way to scale the person doing the selling.</p>
+
+    <p>FlowCity has built a product that genuinely does the heavy lifting. Your AI planning agent walks prospects through the demo, generates a campaign plan on the call, and gives them access to their account before they hang up. You're converting 20&ndash;40% of demos. For a founder doing their own selling with no structured process underneath, that's exceptional.</p>
+
+    <p>But the product is papering over cracks in the sales operation.</p>
+
+    <p>You're stuck in the swamp between &pound;1M and &pound;10M. It's not failing. It's exceeding, a little bit. But it's not exitable. It's incredibly frustrating for your shareholders, and rightly so. You said it yourself: you either pull the business past &pound;10M, or you find an acquisition. The US is opening up. Black Friday product launches are coming. And the bottleneck is you. Your time. Your energy. Your ability to be on calls at 10pm UK time for US prospects.</p>
+
+    <p>You've thought about hiring. But every time you think it through, the same picture comes back: six weeks of onboarding, hand-holding, product training. Three to six months of salary before you know if they can deliver. And in your experience, most of them can't.</p>
+
+    <blockquote>To get someone to deliver, be a self-starter, prioritise, and take away work from you is a year, if we're lucky.</blockquote>
+
+    <p>There's no system for anyone to follow except shadowing you. That's why every hire feels like a gamble, and every departure takes revenue with it.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 02 THE PROBLEM (dark navy)                                    -->
+<!-- ============================================================ -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">02 · The Problem</span>
+    <h2>The Numbers Tell the Story</h2>
+    <p class="subhead">The product converts. The process doesn't exist.</p>
+
+    <p><strong>50% of demos end without a next step booked.</strong> Half the time, the prospect leaves with "have a play, reach out anytime" and a calendar link. No commitment. No booked follow-up. The gap between demo and decision is where deals go to die.</p>
+
+    <p><strong>No discovery before the demo.</strong> Every prospect gets the product walkthrough. The product shows what it can do. But no one builds the business case for why they should switch. The prospect has to figure out what it's costing them to stay where they are. On their own. After the call.</p>
+
+    <p><strong>Three distinct buyer types, no differentiated process.</strong> Performance agencies need differentiation. OOH agencies want control and reporting. Brands are a different conversation entirely. You adjust on the fly because you've done hundreds of demos. A new hire can't do that without a framework.</p>
+
+    <p><strong>Charles won't demo alone.</strong> He brings tech people. That's not a confidence problem. It's a process problem. There's no structured demo flow that someone without your instincts can follow.</p>
+
+    <p><strong>Follow-up falls off.</strong> You said it yourself: something happens between the first demo and the follow-up call. They forget why they liked it. Content helps. But content without a follow-up system is just noise.</p>
+
+    <p>The product is doing 90% of the selling. That's a privilege. But it means 90% of the sales process is missing, and you've never needed to build it because you've been good enough to compensate.</p>
+
+    <p>That stops working the moment you want to scale.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 03 WHAT ARE THE OPTIONS (warm white)                          -->
+<!-- ============================================================ -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">03 · Options</span>
+    <h2>What Are The Options</h2>
+    <p class="subhead">Four Roads. Three Dead Ends.</p>
+
+    <h3>Hire a salesperson.</h3>
+    <p>The logical next step. But you've mapped it out already. Six weeks of your time onboarding. Three to six months of salary before you know if they can sell. Product training is one thing. Your AI agent handles the demo mechanics. But knowing when to push back on feature requests, reading which buyer type you're talking to, building the business case in real time. That lives in your head. Without a documented process, the hire shadows you for a month and then wings it.</p>
+
+    <h3>Keep doing what you're doing.</h3>
+    <p>You're converting 20&ndash;40%. That's strong. But you're capped by your own availability. US prospects need evening calls. Black Friday prep needs your attention. Shareholder pressure isn't going away. You're in the swamp. Not failing, not exitable. Every month at this level is another month where the business exceeds a little bit but doesn't break through. The engine runs, but it doesn't scale.</p>
+
+    <h3>Invest in more tools and automation.</h3>
+    <p>You've already got intent signals, outreach tooling, a planning agent that runs the demo. The tech stack is ahead of most companies ten times your size. But tools without a process underneath are just amplifying what's already there. If 50% of demos end without a next step, sending more prospects through the same process just creates more ghosts.</p>
+
+    <h3>Build the system.</h3>
+    <p>Document the sales process that lives in your head. Create a framework for discovery that builds the business case before the demo starts. Build differentiated playbooks for each buyer type. Structure the follow-up so no prospect falls into the gap between demo and decision. And create the assets so that when you do hire, they walk into a process, not a shadow-and-hope situation.</p>
+
+    <p>One of these solves the root cause. The other three treat symptoms.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 04 WHAT YOU GET (dark navy)                                   -->
+<!-- ============================================================ -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">04 · Outcomes</span>
+    <h2>What You Get</h2>
+    <p class="subhead">Scale the sales without scaling you.</p>
+
+    <ul>
+      <li><strong>A discovery process that builds the business case before the demo.</strong> Prospects arrive at the product walkthrough already understanding what it's costing them to stay where they are. The demo becomes proof, not education.</li>
+      <li><strong>Differentiated playbooks for each buyer type.</strong> Performance agencies, OOH agencies, and brands each get a tailored approach. The framework is the same. The questions, pain points, and positioning differ. Anyone following the playbook knows which branch to take.</li>
+      <li><strong>A structured follow-up system.</strong> Every demo ends with a committed next step. Automated sequences fill the gap. No more "have a play and reach out."</li>
+      <li><strong>A demo framework Charles (or anyone) can run.</strong> Structured around solving the prospect's problem, not walking through features. Handles the "can you add this feature" objection built in. Doesn't require your instincts to work.</li>
+      <li><strong>AI tools that score every call and write every follow-up.</strong> You see exactly what's happening on calls without being on them. Follow-up emails generated in minutes, positioned around what was discussed, not generic templates.</li>
+      <li><strong>A hiring playbook for when the time comes.</strong> Interview questions, scorecard, skills test. The process means you know within weeks whether someone can sell, not months.</li>
+      <li><strong>Visibility and control without being on every call.</strong> The AI dashboard shows pipeline health, call quality, and process adherence at a glance. You manage with data, not gut feel.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 05 HOW WE DO IT (warm white)                                  -->
+<!-- ============================================================ -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">05 · Approach</span>
+    <h2>How We Do It</h2>
+    <p class="subhead">Build the Track Before You Ask People to Run on It</p>
+
+    <p>Most businesses try to fix sales by hiring a salesperson. Find someone with industry experience, give them product training, and hope they figure it out.</p>
+
+    <p>It doesn't work because the salesperson isn't the problem. The system is the problem. If there's no process, no playbook, and no feedback loop, then hiring is just paying someone to shadow you and then wing it.</p>
+
+    <p>What we do instead: build the track first.</p>
+
+    <p>The Sync Selling System reverse-engineers your sales process from your actual deals. We look at how your three buyer types decide, what your best clients said before they came on board, and where deals stall or die. Then we build a step-by-step process around that reality.</p>
+
+    <h3>Phase 1: Diagnose (Week 1&ndash;2)</h3>
+    <p>Full diagnostic of your current sales operation. We've already started this on our call. The output is a complete picture of where revenue is leaking and what to fix first. For FlowCity, the priority sequence is:</p>
+    <ol>
+      <li>Discovery framework (building the business case before the demo)</li>
+      <li>Demo structure for each buyer type (performance agencies, OOH agencies, brands)</li>
+      <li>Follow-up system (closing the gap between demo and decision)</li>
+      <li>Founder handoff playbook (getting Charles and future hires demo-ready)</li>
+      <li>Pipeline visibility and CRM automation</li>
+      <li>Hiring playbook for scaling the team</li>
+    </ol>
+
+    <h3>Phase 2: Build (Week 2&ndash;6)</h3>
+    <p>Every script, every email template, every demo framework, every follow-up sequence. Tailored to FlowCity. Tailored to each buyer persona.</p>
+
+    <p>This includes the Sync Selling AI Sales Toolkit, built on your specific business. Drop a call transcript in, get a scored review within minutes, a follow-up email ready to send, and coaching on what to adjust. You see how calls are going without being on them.</p>
+
+    <h3>Phase 3: Coach (Week 6&ndash;12)</h3>
+    <p>We walk through every playbook. Role-play the discovery conversations. Practice the demo framework with the different buyer types. Review live deals and give feedback.</p>
+
+    <p>You attend group coaching calls. Bring deals. Ask questions. See how other founders are tackling the same scaling challenges.</p>
+
+    <p>The AI dashboard tracks progress week over week. Real numbers, not gut feel.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 06 PROOF (dark navy) — VIDEO EMBED                            -->
+<!-- ============================================================ -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">06 · Proof</span>
+    <h2>From Founder-Dependent to Scalable. A Pattern You'll Recognise.</h2>
+
+    <div class="video-embed">
+      <script src="https://fast.wistia.com/embed/iu0mwb1pri.js" async type="module"></script>
+      <style>wistia-player[media-id='iu0mwb1pri']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/iu0mwb1pri/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
+      <wistia-player media-id="iu0mwb1pri" aspect="1.7777777777777777"></wistia-player>
+    </div>
+
+    <p>Different industry. Same pattern.</p>
+
+    <p>A founder-led sales motion where the founder was the bottleneck. Strong product, strong relationships, but no documented process. The business couldn't scale because the sales knowledge lived in one person's head.</p>
+
+    <p>We built a complete sales system. Documented the process. Created playbooks for every stage. Put AI tools in place for visibility and coaching.</p>
+
+    <p>The result: the founder stepped back from day-to-day selling. The team followed a system, not instincts. Revenue scaled without adding the founder's hours.</p>
+
+    <p>The industry is different. The pattern is identical. A strong product with a missing sales process, fixed by building the system first.</p>
+
+    <div class="divider"></div>
+    <p><em>300+ founders coached. &pound;185M+ in client revenue generated.</em></p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 07 WHAT'S INCLUDED (warm white)                               -->
+<!-- ============================================================ -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">07 · Deliverables</span>
+    <h2>What's Included</h2>
+    <p class="subhead">Everything you need. Nothing you don't.</p>
+
+    <div class="phase">
+      <h4>Phase 1: Clarity and Foundation</h4>
+      <ul>
+        <li><strong>Complete GTM Diagnostic Report.</strong> Every leak in your sales process identified, every opportunity ranked. You see exactly where deals are dying between demo and decision.</li>
+        <li><strong>Buyer Persona Mapping.</strong> Performance agencies, OOH agencies, and brands documented separately. Pain points, decision criteria, objection patterns, and the questions that open each one up. So anyone selling for FlowCity knows which conversation they're in.</li>
+        <li><strong>Competitive Positioning Analysis.</strong> How your prospects currently buy out-of-home. What they compare you against. Where FlowCity wins and where the objections live.</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <h4>Phase 2: Sales Arsenal and Training</h4>
+      <ul>
+        <li><strong>Discovery Framework and Scripts.</strong> The questions that build the business case before the demo starts. Mapped to each buyer persona. "What's it costing you to plan campaigns manually?" beats "let me show you what our AI can do."</li>
+        <li><strong>Demo Playbook (by buyer type).</strong> Structured demo flow for performance agencies, OOH agencies, and brands. Handles the "can you add this feature" deflection. Works for you, Charles, and anyone you hire.</li>
+        <li><strong>Proposal Playbook.</strong> Proposals that sell the outcome, not the feature list. Positioned around the prospect's specific problems from discovery, not a generic capabilities deck.</li>
+        <li><strong>Objection Handling Toolkit.</strong> Every scenario scripted. "We already have a media owner relationship." "Can you white-label it?" "The planning isn't our problem." "We need to see if the team will adopt it." Responses that keep the conversation moving.</li>
+        <li><strong>Follow-Up and Lead Nurture Playbook.</strong> What to send, when, and how to re-engage prospects who went quiet after the demo. Automated sequences plus manual touchpoints.</li>
+        <li><strong>Triage and Qualification Playbook.</strong> Identify the prospects who will never buy and reclaim that time. Your universe is 5,000 prospects in a 3&ndash;6 month window. Not all of them are worth a demo.</li>
+        <li><strong>Sync Selling AI Sales Toolkit.</strong> AI Sales Coach (scores every call against the playbook), AI Email Writer (follow-ups in your voice), AI Proposal Writer (positioned proposals from call transcripts). You check the dashboard weekly and see exactly what's happening without being on the calls.</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <h4>Phase 3: Coaching and Enablement</h4>
+      <ul>
+        <li><strong>3 x 1-Hour Workshops with Joe.</strong> Build the system together. Walk through every playbook, role-play the conversations, and make sure the discovery framework and demo structure feel natural.</li>
+        <li><strong>8 Weeks Group Coaching and Deal Clinics.</strong> Bring deals. Ask questions. See how other founders are solving the same scaling challenges.</li>
+        <li><strong>AI Dashboard Access.</strong> Every call scored. Pipeline visible at a glance. Performance tracked week over week.</li>
+        <li><strong>Hiring Playbook.</strong> For when you bring on your first dedicated salesperson. Interview questions, scorecard, skills test. You know within weeks whether they can sell, not months.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 08 THE NUMBERS (dark navy) — PRICING                          -->
+<!-- ============================================================ -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">08 · The Numbers</span>
+    <h2>The Maths Works at Every Level</h2>
+
+    <h3>What staying put costs:</h3>
+    <table>
+      <tr>
+        <th>Metric</th>
+        <th>Current</th>
+        <th>Annual Impact</th>
+      </tr>
+      <tr>
+        <td>Demos without booked next steps</td>
+        <td>~50% of all demos</td>
+        <td>Unknown pipeline value lost in the gap</td>
+      </tr>
+      <tr>
+        <td>Three buyer types, one approach</td>
+        <td>No differentiated process</td>
+        <td>Conversion opportunity missed per persona</td>
+      </tr>
+      <tr>
+        <td>Founder as sole seller</td>
+        <td>Dagny capacity-capped</td>
+        <td>Revenue ceiling at current hours</td>
+      </tr>
+    </table>
+
+    <h3>What we expect to achieve:</h3>
+    <table>
+      <tr>
+        <th>Metric</th>
+        <th>Now</th>
+        <th>Target</th>
+        <th>Timeframe</th>
+      </tr>
+      <tr>
+        <td>Demos with committed next step</td>
+        <td>~50%</td>
+        <td>80%+</td>
+        <td>60 days</td>
+      </tr>
+      <tr>
+        <td>Discovery before demo</td>
+        <td>0%</td>
+        <td>100%</td>
+        <td>30 days</td>
+      </tr>
+      <tr>
+        <td>Documented process for new hire</td>
+        <td>None</td>
+        <td>Complete playbook set</td>
+        <td>6 weeks</td>
+      </tr>
+    </table>
+
+    <h3>The payback:</h3>
+    <p>If moving from a 25% average close rate to 35% represents even a modest improvement, and your average deal value supports it, the maths covers the investment within the first quarter. One additional closed deal per month at your average contract value pays for the programme multiple times over.</p>
+
+    <h3>What this requires from you:</h3>
+    <p><strong>Dagny:</strong> 3&ndash;4 hours across the first month for workshops and review. Then 1 hour per week for coaching and deal review.</p>
+
+    <div class="price-block">
+      <div class="label">Investment</div>
+      <div class="amount">&pound;7,500 + VAT</div>
+      <div class="terms">Paid in full on the kickoff call.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 09 WORST CASE SCENARIO (warm white) — GUARANTEE               -->
+<!-- ============================================================ -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">09 · Risk Reversal</span>
+    <h2>Worst Case Scenario</h2>
+
+    <p>For this not to work, almost nothing would have to change.</p>
+
+    <p>The discovery framework would have to make zero difference to how prospects perceive the business case. The follow-up system would have to fail to recover a single prospect who currently goes quiet after the demo. The demo playbooks would have to add nothing for Charles or a future hire.</p>
+
+    <p>Even a 5-percentage-point lift in close rate from your current baseline covers the investment within the first quarter.</p>
+
+    <div class="callout">
+      <h3>The 14-Day Risk-Free Guarantee</h3>
+      <p>You have 14 days to decide this is the right fit. If it isn't, you get a full refund of anything paid. You keep everything we've built so far. No questions. No forms. No friction.</p>
+    </div>
+
+    <p><em>We carry the risk because we've seen this work 300+ times.</em></p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 10 FAQs (dark navy)                                           -->
+<!-- ============================================================ -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">10 · FAQs</span>
+    <h2>Questions You Might Be Asking</h2>
+
+    <div class="faq-item">
+      <h4>Our product is already converting well. Why do I need a sales process?</h4>
+      <p>Because 20&ndash;40% means 60&ndash;80% are saying no. Your product is strong enough to convert buyers who figure out the business case on their own. A sales process converts the ones who need help getting there. That's the gap between &pound;10M and what comes next.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>I adjust my demo on the fly for different buyer types. Can a playbook really capture that?</h4>
+      <p>That's exactly what it captures. We watch how you adjust, document the decision points, and create branching frameworks so anyone following the process makes the same reads you do. The playbook doesn't replace your instinct. It codifies it.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Charles doesn't feel confident doing demos. Will this help?</h4>
+      <p>Charles doesn't lack confidence. He lacks a structured demo flow. When the demo is "watch Dagny and try to replicate," that's intimidating. When it's a step-by-step framework with specific questions and pivot points, it's followable. The process does the heavy lifting, not personality.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Will AI tools really work for our niche?</h4>
+      <p>The AI toolkit is built on YOUR process, YOUR buyer personas, YOUR objection patterns. It's not generic. It scores calls against your specific playbook, writes emails using your positioning, and coaches against the framework we build together. Generic AI gives generic answers. This doesn't.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>What about the cultural dynamics? Being a woman from Eastern Europe changes the conversation.</h4>
+      <p>Cultural and gender dynamics exist. They're real. But they're not why deals stall between demo and decision. Deals stall because the prospect hasn't built a business case, there's no committed next step, and the follow-up doesn't give them a reason to re-engage. The process fixes the system. The system works regardless of who's on the call.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>What happens after the programme?</h4>
+      <p>You own the system permanently. The playbooks, the AI tools, the templates. If you want ongoing support, coaching continues at &pound;600/month (payable quarterly) with AI Sales Coach access, weekly Q&amp;A calls, and quarterly strategy sessions with Joe. Optional, not required.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 11 NEXT STEPS (deep black)                                    -->
+<!-- ============================================================ -->
+<section class="dark" style="background: var(--black);">
+  <div class="wrap" style="text-align: center;">
+    <span class="eyebrow">11 · Next Steps</span>
+    <h2>One Decision</h2>
+
+    <p>Book the kickoff session. We start building immediately.</p>
+
+    <p>Week 1: your buyer personas are mapped. The discovery framework is taking shape. By the time your next US prospect books a demo, the process is already different.</p>
+
+    <p>Every month in the swamp between &pound;1M and &pound;10M, not failing, not exitable, is another month your shareholders are right to be frustrated. The product works. The engine needs a track.</p>
+
+    <p>You've seen the diagnostic. You know what's missing. The fix is 12 weeks.</p>
+
+    <p><strong>Let's go.</strong></p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- FOOTER                                                        -->
+<!-- ============================================================ -->
+<footer>
+  <div class="wrap">
+    <span class="mark">Revitk</span>
+    <p>Prepared for FlowCity &middot; April 2026</p>
+    <p>This proposal is confidential and prepared specifically for the named recipient.</p>
+  </div>
+</footer>
+
+</body>
+</html>

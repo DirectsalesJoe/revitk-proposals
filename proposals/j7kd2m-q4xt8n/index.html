@@ -1,1004 +1,764 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
 <title>United Drains — The Sync Selling System</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<meta name="description" content="A complete sales system diagnosed, built, and coached into United Drains." />
+
+<!-- Social preview -->
+<meta property="og:title" content="United Drains — The Sync Selling System" />
+<meta property="og:description" content="Proposal for United Drains. Prepared by Revitk." />
+<meta property="og:type" content="website" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&display=swap" rel="stylesheet" />
+
+<!-- Wistia player (loaded once, individual embeds reference by media-id below) -->
+<script src="https://fast.wistia.com/player.js" async></script>
+
 <style>
   :root {
     --navy: #0F1923;
+    --black: #0B1120;
     --red: #E63946;
     --gold: #C5A572;
-    --warm-white: #F5F0EB;
-    --deep-black: #0B1120;
-    --text-light: #F5F0EB;
-    --text-dark: #1a1a1a;
-    --muted: #8a9ab5;
+    --warm: #F5F0EB;
+    --ink: #0F1923;
+    --muted: #4B5968;
+    --rule: rgba(197, 165, 114, 0.25);
+    --shadow: 0 24px 60px rgba(11, 17, 32, 0.12);
   }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  * { box-sizing: border-box; }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
     font-size: 17px;
-    line-height: 1.65;
-    color: var(--text-dark);
-    background: var(--warm-white);
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--warm);
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
-  h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 800; }
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
 
-  .section { padding: 80px 0; }
-  .section-dark { background: var(--navy); color: var(--text-light); }
-  .section-black { background: var(--deep-black); color: var(--text-light); }
-  .section-light { background: var(--warm-white); color: var(--text-dark); }
-  .section-white { background: #fff; color: var(--text-dark); }
-
-  .container { max-width: 880px; margin: 0 auto; padding: 0 32px; }
-
-  .section-number {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
     font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.4em;
+    color: var(--ink);
+  }
+
+  h1 { font-size: 3rem; line-height: 1.1; }
+  h2 { font-size: 2.25rem; line-height: 1.15; }
+  h3 { font-size: 1.4rem; line-height: 1.25; margin-top: 1.6em; }
+  h4 { font-size: 1.1rem; line-height: 1.3; }
+
+  /* Gold italic = inline word-level highlight ONLY. Never apply to full lines or whole headlines. */
+  .gold-italic {
     color: var(--gold);
-    margin-bottom: 12px;
-    display: block;
-  }
-
-  .section-dark .section-number,
-  .section-black .section-number { color: var(--gold); }
-  .section-light .section-number,
-  .section-white .section-number { color: var(--gold); }
-
-  h2 {
-    font-size: 38px;
-    line-height: 1.15;
-    margin-bottom: 8px;
-  }
-
-  h3 {
-    font-size: 24px;
-    line-height: 1.3;
-    margin-bottom: 24px;
-  }
-
-  .subtitle {
-    font-family: 'Playfair Display', serif;
     font-style: italic;
-    color: var(--gold);
-    font-size: 20px;
-    margin-bottom: 32px;
-    font-weight: 700;
+    font-weight: 500;
   }
 
-  .section-dark .subtitle { color: var(--gold); }
+  p { margin: 0 0 1em; }
+  p + p { margin-top: 0; }
 
-  p { margin-bottom: 20px; }
-  p:last-child { margin-bottom: 0; }
+  ul, ol { padding-left: 1.3em; margin: 0 0 1em; }
+  li { margin-bottom: 0.5em; }
 
   blockquote {
     border-left: 3px solid var(--gold);
-    padding: 16px 0 16px 24px;
-    margin: 28px 0;
+    background: rgba(197, 165, 114, 0.08);
+    padding: 1em 1.2em;
+    margin: 1.5em 0;
     font-style: italic;
-    font-size: 18px;
-    line-height: 1.5;
+    color: var(--ink);
+    border-radius: 0 6px 6px 0;
   }
 
-  .section-dark blockquote { color: var(--muted); border-color: var(--gold); }
-  blockquote cite {
-    display: block;
-    margin-top: 8px;
-    font-style: normal;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--gold);
-  }
-
-  /* Hero */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: var(--deep-black);
-    color: var(--text-light);
-    padding: 80px 32px;
-  }
-
-  .hero h1 {
-    font-size: 52px;
-    line-height: 1.1;
-    margin-bottom: 20px;
-    max-width: 800px;
-  }
-
-  .hero .tagline {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 32px;
-  }
-
-  .hero .hook-line {
-    font-size: 19px;
-    color: var(--muted);
-    max-width: 620px;
-    margin: 0 auto 40px;
-    line-height: 1.6;
-  }
-
-  .hero-meta {
-    font-size: 15px;
-    color: var(--muted);
-    margin-top: 48px;
-  }
-  .hero-meta strong { color: var(--text-light); }
-
-  .hero .investment {
-    display: inline-block;
-    margin-top: 16px;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--text-light);
-    border: 1px solid rgba(197, 165, 114, 0.4);
-    padding: 10px 28px;
-  }
-
-  /* Stat callouts */
-  .stat-row {
-    display: flex;
-    gap: 32px;
-    margin: 40px 0;
-    flex-wrap: wrap;
-  }
-
-  .stat-box {
-    flex: 1;
-    min-width: 150px;
-    text-align: center;
-    padding: 28px 16px;
-    border: 1px solid rgba(197, 165, 114, 0.25);
-  }
-
-  .stat-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-
-  .section-dark .stat-number { color: var(--text-light); }
-  .section-light .stat-number,
-  .section-white .stat-number { color: var(--navy); }
-
-  .stat-label {
-    font-size: 13px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--muted);
-  }
-
-  .section-light .stat-label,
-  .section-white .stat-label { color: #666; }
-
-  /* Tables */
   table {
     width: 100%;
     border-collapse: collapse;
-    margin: 28px 0;
-    font-size: 15px;
-  }
-
-  .section-dark table th {
-    text-align: left;
-    padding: 12px 16px;
-    font-weight: 700;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--gold);
-    border-bottom: 1px solid rgba(197, 165, 114, 0.3);
-  }
-
-  .section-dark table td {
-    padding: 12px 16px;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    color: var(--muted);
-  }
-
-  .section-light table th,
-  .section-white table th {
-    text-align: left;
-    padding: 12px 16px;
-    font-weight: 700;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--navy);
-    border-bottom: 2px solid var(--navy);
-  }
-
-  .section-light table td,
-  .section-white table td {
-    padding: 12px 16px;
-    border-bottom: 1px solid #e0dcd5;
-  }
-
-  /* Outcome list */
-  .outcome-list {
-    list-style: none;
-    counter-reset: outcome;
-  }
-
-  .outcome-list li {
-    counter-increment: outcome;
-    padding: 20px 0 20px 0;
-    border-bottom: 1px solid rgba(197, 165, 114, 0.15);
-    position: relative;
-  }
-
-  .outcome-list li::before {
-    content: counter(outcome);
-    font-family: 'Playfair Display', serif;
-    font-weight: 800;
-    font-size: 28px;
-    color: var(--gold);
-    display: inline-block;
-    width: 40px;
-    vertical-align: top;
-    float: left;
-    margin-right: 16px;
-    line-height: 1.2;
-  }
-
-  .outcome-list li .outcome-text {
+    margin: 1.5em 0;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
     overflow: hidden;
+    box-shadow: var(--shadow);
   }
 
-  .outcome-list li strong {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 4px;
+  th, td {
+    padding: 0.8em 1em;
+    text-align: left;
+    border-bottom: 1px solid var(--rule);
   }
 
-  .section-dark .outcome-list li strong { color: var(--text-light); }
-
-  .outcome-list li span {
-    font-size: 15px;
-    color: var(--muted);
-  }
-
-  .section-light .outcome-list li span { color: #555; }
-
-  /* Alternative cards */
-  .alt-card {
-    padding: 24px 0;
-    border-bottom: 1px solid rgba(197,165,114,0.15);
-  }
-
-  .alt-card:last-child { border-bottom: none; }
-
-  .alt-card h4 {
-    font-family: 'DM Sans', sans-serif;
+  th {
+    font-family: 'DM Sans';
     font-weight: 700;
-    font-size: 17px;
-    margin-bottom: 6px;
-  }
-
-  .section-dark .alt-card h4 { color: var(--text-light); }
-  .section-light .alt-card h4 { color: var(--navy); }
-
-  .alt-card p {
-    font-size: 15px;
-    color: var(--muted);
-    margin-bottom: 0;
-  }
-
-  .section-light .alt-card p { color: #555; }
-
-  /* Phase blocks */
-  .phase {
-    margin-bottom: 40px;
-  }
-
-  .phase-label {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font-size: 0.85rem;
     text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 16px;
-  }
-
-  .phase-item {
-    margin-bottom: 16px;
-  }
-
-  .phase-item strong {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 2px;
-  }
-
-  .phase-item span {
-    font-size: 14px;
-    color: #555;
-  }
-
-  /* AI toolkit callout */
-  .ai-callout {
+    letter-spacing: 0.05em;
     background: var(--navy);
-    color: var(--text-light);
-    padding: 40px 32px;
-    margin: 32px 0;
+    color: var(--warm);
   }
 
-  .ai-callout h4 {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    font-weight: 800;
-    margin-bottom: 16px;
-  }
+  tr:last-child td { border-bottom: none; }
 
-  .ai-callout .ai-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 20px;
-  }
+  a { color: var(--red); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 120ms; }
+  a:hover { border-bottom-color: var(--red); }
 
-  .ai-callout .ai-item strong {
-    display: block;
-    font-size: 14px;
-    color: var(--gold);
-    margin-bottom: 4px;
-  }
-
-  .ai-callout .ai-item span {
-    font-size: 14px;
-    color: var(--muted);
-  }
-
-  /* Guarantee box */
-  .guarantee-box {
-    border: 2px solid var(--gold);
-    padding: 36px 32px;
-    margin: 32px 0;
-    text-align: center;
-  }
-
-  .guarantee-box h4 {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    font-weight: 800;
-    margin-bottom: 16px;
-  }
-
-  .guarantee-box p {
-    font-size: 16px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .section-dark .guarantee-box p { color: var(--muted); }
-
-  /* Results table */
-  .results-table th:first-child,
-  .results-table td:first-child { width: 40%; }
-
-  /* FAQ */
-  .faq-item {
-    padding: 24px 0;
-    border-bottom: 1px solid #e0dcd5;
-  }
-
-  .faq-item:last-child { border-bottom: none; }
-
-  .faq-q {
-    font-weight: 700;
-    font-size: 17px;
-    margin-bottom: 8px;
-    color: var(--navy);
-  }
-
-  .faq-a {
-    font-size: 15px;
-    color: #555;
-    margin-bottom: 0;
-  }
-
-  /* Video embed placeholder */
-  .video-embed {
+  /* Sections */
+  section {
+    padding: 5rem 0;
     position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    margin: 32px 0;
-    background: var(--deep-black);
-    overflow: hidden;
   }
 
-  .video-embed iframe {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    border: none;
+  section.dark {
+    background: var(--navy);
+    color: var(--warm);
   }
-
-  .video-placeholder {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: var(--muted);
-    font-size: 14px;
+  section.dark h1,
+  section.dark h2,
+  section.dark h3,
+  section.dark h4 {
+    color: var(--warm);
   }
-
-  .video-placeholder .play-icon {
-    width: 64px; height: 64px;
-    border: 2px solid var(--gold);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 12px;
+  section.dark th { background: var(--black); }
+  section.dark td { border-bottom-color: rgba(245, 240, 235, 0.15); }
+  section.dark table { background: rgba(245, 240, 235, 0.04); }
+  section.dark blockquote {
+    background: rgba(197, 165, 114, 0.1);
+    color: var(--warm);
+    border-left-color: var(--gold);
   }
+  section.dark a { color: var(--gold); }
+  section.dark a:hover { border-bottom-color: var(--gold); }
 
-  .video-placeholder .play-icon::after {
-    content: '';
+  /* Section label (tiny uppercase above section headline) */
+  .eyebrow {
+    font-family: 'DM Sans';
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1em;
     display: block;
-    width: 0; height: 0;
-    border-style: solid;
-    border-width: 10px 0 10px 18px;
-    border-color: transparent transparent transparent var(--gold);
-    margin-left: 4px;
   }
 
-  /* CTA */
-  .cta-section {
+  /* Subhead = DM Sans, italic, muted. Not Playfair. Not gold. */
+  .subhead {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.15rem;
+    color: var(--muted);
+    margin: 0 0 2rem;
+    line-height: 1.45;
+    max-width: 640px;
+  }
+  section.dark .subhead { color: rgba(245, 240, 235, 0.75); }
+
+  /* Cover */
+  .cover {
+    background: var(--black);
+    color: var(--warm);
+    padding: 6rem 0 5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .cover h1 {
+    color: var(--warm);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-style: normal;
+  }
+  .cover .tag {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    display: block;
+  }
+  .cover .prepared {
+    font-family: 'DM Sans';
+    font-size: 0.95rem;
+    color: rgba(245, 240, 235, 0.7);
+    margin-top: 2rem;
+    letter-spacing: 0.02em;
+  }
+  .cover .line {
+    max-width: 520px;
+    color: rgba(245, 240, 235, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  /* Callout blocks (for guarantee, pricing) */
+  .callout {
+    background: rgba(197, 165, 114, 0.08);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+  section.dark .callout {
+    background: rgba(197, 165, 114, 0.1);
+  }
+  .callout h3 {
+    color: var(--ink);
+    margin-top: 0;
+  }
+  section.dark .callout h3 { color: var(--warm); }
+  .callout .big-number {
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--gold);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Price block */
+  .price-block {
+    background: var(--black);
+    color: var(--warm);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
     text-align: center;
-    padding: 100px 32px;
+  }
+  section.dark .price-block { background: rgba(245, 240, 235, 0.06); }
+  .price-block .label {
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .price-block .amount {
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--warm);
+    line-height: 1;
+    margin: 0.5rem 0;
+  }
+  .price-block .terms {
+    color: rgba(245, 240, 235, 0.8);
+    font-size: 1rem;
+    margin-top: 1rem;
   }
 
-  .cta-button {
+  /* CTA button */
+  .cta-wrap { text-align: center; padding: 1rem 0; }
+  .cta {
     display: inline-block;
     background: var(--red);
-    color: #fff;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
+    color: var(--warm) !important;
+    padding: 1.1rem 2.4rem;
+    font-family: 'DM Sans';
     font-weight: 700;
-    letter-spacing: 2px;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-    text-decoration: none;
-    padding: 16px 40px;
-    margin-top: 32px;
-    transition: background 0.2s;
+    border-radius: 6px;
+    border: none;
+    border-bottom: none !important;
+    box-shadow: 0 10px 30px rgba(230, 57, 70, 0.35);
+    transition: transform 150ms, box-shadow 150ms;
+  }
+  .cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 40px rgba(230, 57, 70, 0.45);
+    border-bottom: none !important;
   }
 
-  .cta-button:hover { background: #c42f3b; }
+  /* Video embed wrapper */
+  .video-embed {
+    margin: 2rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  wistia-player { display: block; width: 100%; }
 
-  /* Past failure comparison */
-  .compare-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    margin: 28px 0;
+  /* Gold divider */
+  .divider {
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.4;
+    margin: 3rem 0;
+    max-width: 60px;
   }
 
-  .compare-col {
-    padding: 24px;
+  /* FAQ item */
+  .faq-item {
+    border-bottom: 1px solid var(--rule);
+    padding: 1.5rem 0;
   }
-
-  .compare-col.last-time {
-    background: rgba(230, 57, 70, 0.08);
-    border-right: 1px solid rgba(197,165,114,0.15);
-  }
-
-  .compare-col.this-time {
-    background: rgba(197, 165, 114, 0.08);
-  }
-
-  .compare-col h4 {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
+  .faq-item:last-child { border-bottom: none; }
+  .faq-item h4 {
+    font-family: 'Playfair Display';
     font-weight: 700;
-    letter-spacing: 2px;
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+  }
+  section.dark .faq-item h4 { color: var(--warm); }
+  .faq-item p { color: inherit; }
+
+  /* Phase cards in What's Included */
+  .phase {
+    margin: 1.5rem 0 2rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--gold);
+  }
+  .phase h4 {
+    color: var(--gold);
+    font-family: 'DM Sans';
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 0.8rem;
   }
 
-  .compare-col.last-time h4 { color: var(--red); }
-  .compare-col.this-time h4 { color: var(--gold); }
+  /* Footer */
+  footer {
+    background: var(--black);
+    color: rgba(245, 240, 235, 0.6);
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+  footer .mark {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    color: var(--warm);
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
 
-  .compare-col p {
-    font-size: 15px;
-    color: #555;
-    margin-bottom: 12px;
+  /* Print styles */
+  @media print {
+    body { font-size: 11pt; }
+    section { padding: 2rem 0; page-break-inside: avoid; }
+    .cover, section.dark { background: white !important; color: var(--ink) !important; }
+    section.dark h1, section.dark h2, section.dark h3, section.dark h4, .cover h1 { color: var(--ink) !important; }
+    section.dark .subhead, .cover .tag, .eyebrow, .price-block .label, .callout h3 { color: var(--ink) !important; }
+    .price-block { background: #f5f0eb !important; color: var(--ink) !important; }
+    .price-block .amount { color: var(--ink) !important; }
+    .cta { display: none; }
+    .video-embed { display: none; }
+    footer { background: white; color: var(--ink); }
+    a { color: var(--ink); border-bottom: 1px solid var(--ink); }
+    @page { margin: 2cm; }
   }
 
   /* Responsive */
   @media (max-width: 640px) {
-    .hero h1 { font-size: 34px; }
-    h2 { font-size: 30px; }
-    .stat-row { flex-direction: column; gap: 16px; }
-    .ai-callout .ai-grid { grid-template-columns: 1fr; }
-    .compare-grid { grid-template-columns: 1fr; }
-    .outcome-list li::before { float: none; display: block; margin-bottom: 8px; }
+    body { font-size: 16px; }
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.25rem; }
+    .cover h1 { font-size: 2.4rem; }
+    .cover .tag { font-size: 1.15rem; }
+    section { padding: 3.5rem 0; }
+    .callout, .price-block { padding: 1.5rem; }
+    .price-block .amount { font-size: 2.2rem; }
+    table { font-size: 0.85rem; }
+    th, td { padding: 0.6em 0.7em; }
   }
 </style>
 </head>
 <body>
 
-<!-- COVER -->
-<section class="hero">
-  <div>
-    <div class="tagline">The Sync Selling System</div>
-    <h1>How United Drains Can Convert 20 Dormant Clients Into Revenue Without Hiring Another Salesperson</h1>
-    <p class="hook-line">A complete sales system diagnosed, built, and coached into your business. Same clients. Same salesperson. Three times the activation rate.</p>
-    <div class="hero-meta">
-      Prepared for <strong>Aaron Clark</strong><br>
-      March 2026
-    </div>
-    <div class="investment">Investment: &pound;7,500 + VAT</div>
+<!-- ============================================================ -->
+<!-- COVER                                                         -->
+<!-- ============================================================ -->
+<section class="cover">
+  <div class="wrap">
+    <span class="tag">The Sync Selling System</span>
+    <h1>How United Drains Can<br /><span class="gold-italic">Convert 20 Dormant Accounts Into £200K+ Revenue</span><br />Without Hiring Another Salesperson</h1>
+    <p class="line">A complete sales system diagnosed, built, and coached into your business.</p>
+    <p class="prepared">Prepared for <strong>Aaron Clark</strong> · April 2026</p>
   </div>
 </section>
 
-<!-- 01: WHAT WE UNDERSTAND -->
-<section class="section section-dark">
-  <div class="container">
-    <span class="section-number">01</span>
+<!-- ============================================================ -->
+<!-- 01 WHAT WE UNDERSTAND (warm white)                            -->
+<!-- ============================================================ -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">01 · Context</span>
     <h2>What We Understand</h2>
-    <div class="subtitle">You've Got the Clients. They're Just Not Buying.</div>
+    <p class="subhead">Same accounts. Same salesperson. Three times the conversion.</p>
+    
+<p>You've built United Drains into a business that works for five or six of the biggest pub chains in the country, plus FM companies, hotel groups, and direct corporate clients. Revenue comes from repeat relationships, not ads. The work is there. The quality is there.</p>
+<p>The problem is on the new business side.</p>
+<p>Chloe's been in since January and she's generating conversations. LinkedIn messages are landing, meetings are happening. But somewhere between "yeah, we'll get you set up as a supplier" and the first purchase order, deals stall. You've signed up <strong>30 new clients</strong> in a recent quarter. Only <strong>10 placed an order</strong>.</p>
+<p>And within the accounts you already trade with (CBRE, Accor, Leonardo Hotels, Morgan Sindall, Arcus, Equans), you're approved at group level but only active with a fraction of the account managers who could be sending you work.</p>
+<p>You know this. You've known it for a while. You just haven't had the process to fix it.</p>
 
-    <p>United Drains has signed up 30 new clients in the last three months. Only 10 are trading. That's 20 companies who went through the rigmarole of PQQs, supplier setup, rate agreements, and then never placed an order.</p>
-
-    <p>You've got Weatherspoons, Green King, Young's, FM companies, building managers spending six figures a year on drainage. They signed up because they needed a better supplier. And then nothing happened.</p>
-
-    <p>The salesperson has free reign. There's no framework for what happens after signup. No post-activation process. No walkthroughs on quotes. No next steps booked.</p>
-
-    <blockquote>
-      "Our new business sales is probably our weakest part of the business."
-      <cite>Aaron Clark</cite>
-    </blockquote>
-
-    <p>You also said you're not a salesperson. You can't retrain them. So when a rep isn't performing, you don't know if it's them or the process. You give them more time than you should. Eventually you let them go. Start from zero.</p>
-
-    <p>The goal: get those 20 dormant clients trading. Convert at least 60% of new signups into first orders. Build a process that works whether it's this salesperson or the next one.</p>
   </div>
 </section>
 
-<!-- 02: THE PROBLEM -->
-<section class="section section-light">
-  <div class="container">
-    <span class="section-number">02</span>
-    <h2>The Problem</h2>
-    <div class="subtitle">The Numbers Tell the Story</div>
+<!-- ============================================================ -->
+<!-- 02 THE PROBLEM (dark navy)                                    -->
+<!-- ============================================================ -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">02 · The Problem</span>
+    <h2>The Numbers Tell the Story</h2>
+    <p class="subhead">Every week you run the current system costs you money you'll never see again.</p>
+    
+<p><strong>20 dormant accounts.</strong> Signed up, PQQs complete, ready to trade. Not a single purchase order.</p>
+<p>At a conservative £10,000 per year per account, that's <strong>£200,000 in annual revenue</strong> sat idle. Waiting to be poked with a stick.</p>
+<p><strong>Existing accounts under-penetrated.</strong> CBRE: approved, trading with a handful of account managers. Leonardo Hotels: three locations using you out of dozens. Accor: same story. Arcus and Equans: on the books, not trading. Morgan Sindall just placed their first order off the back of a meeting Chloe set up. There are hundreds of contract managers and facilities managers inside accounts where you're already proven. You're sat on new business that isn't trading, and existing business where the low-hanging fruit hasn't been picked.</p>
+<p><strong>No structured follow-up after supplier setup.</strong> Once someone is approved, there's no booked review meeting, no commitment to a trial order, no mechanism to hold their feet to the fire. The PQQ gets filed. The relationship goes cold. You become the "backup we never call."</p>
+<p><strong>No discovery process to find the pain.</strong> Conversations focus on logistics (coverage, spend, frequency) rather than what's actually broken with their current supplier. Without that, you've got nothing to match your service against. You're just another drainage company saying "we do a good job."</p>
+<p><strong>Quote follow-up is inconsistent.</strong> Surveyors send quotes and move on. No walkthrough call. No booked follow-up. The quote sits in an inbox competing with seven other priorities. 50% conversion on existing client quotes is decent. It also means 50% of the time someone spent putting a quote together, it went nowhere.</p>
+<p><strong>No deal pipeline.</strong> Lead statuses exist (cold, warm, hot, active, inactive) but there's no deal stage pipeline. No visibility on how many prospects are at each stage, where they're stuck, or what's needed to move them. Aaron, you said it yourself: you're going on gut feel, and by the time you realise someone's not performing, months have passed.</p>
+<blockquote>"I've done so much over the years and none of it's worked. I've just wasted an absolute load of money."</blockquote>
+<p>That's not because nothing works. It's because none of it was a system.</p>
 
-    <div class="stat-row">
-      <div class="stat-box">
-        <div class="stat-number">33%</div>
-        <div class="stat-label">Signup-to-trading rate</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number">&pound;200K+</div>
-        <div class="stat-label">Dormant first-year revenue</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number">0</div>
-        <div class="stat-label">Documented sales process</div>
-      </div>
-    </div>
-
-    <p>20 companies have gone through supplier setup and are not placing orders. At a minimum of &pound;10,000 each per year, that's &pound;200,000 in first-year revenue sitting idle. And that's before they ramp into planned maintenance, which is where the real money lives.</p>
-
-    <p>Your surveyors do 100 quotes a week between them. Conversion sits at 50%. That's 50 quotes a week where time was invested and nothing came back. Quotes over &pound;10,000 are going out without a walkthrough.</p>
-
-    <p>The visible symptoms: clients signing up but not ordering. Quote follow-ups falling off. Salespeople coming and going. You giving them more time than you should because you've got nothing in black and white to judge them on.</p>
-
-    <p>The root cause: there is no repeatable sales process. Your salesperson operates without a framework, so activation after signup is a coin flip.</p>
   </div>
 </section>
 
-<!-- 03: WHAT ARE THE OPTIONS -->
-<section class="section section-dark">
-  <div class="container">
-    <span class="section-number">03</span>
+<!-- ============================================================ -->
+<!-- 03 WHAT ARE THE OPTIONS (warm white)                          -->
+<!-- ============================================================ -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">03 · Options</span>
     <h2>What Are The Options</h2>
-    <div class="subtitle">Four Roads. Three Dead Ends.</div>
+    <p class="subhead">Four roads. Three dead ends.</p>
+    
+<h3>Hire another salesperson</h3>
+<p>The instinct is always "get more people." But you've done this. Multiple times. They come in, shadow you for a bit, get the product knowledge, and then it's "go crack on." No playbook. No call structure. No way to assess whether they're any good until months of salary have gone. You've spent thousands on salespeople who didn't work out, and the root cause was the same every time: there was no process for them to follow.</p>
+<h3>Keep doing what you're doing</h3>
+<p>Chloe's doing good work. She's generating conversations, connecting on LinkedIn, getting meetings. But without a structured sales process, a follow-up cadence, and a mechanism to convert signed-up suppliers into active accounts, the conversion rate stays where it is. Another quarter passes. Another 20 accounts sit dormant. That's another £200K left on the table.</p>
+<h3>Buy a tool or a database</h3>
+<p>You've tried data before. Delight is a step in the right direction for dormant client reactivation. But tools without a process are like giving someone a sat nav without telling them where they're going. The CRM is being used as a contact list, not a pipeline management tool.</p>
+<h3>Build the system</h3>
+<p>Map out every stage of your sales process. Give Chloe (and anyone who comes after her) a framework that works whether Aaron's involved or not. Get the data for the decision-makers inside your existing accounts. Build the follow-up cadences. Structure the onboarding process so that supplier setup becomes first order, not supplier setup becomes dormant account. And give yourself visibility over what's happening without having to sit on every call or chase every lead.</p>
+<p><strong>One of these solves the root cause. The other three treat symptoms.</strong></p>
 
-    <div class="alt-card">
-      <h4>Hire another salesperson</h4>
-      <p>You've done this. Multiple times. Without a process, the next person has the same problem the last one did: no framework, no visibility, no way to tell if they're doing it right. You said it yourself: you've wasted thousands on salespeople that didn't work out. A hire costs &pound;20K+ when it fails. And you still have to manage someone in a skill you haven't systemised.</p>
-    </div>
-
-    <div class="alt-card">
-      <h4>Train the existing team</h4>
-      <p>You tried this three years ago. Three salespeople. They pushed back: "we don't need it." None of them are with you now. Training without a system underneath it gives you a burst of motivation and then nothing. Three months later, they've forgotten. You need the process and the back end, otherwise it's easy to let it slide.</p>
-    </div>
-
-    <!-- PAST FAILURE FOLDED IN -->
-    <div class="compare-grid">
-      <div class="compare-col last-time">
-        <h4>Last Time</h4>
-        <p>Training imposed on reps who didn't want it. No documented process behind it. No visibility on whether it was working. No tools to reinforce the behaviour. Reps resisted, then left.</p>
-      </div>
-      <div class="compare-col this-time">
-        <h4>This Time</h4>
-        <p>We build the process first, then bring the team on board. The rep helps shape the system. AI dashboard scores every call and shows what's working. Full visibility from day one. The data does the convincing.</p>
-      </div>
-    </div>
-
-    <div class="alt-card">
-      <h4>Use ChatGPT or do it yourself</h4>
-      <p>ChatGPT doesn't know United Drains. It doesn't know your sales process, your client personas, or the difference between selling to a pub chain FM manager and a building management company. It can't score calls against your playbook or track rep improvement over time. Generic AI gives generic output. This system is built on your business, your customers, and your methodology.</p>
-    </div>
-
-    <div class="alt-card">
-      <h4>Keep going as you are</h4>
-      <p>20 dormant clients this quarter. At this rate, 80 by the end of the year. That's &pound;800K in first-year revenue that never activated. Plus the next hire that doesn't work out. Plus the surveyor quotes that go out without a walkthrough. The problem doesn't shrink. It compounds every quarter.</p>
-    </div>
   </div>
 </section>
 
-<!-- 04: WHAT YOU GET -->
-<section class="section section-light">
-  <div class="container">
-    <span class="section-number">04</span>
+<!-- ============================================================ -->
+<!-- 04 WHAT YOU GET (dark navy)                                   -->
+<!-- ============================================================ -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">04 · Outcomes</span>
     <h2>What You Get</h2>
-    <div class="subtitle">More Trading Clients. Less Guesswork. Full Control.</div>
+    <p class="subhead">Specific outcomes, measured weekly.</p>
+    
+<ul>
+  <li><strong>Dormant accounts activated.</strong> The 20 signed-up suppliers that aren't trading today move from approved to first order inside 90 days.</li>
+  <li><strong>Structured onboarding cadence.</strong> Every new supplier goes from "approved" to "first order" to "regular trading" with booked review meetings at each stage. No more hoping they'll remember you exist.</li>
+  <li><strong>Discovery that finds the pain.</strong> Chloe walks into every meeting with questions that open up dissatisfaction, not just collect logistics. "When was the last time your current supplier dropped the ball?" replaces "how many call-outs do you get?"</li>
+  <li><strong>Key account mapped.</strong> Every contract manager, facilities manager, and account manager inside your top 10-20 existing accounts. Names, roles, LinkedIn, mobile numbers where available. The spider's web, drawn out and ready to work.</li>
+  <li><strong>Quote follow-up that closes.</strong> No quote goes out without a walkthrough call booked. Automated email sequences at 7, 14, and 30 days for anything that hasn't been picked up.</li>
+  <li><strong>Pipeline visibility.</strong> Proper deal stages, automated dormant-account alerts, and a view you can trust without sitting on every call.</li>
+  <li><strong>AI tools working for you.</strong> Every call scored, follow-up emails drafted, proposals positioned. Chloe moves faster. You see exactly where conversations are strong and where they're leaking.</li>
+  <li><strong>A hiring playbook for what's next.</strong> When the public sector BDM comes in, they walk into a documented process and a scorecard. You know inside weeks whether they can do the job, not months.</li>
+</ul>
 
-    <ol class="outcome-list">
-      <li>
-        <div class="outcome-text">
-          <strong>Recover &pound;200K+ in dormant revenue from clients already signed up</strong>
-          <span>Those 20 companies went through the rigmarole. They want to use you. A structured activation process turns sitting ducks into first orders.</span>
-        </div>
-      </li>
-      <li>
-        <div class="outcome-text">
-          <strong>Convert 60%+ of new signups into trading clients within 90 days</strong>
-          <span>Every new supplier that signs up gets a clear path from PQQ to first billable job to planned maintenance. No more signing up and going silent.</span>
-        </div>
-      </li>
-      <li>
-        <div class="outcome-text">
-          <strong>Know exactly where deals are breaking down and why</strong>
-          <span>Full visibility over your sales process. No more judging performance on a feeling. You see what's happening in black and white, even though you're not a sales expert.</span>
-        </div>
-      </li>
-      <li>
-        <div class="outcome-text">
-          <strong>A process that works whether it's this salesperson or the next one</strong>
-          <span>Documented. Repeatable. If someone leaves, the process stays. New hires follow the playbook from day one instead of shadowing you for a week and winging it.</span>
-        </div>
-      </li>
-      <li>
-        <div class="outcome-text">
-          <strong>Stop wasting money on salespeople who fail because there's nothing to follow</strong>
-          <span>You said you've wasted thousands on hires that didn't work out. One saved bad hire pays for this programme three times over.</span>
-        </div>
-      </li>
-      <li>
-        <div class="outcome-text">
-          <strong>Your time back</strong>
-          <span>You're running operations, managing surveyors, expanding into public sector. You shouldn't be wondering whether the BDM is doing a good job. The system tells you.</span>
-        </div>
-      </li>
-    </ol>
   </div>
 </section>
 
-<!-- 05: HOW WE DO IT -->
-<section class="section section-dark">
-  <div class="container">
-    <span class="section-number">05</span>
+<!-- ============================================================ -->
+<!-- 05 HOW WE DO IT (warm white)                                  -->
+<!-- ============================================================ -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">05 · Approach</span>
     <h2>How We Do It</h2>
-    <div class="subtitle">Build the Track Before You Ask People to Run On It</div>
+    <p class="subhead">Build the track before you ask people to run on it.</p>
+    
+<p>Most businesses try to fix sales by training the salesperson. Send them on a course. Get them to read a book. Maybe bring in a consultant for a day.</p>
+<p>It doesn't work because the salesperson isn't the problem. The system is the problem. If there's no process, no playbook, and no feedback loop, then training is just giving someone better shoes to run on a broken track.</p>
+<p>What we do instead: build the track first.</p>
+<p>The Sync Selling System reverse-engineers your sales process from your actual deals. We look at how your buyers decide, what your best clients said before they came on board, and where deals stall or die. Then we build a step-by-step process around that reality.</p>
 
-    <p>Most companies try to fix underperforming sales by training the rep or hiring a better one. That fails. The rep is selling on a process that doesn't exist. Training people to run faster on a broken track doesn't fix the track.</p>
+<div class="phase">
+<h4>Phase 01 · Diagnose (Weeks 1-2)</h4>
+<p>We've already started this. The workshop gave us the raw material. Now we go deeper. Full diagnostic of every stage of your sales process. Every leak identified. Every opportunity ranked by impact and ease of implementation. The output is a complete GTM Diagnostic Report with a prioritised roadmap.</p>
+<p>For United Drains, the priority sequence is clear:</p>
+<ol>
+  <li>Dormant account activation (the 20 accounts, the existing groups)</li>
+  <li>Onboarding and review cadence (supplier setup to first order)</li>
+  <li>Discovery framework (finding the pain, not just the logistics)</li>
+  <li>Quote follow-up process (surveyors calling, automated sequences)</li>
+  <li>CRM pipeline setup and automation (or advice on moving to something simpler)</li>
+  <li>Outreach playbook for new business (LinkedIn, cold call, email)</li>
+  <li>Hiring playbook for future sales hires</li>
+</ol>
+</div>
 
-    <p>We build the track first.</p>
+<div class="phase">
+<h4>Phase 02 · Build (Weeks 2-6)</h4>
+<p>Every script, every email template, every meeting framework, every follow-up sequence. Tailored to United Drains. Tailored to the different personas: FM companies, hotel groups, pub chains, direct corporates.</p>
+<p>This includes the Sync Selling AI Sales Toolkit, built on your specific business. Chloe drops a call transcript in, and within minutes she gets a scored review of how the call went, a follow-up email ready to send, and coaching on what to ask next time. You see at a glance how she's performing and whether the process is being followed. No more black box.</p>
+</div>
 
-    <p>The Sync Selling System reverse-engineers your specific problem from your actual conversations and client interactions. We've already seen it on this call: 30 clients signed up, 20 not trading. The activation step is missing entirely. Your salesperson has no framework for getting a signed-up client to place their first order.</p>
+<div class="phase">
+<h4>Phase 03 · Coach (Weeks 6-12)</h4>
+<p>We train Chloe on every playbook. Walk her through the discovery framework so she's asking the questions that open up dissatisfaction. Role-play the onboarding conversation so the "would you have any objection to testing us with a couple of small jobs?" feels natural. Review her live deals and give feedback on what's working and what needs adjusting.</p>
+<p>You attend group coaching calls. Bring deals. Ask questions. See how other founders are tackling the same problems. The AI dashboard tracks progress week over week, so you can see the improvement in real numbers.</p>
+</div>
 
-    <p>We mapped out the fix live on the call: supplier setup, commitment to a couple of small billable jobs, review meeting booked before anyone hangs up. You said yourself, "it's stupidly simple, but it would make such a big difference."</p>
-
-    <p>That's one step. We build the entire track. Outreach to first meeting. First meeting to supplier setup. Setup to first order. First order to planned maintenance. Every stage has a clear next step, a framework for the conversation, and templates your rep can follow without you needing to be a sales expert.</p>
-
-    <h3 style="margin-top: 40px;">How the Team Comes On Board</h3>
-
-    <p>You mentioned that training failed before because the reps pushed back. The difference: we don't impose a process. Your salesperson helps build it. Their input shapes how it works.</p>
-
-    <p>When they see the data, the conversations playing back, the 20 dormant clients, the motivation is built in. The AI dashboard gives immediate feedback after every call. Quick loops. Visible improvement. The data does the convincing.</p>
   </div>
 </section>
 
-<!-- 06: PROOF -->
-<section class="section section-light">
-  <div class="container">
-    <span class="section-number">06</span>
-    <h2>MORPH Closed &pound;500K+ and Increased Prices 6x</h2>
-    <div class="subtitle">Same Problem. Same Pattern. Different Industry.</div>
+<!-- ============================================================ -->
+<!-- 06 PROOF (dark navy) — VIDEO EMBED                            -->
+<!-- ============================================================ -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">06 · Proof</span>
+    <h2>Vohkus: From Zero to £1.2M Monthly Revenue</h2>
 
-    <p>Matej came to us at MORPH with clients coming in and no clear understanding of why they weren't converting. Quotes going out. Deals dying in silence. Sound familiar?</p>
-
-    <p>We built the Sync Selling System into his business: discovery before quoting, process control on every deal, proposals that sell the outcome.</p>
-
-    <div class="stat-row">
-      <div class="stat-box">
-        <div class="stat-number">&pound;500K+</div>
-        <div class="stat-label">Revenue closed</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number">6x</div>
-        <div class="stat-label">Price increase</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number">6x</div>
-        <div class="stat-label">Close rate improvement</div>
-      </div>
-    </div>
-
-    <p>The industry is different. The pattern is identical. Clients were there. The process was missing. We fixed the process. The revenue followed.</p>
-
-    <!-- VIDEO CASE STUDY EMBED -->
     <div class="video-embed">
-      <div class="video-placeholder">
-        <div class="play-icon"></div>
-        <span>Matej — MORPH Case Study</span>
-        <span style="font-size: 12px; margin-top: 4px; color: var(--gold);">Replace with Wistia embed: &lt;iframe src="https://fast.wistia.net/embed/iframe/YOUR_VIDEO_ID"&gt;</span>
-      </div>
+      <script src="https://fast.wistia.com/embed/76232sa9wr.js" async type="module"></script>
+      <style>wistia-player[media-id='76232sa9wr']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/76232sa9wr/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
+      <wistia-player media-id="76232sa9wr" aspect="1.7777777777777777"></wistia-player>
     </div>
 
-    <p style="text-align: center; font-size: 15px; color: #666; margin-top: 24px;">300+ founders coached. &pound;185M+ in client revenue generated.</p>
+    
+<p>Different industry. Same pattern.</p>
+<p>Vohkus had a team of graduate salespeople with zero experience. No playbook. No structure. The founder was involved in every deal.</p>
+<p>We built a complete sales system. Graduates who'd never sold anything followed a process and a set of playbooks, not their instincts.</p>
+<p>Within the first year: <strong>£1.2M in monthly revenue.</strong></p>
+<p>The graduates didn't become sales superstars overnight. They followed a system.</p>
+<blockquote>"The ROI comes. I have seen it with my own eyes." Steve Williams, Vohkus</blockquote>
+<p>The parallel for United Drains: Chloe doesn't need 15 years of drainage experience to convert prospects. She needs a process that guides every conversation, a set of questions that find the pain, and a follow-up system that keeps deals moving. The system does the heavy lifting.</p>
+
+
+    <div class="divider"></div>
+    <p><em>300+ founders coached. £185M+ in client revenue generated.</em></p>
   </div>
 </section>
 
-<!-- 07: WHAT'S INCLUDED -->
-<section class="section section-white">
-  <div class="container">
-    <span class="section-number">07</span>
+<!-- ============================================================ -->
+<!-- 07 WHAT'S INCLUDED (warm white)                               -->
+<!-- ============================================================ -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">07 · Deliverables</span>
     <h2>What's Included</h2>
-    <div class="subtitle">Everything You Need. Nothing You Don't.</div>
+    <p class="subhead">Everything you need. Nothing you don't.</p>
+    
+<div class="phase">
+<h4>Phase 01 · Clarity and Foundation</h4>
+<ul>
+  <li><strong>Complete GTM Diagnostic Report.</strong> Every leak in your sales process identified, every opportunity ranked. You see exactly where revenue is escaping and what to fix first.</li>
+  <li><strong>Decision-Maker Data Pack for Top 10-20 Accounts.</strong> Names, job titles, LinkedIn profiles, and mobile numbers for every contract manager, facilities manager, and account manager inside your existing approved accounts. CBRE, Accor, Leonardo, Morgan Sindall, Arcus, Equans, and the rest. Your hit list, ready to work.</li>
+  <li><strong>Ideal Customer Profile Documentation.</strong> The "what's in Aaron's head" written down. Two to four personas (FM companies, hotel groups, pub chains, direct corporates) with qualifying criteria, pain points, and minimum spend thresholds. Anyone who comes in after Chloe knows exactly who to go after and who to leave alone.</li>
+</ul>
+</div>
 
-    <div class="phase">
-      <div class="phase-label">Phase 01 — Clarity &amp; Foundation</div>
-      <div class="phase-item">
-        <strong>Complete GTM Diagnostic Report &amp; Market Research</strong>
-        <span>Where revenue is leaking. What to fix first. 80+ hours of analysis. You've already seen a preview on this call.</span>
-      </div>
-      <div class="phase-item">
-        <strong>Wireframed Sales Playbook</strong>
-        <span>United Drains' entire sales process mapped. Outreach to first order to planned maintenance. Clear entry and exit criteria at every stage.</span>
-      </div>
-    </div>
+<div class="phase">
+<h4>Phase 02 · Sales Arsenal and Training</h4>
+<ul>
+  <li><strong>Inbound/Discovery Playbook.</strong> So Chloe and the team qualify properly from the first conversation, instead of collecting logistics and hoping the deal comes later.</li>
+  <li><strong>Selling the Outcome Playbook.</strong> Sell the experience of working with United Drains, not the feature list. Different versions for FM, hotels, pub groups, corporates.</li>
+  <li><strong>Proposal Playbook.</strong> Proposals that sell the dream, not invoices disguised as quotes. Built around what the buyer needs to see to sign off.</li>
+  <li><strong>Objection Handling Playbook.</strong> Every scenario Chloe will face, scripted. "We're happy with our current provider." "Send me some info." "We don't have budget right now." Responses that keep the conversation alive.</li>
+  <li><strong>Follow-Up and Lead Nurture Playbook.</strong> What to send, when, how to bring cold leads back. Includes the quote walkthrough call and the 7/14/30-day automated cadence.</li>
+  <li><strong>Triage and Qualification Playbook.</strong> Identify prospects who will never buy. Reclaim that time for ones who will.</li>
+  <li><strong>Account Expansion Playbook.</strong> How to get referrals inside existing accounts. How to ask for permission to name-drop. LinkedIn templates, cold call scripts, and email sequences for new contacts inside groups where you're already approved.</li>
+  <li><strong>Supplier Onboarding Playbook.</strong> The step-by-step process from "signed up" to "first order" to "regular trading." Includes the review meeting booking script, the trial order commitment conversation, and the automated follow-up cadence.</li>
+  <li><strong>Sync Selling AI Sales Toolkit.</strong> AI Sales Coach scores every call against the playbook. AI Email Writer generates follow-up emails specific to your business. AI Proposal Writer turns conversations into positioned quotes. Chloe uses it daily. You check in weekly and see exactly what's happening.</li>
+  <li><strong>CRM Pipeline and Automation Guidance.</strong> Pipeline stages mapped to your sales process. Automation triggers for follow-up tasks, dormant account alerts, deal stage tracking. If it makes sense to move to a simpler, cheaper platform, we'll advise on that separately. The priority is getting the process right first.</li>
+</ul>
+</div>
 
-    <div class="phase">
-      <div class="phase-label">Phase 02 — Sales Arsenal &amp; Training</div>
-      <div class="phase-item">
-        <strong>Outreach &amp; Prospecting Playbook</strong>
-        <span>LinkedIn messages, cold calls, and email sequences built for FM managers, pub chain buyers, and building management contacts. Tailored by persona.</span>
-      </div>
-      <div class="phase-item">
-        <strong>First Meeting &amp; Discovery Playbook</strong>
-        <span>What to ask when you get in the room. Different questions for FM companies versus pub chains versus building managers. Get to the pain fast.</span>
-      </div>
-      <div class="phase-item">
-        <strong>Supplier Activation Playbook</strong>
-        <span>The process to get signed-up clients from PQQ to first billable job. Commitment to test orders. Review meetings booked. No more dormant accounts.</span>
-      </div>
-      <div class="phase-item">
-        <strong>Quote &amp; Proposal Playbook</strong>
-        <span>How to present quotes so they close. Walkthroughs for anything over &pound;10K. Follow-up sequences that add value instead of "just checking in."</span>
-      </div>
-      <div class="phase-item">
-        <strong>Objection Handling Playbook</strong>
-        <span>Every scenario scripted. "We've already got a contractor." "Your rates are too high." "We need to run it past the FD." Answers ready before the question lands.</span>
-      </div>
-      <div class="phase-item">
-        <strong>Account Growth &amp; Nurture Playbook</strong>
-        <span>How to move clients from reactive jobs to planned maintenance. How to keep the plate spinning when they're not ready yet. How to catch them when the current supplier drops the ball.</span>
-      </div>
-      <div class="phase-item">
-        <strong>3 x 1-Hour Workshops with Joe</strong>
-        <span>Your salesperson helps build the system and owns it from day one. Not imposed. Co-created.</span>
-      </div>
-    </div>
+<div class="phase">
+<h4>Phase 03 · Coaching and Enablement</h4>
+<ul>
+  <li><strong>3 x 1-Hour Workshops with Joe.</strong> Build the system together. Chloe attends. We walk through every playbook, role-play the conversations, and make sure it all feels natural before going live.</li>
+  <li><strong>8 Weeks Group Coaching and Deal Clinics.</strong> Drop in live or watch the recordings. Bring deals. Ask questions. See how other founders solve the same problems.</li>
+  <li><strong>AI Dashboard Access.</strong> Every call scored. Pipeline visible at a glance. Performance tracked week over week. Leading indicators, not just "are we making money yet?"</li>
+  <li><strong>Hiring Playbook.</strong> For when the public sector BDM comes on board. Interview questions, scorecard, skills test. You know within weeks whether someone can do the job, not months.</li>
+</ul>
+</div>
 
-    <!-- AI TOOLKIT CALLOUT -->
-    <div class="ai-callout">
-      <h4>Sync Selling AI Sales Toolkit</h4>
-      <p style="color: var(--muted); margin-bottom: 20px;">AI tools built on United Drains' methodology, your client personas, and your sales process. Your rep drops a call transcript in and gets coaching, follow-ups, and proposals in minutes.</p>
-      <div class="ai-grid">
-        <div class="ai-item">
-          <strong>Less Time</strong>
-          <span>Follow-up emails, proposal outlines, and coaching feedback generated in minutes, not hours. Your rep spends time selling, not writing.</span>
-        </div>
-        <div class="ai-item">
-          <strong>Better Results</strong>
-          <span>Every call scored against the playbook. Immediate feedback. What went well. What was missed. What to do differently next time.</span>
-        </div>
-        <div class="ai-item">
-          <strong>More Consistency</strong>
-          <span>Same standard every time. When you hire for public sector, that rep follows the same process from day one.</span>
-        </div>
-        <div class="ai-item">
-          <strong>At-a-Glance Visibility</strong>
-          <span>See how your rep is performing without sitting on every call. Pipeline visibility. Deal risk flagged. Coaching needs surfaced.</span>
-        </div>
-      </div>
-    </div>
+  </div>
+</section>
 
-    <div class="phase">
-      <div class="phase-label">Phase 03 — Coaching &amp; Implementation</div>
-      <div class="phase-item">
-        <strong>12 Weeks Coaching &amp; Deal Review</strong>
-        <span>Joe works alongside you for three months. Deal reviews. Call feedback. Outreach review. Making sure it's embedded, not just documented.</span>
-      </div>
-      <div class="phase-item">
-        <strong>Group Deal Clinics &amp; Q&amp;A Sessions</strong>
-        <span>Bring live deals. Ask questions. Get answers. Drop in live or watch the recordings.</span>
-      </div>
-      <div class="phase-item">
-        <strong>AI Dashboard Access</strong>
-        <span>Every call scored. Pipeline visibility at a glance. Rep improvement tracked over time. The system keeps coaching after the programme ends.</span>
-      </div>
-      <div class="phase-item">
-        <strong>Hiring Playbook</strong>
-        <span>When you hire for public sector, you've got interview frameworks, skills tests, and scoring criteria. No more gut feel and crossed fingers.</span>
-      </div>
+<!-- ============================================================ -->
+<!-- 08 THE NUMBERS (dark navy) — PRICING                          -->
+<!-- ============================================================ -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">08 · The Numbers</span>
+    <h2>The Maths Works at Every Level</h2>
+    
+<p><strong>By week 4</strong>, you'll have your top 20 accounts mapped with decision-maker contact data, the onboarding cadence running against the 20 dormant accounts, and the discovery framework live in Chloe's calls.</p>
+<p><strong>By week 8</strong>, we're targeting measurable movement on dormant account conversion. At least 6 of the 20 dormant accounts placing a first order. That's how we'll both know this is working.</p>
+
+<h3>What staying put costs</h3>
+<table>
+  <thead>
+    <tr><th>Metric</th><th>Current</th><th>Annual cost</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Dormant signed-up accounts</td><td>20 accounts not trading</td><td>£200,000+ in first-year revenue</td></tr>
+    <tr><td>Under-penetrated key accounts</td><td>CBRE, Accor, Leonardo, Arcus, Equans trading at a fraction of potential</td><td>Unknown but significant</td></tr>
+    <tr><td>Quotes without follow-up</td><td>~50% unconverted (existing clients)</td><td>Hours of surveyor time, lost revenue</td></tr>
+  </tbody>
+</table>
+
+<h3>What we expect to achieve</h3>
+<table>
+  <thead>
+    <tr><th>Metric</th><th>Now</th><th>Target</th><th>Timeframe</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Dormant account conversion</td><td>~33% (10 of 30)</td><td>60%+</td><td>90 days</td></tr>
+    <tr><td>Active contacts in key accounts</td><td>Handful per group</td><td>Full decision-maker mapping</td><td>30 days</td></tr>
+    <tr><td>Booked review meetings (active accounts)</td><td>~0</td><td>All top 20 accounts</td><td>60 days</td></tr>
+  </tbody>
+</table>
+
+<h3>The payback</h3>
+<p>Converting <strong>5 of those 20 dormant accounts</strong> at £10,000 each covers the investment. That's a conservative estimate. You told me some of these accounts could be £50K-£200K per year once they ramp. One decent account covers the programme twice over.</p>
+
+<h3>What this requires from you</h3>
+<ul>
+  <li><strong>Aaron:</strong> 3-4 hours across the first month for workshops and review. Then 1 hour per week for coaching and pipeline review.</li>
+  <li><strong>Chloe:</strong> attends the workshops, uses the playbooks, drops call transcripts into the AI tools. The process makes her faster, not busier.</li>
+</ul>
+
+
+    <div class="price-block">
+      <div class="label">Investment</div>
+      <div class="amount">£7,500 + VAT</div>
+      <div class="terms">Paid in full on the kickoff call.</div>
     </div>
   </div>
 </section>
 
-<!-- 08: THE NUMBERS -->
-<section class="section section-dark">
-  <div class="container">
-    <span class="section-number">08</span>
-    <h2>The Numbers</h2>
-    <div class="subtitle">The Maths Works at Every Level</div>
-
-    <table class="results-table">
-      <thead>
-        <tr><th>Metric</th><th>Now</th><th>Target</th><th>Timeframe</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Signup-to-trading rate</td><td>33%</td><td>60%+</td><td>90 days</td></tr>
-        <tr><td>Dormant clients activated</td><td>0 of 20</td><td>10+</td><td>8 weeks</td></tr>
-        <tr><td>Surveyor quote conversion (10K+)</td><td>~50%</td><td>65%+</td><td>12 weeks</td></tr>
-        <tr><td>Documented sales process</td><td>None</td><td>Complete</td><td>Week 4</td></tr>
-        <tr><td>Pipeline visibility</td><td>None</td><td>Full stage tracking</td><td>Week 2</td></tr>
-      </tbody>
-    </table>
-
-    <p>60% activation isn't aggressive. You should be converting the majority of clients who go through the effort of signing you up as a supplier. We're targeting the floor.</p>
-
-    <p>In real terms: 10 activated clients at &pound;10,000 minimum first-year spend = &pound;100,000. That's before they ramp into planned maintenance. One building alone spends &pound;100K a year on drain cleaning.</p>
-
-    <p>Even the most conservative scenario, 5 extra clients trading at &pound;10K, covers the entire investment nearly seven times over in first-year revenue.</p>
-
-    <div class="stat-row">
-      <div class="stat-box">
-        <div class="stat-number">&pound;7,500</div>
-        <div class="stat-label">Total Investment + VAT</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number">&pound;100K+</div>
-        <div class="stat-label">Recovered first-year revenue</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number">&lt;1 month</div>
-        <div class="stat-label">Payback period</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number">13x</div>
-        <div class="stat-label">Annual return</div>
-      </div>
-    </div>
-
-    <p style="color: var(--muted); font-size: 15px; margin-top: 24px;"><strong style="color: var(--text-light);">What's required from you:</strong> 3 hours total for workshops. Access to live coaching or recordings as suits your schedule. Use the new playbooks and process on every deal. Send us call transcripts and email chains for review.</p>
-  </div>
-</section>
-
-<!-- 09: WORST CASE SCENARIO -->
-<section class="section section-light">
-  <div class="container">
-    <span class="section-number">09</span>
+<!-- ============================================================ -->
+<!-- 09 WORST CASE SCENARIO (warm white) — GUARANTEE               -->
+<!-- ============================================================ -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">09 · Risk Reversal</span>
     <h2>Worst Case Scenario</h2>
+    
+<p>For this not to work, almost nothing would have to change.</p>
+<p>The 20 dormant accounts would have to stay dormant despite a structured onboarding cadence with booked review meetings. The existing key accounts would have to ignore outreach from a company they already trade with. The discovery framework would have to make zero difference to Chloe's conversations.</p>
+<p>Even if only <strong>3 dormant accounts converted at £10,000 each</strong>, that's £30,000 in the first year. Four times the investment.</p>
 
-    <p>For this not to work, almost nothing would have to change.</p>
 
-    <p>You've got 20 dormant clients who have already signed up. Zero sales process. Zero post-activation framework. Zero quote walkthroughs booked.</p>
-
-    <p>Even activating 3 extra clients at &pound;10,000 first-year spend covers the investment four times over. That's less than a 10% improvement on the current activation rate.</p>
-
-    <p>The alternative: one more failed hire at &pound;20K+. Another quarter of signups going dormant. Another year of judging sales performance on a feeling.</p>
-
-    <div class="guarantee-box">
-      <h4>The 30-Day Guarantee</h4>
-      <p>Pay in full. Use the first 30 days to test everything. If at any point you think this won't move the needle, or your salesperson isn't bought in, you get a full refund. No questions asked. You keep everything we've built.</p>
-      <p style="margin-top: 16px; font-weight: 700; color: var(--navy);">We carry the risk because we've seen this work 300+ times.</p>
+    <div class="callout">
+      <h3>The 30-Day Risk-Free Guarantee</h3>
+      <p>You have 30 days to decide this is the right fit. If it isn't, you get a full refund of anything paid. You keep everything we've built so far. No questions. No forms. No friction.</p>
+      
     </div>
+
+    <p><em>We carry the risk because we've seen this work 300+ times.</em></p>
   </div>
 </section>
 
-<!-- 10: FAQs -->
-<section class="section section-white">
-  <div class="container">
-    <span class="section-number">10</span>
-    <h2>FAQs</h2>
+<!-- ============================================================ -->
+<!-- 10 FAQs (dark navy)                                           -->
+<!-- ============================================================ -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">10 · FAQs</span>
+    <h2>Questions You Might Be Asking</h2>
+    
+<div class="faq-item">
+  <h4>I've tried things before and wasted money. How is this different?</h4>
+  <p>Every failed attempt had the same root cause: no system underneath. Training without a process is motivation that wears off. You tried getting three salespeople trained three years ago. They pushed back, said they didn't need it, and none are with you now. We build the system first. The training runs on top of it. And the AI tools mean the feedback loop never stops.</p>
+</div>
+<div class="faq-item">
+  <h4>Can ChatGPT do what the AI tools do?</h4>
+  <p>ChatGPT doesn't know your sales process, your customers, your pain points, or your case studies. Our AI tools are built on the Sync Selling methodology and trained on your specific business. They score calls against YOUR playbook, write emails in YOUR voice, and coach against YOUR process. Generic AI gives generic answers.</p>
+</div>
+<div class="faq-item">
+  <h4>What about the different types of customers? FM companies need a different approach to pub chains.</h4>
+  <p>Every playbook is built with persona variations. The qualifying questions differ. The pain points differ. The messaging differs. But the process structure is the same. Chloe follows one framework with different branches depending on who she's speaking to.</p>
+</div>
+<div class="faq-item">
+  <h4>How open will Chloe be to this?</h4>
+  <p>Chloe came from corporate banking. She knows what good structure looks like. She's already doing the right things (building pipeline, diarising follow-ups, tracking in the CRM). What she doesn't have is the questions, the scripts, and the tools to convert at a higher rate. This makes her job easier, not harder. And it makes her more money.</p>
+</div>
+<div class="faq-item">
+  <h4>What happens when I hire the public sector BDM?</h4>
+  <p>They walk into a documented process. Playbooks are there. Training videos are there. AI coaching tools are there. You're not starting from scratch and hoping they figure it out. Onboarding drops from months to weeks.</p>
+</div>
+<div class="faq-item">
+  <h4>What about our surveyors? They need to be part of this.</h4>
+  <p>The quote follow-up process involves the surveyors. We'll build the scripts for the walkthrough call and the handoff from Chloe. They don't need to attend the full programme. They need a simple, clear process for what happens when a quote goes out.</p>
+</div>
+<div class="faq-item">
+  <h4>How does payment work?</h4>
+  <p>£7,500 + VAT, paid in full on the kickoff call. The 30-day risk-free guarantee protects every penny. If it isn't right, you get a full refund and you keep everything we've built so far.</p>
+</div>
+<div class="faq-item">
+  <h4>What happens after the programme?</h4>
+  <p>You own the system permanently. The playbooks, the AI tools, the templates. If you want ongoing support, coaching continues at £600/month (payable quarterly) with AI Sales Coach access, weekly Q&A calls, and quarterly strategy sessions with Joe. Optional, not required.</p>
+</div>
 
-    <div class="faq-item">
-      <div class="faq-q">"I've done so much over the years and none of it's worked. I've wasted an absolute load of money. How is this different?"</div>
-      <p class="faq-a">Previous attempts failed because there was no system underneath. Training without a process gives you a burst of motivation and then nothing. We build the process first, document everything, and give you AI tools that reinforce the behaviour daily. You also get full visibility from day one, so you know within weeks whether it's working, not months.</p>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">"My reps pushed back on training last time. What if that happens again?"</div>
-      <p class="faq-a">Last time it was imposed. This time, your salesperson helps build the system. Their input shapes how it works. When they see the data and understand why 20 clients went dormant, the motivation is built in. The AI coaching makes their job easier, not harder. They get instant feedback and pre-written follow-ups. It saves them time.</p>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">"Is the AI toolkit something ChatGPT could do?"</div>
-      <p class="faq-a">ChatGPT doesn't know United Drains. It can't score calls against your specific playbook, track improvement over time, or generate follow-ups using your client personas and objection frameworks. This system is trained on your sales process, your customer types, and your methodology. Generic AI gives generic output.</p>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">"How does the AI toolkit work alongside HubSpot?"</div>
-      <p class="faq-a">It sits alongside HubSpot, not inside it. Your CRM stays as-is. After a call, the rep drops the transcript into the dashboard. Within minutes: scored review, follow-up email, next steps. Copy, paste, send. No migration. No integration headache.</p>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">"We've got different client types — pub chains, FM companies, building managers. Will one process work?"</div>
-      <p class="faq-a">We map out persona-specific playbooks. The core process is the same. The questions, messaging, and value proposition adapt for each persona type. FM managers care about not getting angry calls. Pub chain buyers care about reliability across multiple sites. We script for each one.</p>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">"What if I hire for public sector — will the new person be able to use this?"</div>
-      <p class="faq-a">That's one of the biggest returns. The hiring playbook gives you interview frameworks and skills tests. The new hire walks into a documented process with playbooks, AI coaching tools, and recorded training. No more "shadow me and figure it out." Onboarding drops from months to weeks.</p>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">"What happens after the 12 weeks?"</div>
-      <p class="faq-a">You own the system permanently. The playbooks, the AI tools, the templates. Your team can run it without us. If you want ongoing support, coaching continues at &pound;1,800/month excl. VAT — AI Sales Coach access, weekly Q&amp;A calls, and quarterly strategy sessions with Joe.</p>
-    </div>
   </div>
 </section>
 
-<!-- 11: NEXT STEPS -->
-<section class="section section-black cta-section">
-  <div class="container">
-    <span class="section-number">11</span>
-    <h2>Next Steps</h2>
-    <div class="subtitle">One Decision.</div>
+<!-- ============================================================ -->
+<!-- 11 NEXT STEPS (deep black) — RED CTA                          -->
+<!-- ============================================================ -->
+<section class="dark" style="background: var(--black);">
+  <div class="wrap" style="text-align: center;">
+    <span class="eyebrow">11 · Next Steps</span>
+    <h2>One Decision</h2>
+    
+<p>Book the kickoff session. We start building immediately.</p>
+<p>Week 1: the decision-maker data pack for your top accounts lands. Chloe has a hit list. The outreach begins while we build everything else around it.</p>
+<p>Every week that passes without a process is another batch of dormant accounts collecting dust, another set of contract managers inside CBRE, Leonardo, Arcus, and Equans who don't know you exist, and another quarter where 20 signed-up suppliers sit there doing nothing.</p>
+<p>You've seen the diagnostic. You know what's broken. The fix is 12 weeks.</p>
+<p><em>Let's go.</em></p>
 
-    <p style="color: var(--muted); max-width: 580px; margin: 0 auto 20px; font-size: 17px;">Book the kickoff workshop. Map out your 12-week build schedule. Get your salesperson in the room. Get dashboard access.</p>
 
-    <p style="color: var(--muted); max-width: 580px; margin: 0 auto 20px; font-size: 17px;">Those 20 dormant clients are waiting. Every week without an activation process is another batch of signups that go silent. Another quarter of &pound;200K sitting idle.</p>
-
-    <p style="color: var(--muted); max-width: 580px; margin: 0 auto 20px; font-size: 17px;">You said you've spent years doing things that didn't work and wasting money on salespeople that didn't stick. The process doesn't exist yet. That's the problem. That's what we fix.</p>
-
-    <p style="color: var(--text-light); font-size: 18px; font-weight: 700; max-width: 580px; margin: 24px auto 0;">Are you going to keep hoping the next salesperson figures it out? Or are you going to build the system that makes them succeed?</p>
-
-    <a href="https://app.revitk.com/widget/bookings/syncselling" class="cta-button">Book Your Kickoff Workshop</a>
   </div>
 </section>
+
+<!-- ============================================================ -->
+<!-- FOOTER                                                        -->
+<!-- ============================================================ -->
+<footer>
+  <div class="wrap">
+    <span class="mark">Revitk</span>
+    <p>Prepared for United Drains · April 2026</p>
+    <p>This proposal is confidential and prepared specifically for the named recipient.</p>
+  </div>
+</footer>
 
 </body>
 </html>

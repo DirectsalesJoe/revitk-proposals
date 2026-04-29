@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Vohkus — The Sync Selling System</title>
+<meta name="description" content="A complete sales system diagnosed, built, and coached into Vohkus." />
+
+<!-- Social preview -->
+<meta property="og:title" content="Vohkus — The Sync Selling System" />
+<meta property="og:description" content="Proposal for Vohkus. Prepared by Revitk." />
+<meta property="og:type" content="website" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&display=swap" rel="stylesheet" />
+
+<!-- Wistia player (loaded once) -->
+<script src="https://fast.wistia.com/player.js" async></script>
+
+<style>
+  :root {
+    --navy: #0F1923;
+    --black: #0B1120;
+    --red: #E63946;
+    --gold: #C5A572;
+    --warm: #F5F0EB;
+    --ink: #0F1923;
+    --muted: #4B5968;
+    --rule: rgba(197, 165, 114, 0.25);
+    --shadow: 0 24px 60px rgba(11, 17, 32, 0.12);
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--warm);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.4em;
+    color: var(--ink);
+  }
+
+  h1 { font-size: 3rem; line-height: 1.1; }
+  h2 { font-size: 2.25rem; line-height: 1.15; }
+  h3 { font-size: 1.4rem; line-height: 1.25; margin-top: 1.6em; }
+  h4 { font-size: 1.1rem; line-height: 1.3; }
+
+  .gold-italic {
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  p { margin: 0 0 1em; }
+  p + p { margin-top: 0; }
+
+  ul, ol { padding-left: 1.3em; margin: 0 0 1em; }
+  li { margin-bottom: 0.5em; }
+
+  blockquote {
+    border-left: 3px solid var(--gold);
+    background: rgba(197, 165, 114, 0.08);
+    padding: 1em 1.2em;
+    margin: 1.5em 0;
+    font-style: italic;
+    color: var(--ink);
+    border-radius: 0 6px 6px 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  th, td {
+    padding: 0.8em 1em;
+    text-align: left;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  th {
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: var(--navy);
+    color: var(--warm);
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  a { color: var(--red); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 120ms; }
+  a:hover { border-bottom-color: var(--red); }
+
+  section {
+    padding: 5rem 0;
+    position: relative;
+  }
+
+  section.dark {
+    background: var(--navy);
+    color: var(--warm);
+  }
+  section.dark h1,
+  section.dark h2,
+  section.dark h3,
+  section.dark h4 {
+    color: var(--warm);
+  }
+  section.dark th { background: var(--black); }
+  section.dark td { border-bottom-color: rgba(245, 240, 235, 0.15); }
+  section.dark table { background: rgba(245, 240, 235, 0.04); }
+  section.dark blockquote {
+    background: rgba(197, 165, 114, 0.1);
+    color: var(--warm);
+    border-left-color: var(--gold);
+  }
+  section.dark a { color: var(--gold); }
+  section.dark a:hover { border-bottom-color: var(--gold); }
+
+  .eyebrow {
+    font-family: 'DM Sans';
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1em;
+    display: block;
+  }
+
+  .subhead {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.15rem;
+    color: var(--muted);
+    margin: 0 0 2rem;
+    line-height: 1.45;
+    max-width: 640px;
+  }
+  section.dark .subhead { color: rgba(245, 240, 235, 0.75); }
+
+  .cover {
+    background: var(--black);
+    color: var(--warm);
+    padding: 6rem 0 5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .cover h1 {
+    color: var(--warm);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-style: normal;
+  }
+  .cover .tag {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    display: block;
+  }
+  .cover .prepared {
+    font-family: 'DM Sans';
+    font-size: 0.95rem;
+    color: rgba(245, 240, 235, 0.7);
+    margin-top: 2rem;
+    letter-spacing: 0.02em;
+  }
+  .cover .line {
+    max-width: 520px;
+    color: rgba(245, 240, 235, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .callout {
+    background: rgba(197, 165, 114, 0.08);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+  section.dark .callout {
+    background: rgba(197, 165, 114, 0.1);
+  }
+  .callout h3 {
+    color: var(--ink);
+    margin-top: 0;
+  }
+  section.dark .callout h3 { color: var(--warm); }
+  .callout .big-number {
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--gold);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .price-block {
+    background: var(--black);
+    color: var(--warm);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+  }
+  section.dark .price-block { background: rgba(245, 240, 235, 0.06); }
+  .price-block .label {
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .price-block .amount {
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--warm);
+    line-height: 1;
+    margin: 0.5rem 0;
+  }
+  .price-block .terms {
+    color: rgba(245, 240, 235, 0.8);
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .cta-wrap { text-align: center; padding: 1rem 0; }
+  .cta {
+    display: inline-block;
+    background: var(--red);
+    color: var(--warm) !important;
+    padding: 1.1rem 2.4rem;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 6px;
+    border: none;
+    border-bottom: none !important;
+    box-shadow: 0 10px 30px rgba(230, 57, 70, 0.35);
+    transition: transform 150ms, box-shadow 150ms;
+  }
+  .cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 40px rgba(230, 57, 70, 0.45);
+    border-bottom: none !important;
+  }
+
+  .video-embed {
+    margin: 2rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  wistia-player { display: block; width: 100%; }
+
+  .divider {
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.4;
+    margin: 3rem 0;
+    max-width: 60px;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--rule);
+    padding: 1.5rem 0;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-item h4 {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+  }
+  section.dark .faq-item h4 { color: var(--warm); }
+  .faq-item p { color: inherit; }
+
+  .phase {
+    margin: 1.5rem 0 2rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--gold);
+  }
+  .phase h4 {
+    color: var(--gold);
+    font-family: 'DM Sans';
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+
+  footer {
+    background: var(--black);
+    color: rgba(245, 240, 235, 0.6);
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+  footer .mark {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    color: var(--warm);
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  @media print {
+    body { font-size: 11pt; }
+    section { padding: 2rem 0; page-break-inside: avoid; }
+    .cover, section.dark { background: white !important; color: var(--ink) !important; }
+    section.dark h1, section.dark h2, section.dark h3, section.dark h4, .cover h1 { color: var(--ink) !important; }
+    section.dark .subhead, .cover .tag, .eyebrow, .price-block .label, .callout h3 { color: var(--ink) !important; }
+    .price-block { background: #f5f0eb !important; color: var(--ink) !important; }
+    .price-block .amount { color: var(--ink) !important; }
+    .cta { display: none; }
+    .video-embed { display: none; }
+    footer { background: white; color: var(--ink); }
+    a { color: var(--ink); border-bottom: 1px solid var(--ink); }
+    @page { margin: 2cm; }
+  }
+
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.25rem; }
+    .cover h1 { font-size: 2.4rem; }
+    .cover .tag { font-size: 1.15rem; }
+    section { padding: 3.5rem 0; }
+    .callout, .price-block { padding: 1.5rem; }
+    .price-block .amount { font-size: 2.2rem; }
+    table { font-size: 0.85rem; }
+    th, td { padding: 0.6em 0.7em; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="wrap">
+    <span class="tag">The Sync Selling System</span>
+    <h1>How Vohkus Can<br /><span class="gold-italic">Get Every Rep Selling the Same Way</span><br />Without Hiring Another Enablement Head</h1>
+    <p class="line">A complete sales system diagnosed, built, and coached into your team.</p>
+    <p class="prepared">Prepared for <strong>Neo Paphitis, Simon Murdoch &amp; Charles Winfield</strong> &middot; May 2026</p>
+  </div>
+</section>
+
+<!-- 01 WHAT WE UNDERSTAND -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">01 &middot; Context</span>
+    <h2>What We Understand</h2>
+    <p class="subhead">30+ salespeople. Three teams. One missing system.</p>
+
+    <p>Vohkus has 30+ salespeople across three teams. Neo is scaling new business from 13 to 18 reps with monthly inductions and a retention rate of "one in five, probably one in eight." Simon's accounts team hasn't had sales training since Fast Track over a decade ago. Charles is driving services adoption across both teams, largely alone.</p>
+
+    <blockquote>"I've taken over this role from four or five other people, and I don't want to have the same outcome."</blockquote>
+
+    <p>You've invested in Salesforce, Cognism, LinkedIn Sales Nav, and CoPilot. Simon's assessment: "Literally no enablement at all in any part of our business."</p>
+
+    <p>The goal: new starters producing from week one, existing reps opening wider conversations, services built from the ground up, and the technology you're already paying for actually earning its keep.</p>
+  </div>
+</section>
+
+<!-- 02 THE PROBLEM -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">02 &middot; The Problem</span>
+    <h2>The Numbers Tell the Story</h2>
+    <p class="subhead">75% of new hires don't make it. The ones who stay have no system to run on.</p>
+
+    <p>Neo onboards 2-3 new reps every month. 75% don't make it. Simon's team runs one or two customer meetings a month across hundreds of buying accounts.</p>
+
+    <p>PST sessions going stale. Reps hiding behind admin. Excuses replacing activity. Services conversations that only happen when Charles is in the room.</p>
+
+    <p>The root cause: there is no repeatable sales process. No structured onboarding. No visibility into what's happening on calls. No playbooks for the tools already paid for. Each rep figures it out alone, or doesn't.</p>
+
+    <p>Every month without a system, Neo runs another induction that produces the same result. Failed hires cost money. Surviving reps operating at a fraction of their potential costs more. Both compound month after month.</p>
+  </div>
+</section>
+
+<!-- 03 WHAT ARE THE OPTIONS -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">03 &middot; Options</span>
+    <h2>What Are The Options</h2>
+    <p class="subhead">Four roads. Three dead ends.</p>
+
+    <p><strong>Hire another full-time sales enablement head.</strong> Four or five people have held this role. &pound;50-70K loaded, 3-6 months to ramp, and they still need a system to enable against. Without the system, you're asking someone to teach from a playbook that doesn't exist.</p>
+
+    <p><strong>Keep running PST sessions internally.</strong> The first few weeks produced results. Then it went stale. Attendance dropped. The reps who needed it most stopped showing up. Internal sessions work when there's a framework underneath. Without one, it's energy in, nothing sustained.</p>
+
+    <p><strong>Generic sales training.</strong> Off-the-shelf courses and motivational workshops. Techniques without a system. Two weeks later, everyone reverts.</p>
+
+    <p><strong>Keep going as you are.</strong> At 75% failure rate on new hires, the business is spending over &pound;165k per year on people who never produce. The problem compounds every month it goes unsolved.</p>
+  </div>
+</section>
+
+<!-- 04 WHAT YOU GET -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">04 &middot; Outcomes</span>
+    <h2>What You Get</h2>
+    <p class="subhead">Same team. Different output. Full visibility.</p>
+
+    <ul>
+      <li><strong>New starters producing in weeks, not months.</strong> A structured 90-day fast-track so every hire knows what to do, say, and prioritise from day one.</li>
+      <li><strong>Every rep following the same process for customer meetings.</strong> Agenda, preparation, discovery questions, follow-up. The basics, rebuilt and documented.</li>
+      <li><strong>Services revenue building from the ground up.</strong> Reps start conversations early, build trust through smaller engagements, and earn a seat at the table for the complex, high-value opportunities. Charles focuses on closing the big deals.</li>
+      <li><strong>Visibility into conversation quality.</strong> AI-powered call scoring shows what happened, what was missed, and what to coach. You'll know within weeks whether a rep is following the process.</li>
+      <li><strong>Your existing AI tools earning their keep.</strong> CoPilot, Cognism, LinkedIn Sales Nav. Playbooks for each, specific to Vohkus workflows. No new apps. No new spend.</li>
+      <li><strong>Neo coaching from data.</strong> The system carries the enablement load.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 05 HOW WE DO IT -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">05 &middot; Approach</span>
+    <h2>How We Do It</h2>
+    <p class="subhead">Build the track before you ask people to run on it.</p>
+
+    <p>Most companies fix sales by hiring a trainer or running sessions on closing techniques. That fails because the reps are running on a process that doesn't exist. Teaching people to run faster on a broken track doesn't fix the track.</p>
+
+    <p>We build the track first. The Sync Selling System reverse-engineers how your buyers make decisions, then builds a process around those decision points. Every rep follows the same path. Every call has a structure. Every follow-up is positioned against what the buyer needs to decide.</p>
+
+    <p>It works because the system is specific to how Vohkus's buyers behave.</p>
+
+    <h3>New starters aren't hitting the ground running. 75% don't make it.</h3>
+    <p>The New Starter Fast-Track Playbook maps the first 90 days: week-by-week actions, personas to target, first conversations, first pipeline. Every hire gets the same blueprint. The AI dashboard shows whether they're following it from week one.</p>
+
+    <h3>One or two meetings a month across hundreds of accounts.</h3>
+    <p>The Account Expansion Playbook gives reps a repeatable process for identifying new contacts, reaching out, and running meetings that open wider conversations. Preparation templates, discovery frameworks, follow-up sequences. Built around Vohkus's portfolio.</p>
+
+    <h3>Services conversations only happen when Charles is in the room.</h3>
+    <p>The Services Land-and-Expand Playbook gives every rep a framework for starting conversations early, winning trust through smaller transactional engagements, and earning a seat at the table for complex, high-value deals. Reps build the relationship. Charles closes the big ones. The pipeline builds from the bottom up.</p>
+
+    <h3>No visibility into conversation quality.</h3>
+    <p>The AI Sales Dashboard scores every call against the playbook. Which reps are asking the right questions. Which are accepting excuses at surface level. Which are building real pipeline. Visible without sitting on every call.</p>
+
+    <h3>CoPilot, Cognism, Sales Nav: all paid for, barely used.</h3>
+    <p>The AI Productivity Playbook maps each tool to daily workflows: account research, persona identification, outreach sequencing, meeting prep, follow-up drafting, proposal writing. No new technology. Playbooks for what's already on the screen.</p>
+
+    <p>Neo described reps "immersing themselves with admin to not get into the selling." Research that took an hour takes ten minutes. Follow-ups that took 30 minutes get drafted in two. The excuse evaporates when the tool does the work.</p>
+  </div>
+</section>
+
+<!-- 06 PROOF -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">06 &middot; Proof</span>
+    <h2>Vohkus Got Graduate Reps Generating &pound;1.2M Monthly Revenue in 6 Months</h2>
+
+    <div class="video-embed">
+      <script src="https://fast.wistia.com/embed/76232sa9wr.js" async type="module"></script>
+      <style>wistia-player[media-id='76232sa9wr']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/76232sa9wr/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
+      <wistia-player media-id="76232sa9wr" aspect="1.7777777777777777"></wistia-player>
+    </div>
+
+    <p>You already know this one. Graduate reps, no playbook, quoting but not closing. Leadership involved in every deal.</p>
+
+    <p>We built a trigger-driven sales playbook and trained the team. Within 6 months, &pound;1.2M in monthly revenue generated independently.</p>
+
+    <blockquote>Steve Williams: "The ROI comes. I have seen it with my own eyes."</blockquote>
+
+    <p>Same company. Same pattern. The difference is scale: full sales organisation, all three teams, with AI tools that didn't exist last time.</p>
+
+    <div class="divider"></div>
+    <p><em>300+ founders coached. &pound;185M+ in client revenue generated.</em></p>
+  </div>
+</section>
+
+<!-- 07 WHAT'S INCLUDED -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">07 &middot; Deliverables</span>
+    <h2>What's Included</h2>
+    <p class="subhead">Everything you need. Nothing you don't.</p>
+
+    <div class="phase">
+      <h4>Phase 01: Clarity and Foundation (Weeks 1-3)</h4>
+      <ul>
+        <li><strong>Full GTM Diagnostic Report.</strong> Outside-in assessment of your sales process, messaging, and buyer journey. Built from live calls, CRM data, and interviews. Every finding backed by evidence.</li>
+        <li><strong>New Starter Fast-Track Blueprint.</strong> The 90-day onboarding system. Week-by-week structure, priority accounts, first conversations, activity milestones. Same proven path for every hire.</li>
+        <li><strong>Buyer Decision Map.</strong> How Vohkus's buyers make decisions, mapped from real deals. Every playbook is built on this foundation.</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <h4>Phase 02: Sales Arsenal and Training (Weeks 3-8)</h4>
+      <p>Six playbooks, each built specifically for Vohkus:</p>
+      <ol>
+        <li><strong>Inbound/Discovery Playbook.</strong> So your reps qualify properly from the first conversation instead of accepting "send me a quote" and hoping for the best.</li>
+        <li><strong>Selling the Outcome Playbook.</strong> Sell the business result. Built to help reps land smaller services engagements that build trust and open the door to the larger, complex deals Charles specialises in.</li>
+        <li><strong>Proposal Playbook.</strong> Proposals that sell the experience back to the buyer. No more technical specs disguised as proposals that go out and die in silence.</li>
+        <li><strong>Objection Handling Playbook.</strong> Every excuse ("everyone's on holiday," "chip shortages," "year-end") scripted with a structured response. Resilience baked into the system.</li>
+        <li><strong>Follow-Up and Lead Nurture Playbook.</strong> What to send, when, and how to bring cold accounts back. So Simon's hundreds of buying accounts don't sit dormant because nobody knows how to re-engage.</li>
+        <li><strong>Triage and Qualification Playbook.</strong> Identify the prospects who will never buy. Reclaim that time. Stop reps spending weeks chasing accounts that were never going to trade.</li>
+      </ol>
+
+      <p><strong>AI Productivity Playbook and Workshops.</strong> CoPilot, Cognism, and Sales Nav mapped to daily selling workflows. Account research, persona identification, outreach sequencing, meeting prep, follow-up drafting, proposal writing. No new apps. Live workshops on what's already on the laptop.</p>
+
+      <h3>The AI Sales Toolkit</h3>
+      <ul>
+        <li><strong>AI Sales Coach.</strong> Every call scored against the playbook automatically. You see what was covered, what was missed, and where to coach. Neo and Simon get visibility into conversation quality without sitting on every call.</li>
+        <li><strong>AI Dashboard.</strong> At-a-glance view of the entire team's performance against the process. New starters tracked from week one. Leading indicators measured alongside revenue. Which reps are opening services conversations. Which aren't.</li>
+        <li><strong>AI Follow-Up Writer.</strong> Drop the call transcript in, get a positioned follow-up email that references the buyer's specific pain points and next steps. Every email meets the same standard.</li>
+        <li><strong>AI Proposal Writer.</strong> Proposals generated from call transcripts in minutes. Positioned against the buyer's decision criteria.</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <h4>Phase 03: Coaching and Implementation (Weeks 4-12)</h4>
+      <ul>
+        <li><strong>Monthly full-day workshops.</strong> Bigger chunks, less often. The team workshops real scenarios and leaves with actions to put into practice.</li>
+        <li><strong>New starter integration sessions.</strong> Every new cohort gets enabled on the system during their first month.</li>
+        <li><strong>Deal reviews and pipeline coaching.</strong> Live coaching on active deals using dashboard data and call transcripts.</li>
+        <li><strong>Management coaching for Neo and Simon.</strong> How to coach from data. How to spot the leading indicators that predict revenue before it shows up.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 08 THE NUMBERS -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">08 &middot; The Numbers</span>
+    <h2>The Maths Works at Every Level</h2>
+
+    <h3>The cost of the current model</h3>
+
+    <p>Take 15 new hires in a year. At a 75% failure rate, 11 don't make it. Each failed hire costs roughly 4 months of salary before they leave or are let go. At &pound;30k base, that's &pound;10k per head in salary alone.</p>
+
+    <div class="callout">
+      <span class="big-number">&pound;165k+</span>
+      <p>Wasted per year on failed hires. &pound;110k in salary. &pound;55k in recruitment and onboarding. Before management time, lost pipeline, and the opportunity cost of an empty seat.</p>
+    </div>
+
+    <p>And the ones who do stay? Without a system, without playbooks, without AI tools mapped to daily workflows, even the right people are operating at a fraction of their potential. You can hire someone with every attribute you need. If you hand them a laptop and say "get in front of customers," you're setting them up to fail.</p>
+
+    <h3>What success looks like</h3>
+    <p>By week 4, you'll have the diagnostic report, the new starter fast-track blueprint, and the first two playbooks built. By week 8, the AI dashboard is live, every rep has been through the first workshop, and you'll have measurable data on conversation quality across the team.</p>
+
+    <table>
+      <thead>
+        <tr><th>Metric</th><th>Now</th><th>Target</th><th>Timeframe</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>New starter retention</td><td>1 in 4 (25%)</td><td>1 in 2 (50%+)</td><td>6 months</td></tr>
+        <tr><td>Wasted salary on failed hires</td><td>~&pound;110k/year</td><td>Under &pound;40k/year</td><td>12 months</td></tr>
+        <tr><td>Customer meetings per rep/month</td><td>1-2</td><td>4-6</td><td>90 days</td></tr>
+        <tr><td>Reps opening services conversations</td><td>Charles + a handful</td><td>Every rep with a framework</td><td>8 weeks</td></tr>
+        <tr><td>Time from new hire to first pipeline activity</td><td>3-4 months</td><td>4-6 weeks</td><td>Next cohort</td></tr>
+      </tbody>
+    </table>
+
+    <p>We're targeting the floor. Even moving retention from 1 in 4 to 1 in 3 saves over &pound;50k per year in direct costs. Every additional customer meeting is an opportunity that didn't exist before. Every services conversation that happens without Charles in the room frees his capacity for the complex, high-value deals.</p>
+
+    <h3>What's required from the team</h3>
+    <ul>
+      <li>Half-day workshop once per month (all selling reps)</li>
+      <li>1 hour per week from Neo and Simon (coaching reviews, dashboard check-ins)</li>
+      <li>New starters: 2-3 hours per week during their first month (integrated into existing induction)</li>
+      <li>Access to Salesforce, CoPilot, Cognism, and call recordings</li>
+    </ul>
+
+    <div class="price-block">
+      <div class="label">Investment</div>
+      <div class="amount">Bespoke</div>
+      <div class="terms">Based on team size, scope, and timeline. Locked on the kickoff call.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 WORST CASE SCENARIO -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">09 &middot; Risk Reversal</span>
+    <h2>Worst Case Scenario</h2>
+
+    <p>For this not to work, the entire team would have to ignore every playbook, skip every workshop, and refuse to use the AI tools. Even then, the system exists permanently. Every future hire can be onboarded against it.</p>
+
+    <p>Realistic worst case: some reps adopt faster than others. The dashboard shows exactly who needs more coaching and where.</p>
+
+    <div class="callout">
+      <h3>The 14-Day Risk-Free Guarantee</h3>
+      <p>You have 14 days to decide this is the right fit. If it isn't, you get a full refund of anything paid. You keep everything we've built so far. No questions. No forms. No friction.</p>
+    </div>
+
+    <p>This carries less risk than a &pound;60K hire who takes six months to ramp and still needs a system to teach from.</p>
+
+    <p><em>We carry the risk because we've seen this work 300+ times.</em></p>
+  </div>
+</section>
+
+<!-- 10 FAQs -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">10 &middot; FAQs</span>
+    <h2>Questions You Might Be Asking</h2>
+
+    <div class="faq-item">
+      <h4>"What about reps who won't want their calls recorded?"</h4>
+      <p>Some will push back. The ones most reluctant tend to be the ones doing the fewest calls. The sell is simple: the tool writes your follow-up emails, drafts your proposals, and gives you coaching. The benefit is theirs. The reps who try it first become the proof for the rest.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>"We've had people in this role before and it hasn't worked. Why is this different?"</h4>
+      <p>This builds a system into the business. The playbooks, AI tools, and onboarding blueprint stay permanently. They work whether any individual stays or goes.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>"How much time does this take out of selling?"</h4>
+      <p>One half-day workshop per month. One hour per week for managers. New starters: 2-3 hours in their first month, integrated into the existing induction. Less time than the team spends on one stalled deal.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>"Will there be compliance issues with AI tools and call recording?"</h4>
+      <p>We work within your existing IT and compliance framework. CoPilot is already approved within your Microsoft estate. Call recording consent follows standard business practice. No new platforms. Just playbooks for the ones already approved.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>"What about internal account managers? Their needs are different."</h4>
+      <p>The playbooks are tiered. The IAM team gets a version focused on phone confidence, qualification, and warm handoff. Same core system, tailored application.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>"Can this work for reps at different experience levels?"</h4>
+      <p>The diagnostic identifies where each group needs help. The playbooks provide the framework. The AI dashboard personalises the coaching. Whether someone has six months' experience or ten years, the system meets them where they are.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>"What happens after the programme?"</h4>
+      <p>You own the system permanently. The playbooks, AI tools, templates, onboarding blueprint. If you want ongoing support, coaching continues at a monthly rate payable quarterly. AI Sales Coach access, weekly Q&amp;A calls, and quarterly strategy sessions with Joe. Entirely optional.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>"We're hiring new people in the next few weeks. Is it too late for them?"</h4>
+      <p>It's the perfect time. They become the first cohort through the new system. Their onboarding becomes the proof of concept for every hire after them.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 11 NEXT STEPS -->
+<section class="dark" style="background: var(--black);">
+  <div class="wrap" style="text-align: center;">
+    <span class="eyebrow">11 &middot; Next Steps</span>
+    <h2>One Decision</h2>
+
+    <p>Book the kickoff call. We lock in scope, timeline, and investment specific to your three-layer requirement.</p>
+
+    <p>Two new hires arriving in the next two weeks. Every week without the system is another induction that follows the old pattern. The pipeline gap widens every month it goes unaddressed.</p>
+
+    <p>Let's get moving before the next cohort starts without a track to run on.</p>
+
+    <div class="cta-wrap">
+      <a href="https://app.revitk.com/widget/bookings/syncselling" class="cta">Book the Kickoff Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <span class="mark">Revitk</span>
+    <p>Prepared for Vohkus &middot; May 2026</p>
+    <p>This proposal is confidential and prepared specifically for the named recipient.</p>
+  </div>
+</footer>
+
+</body>
+</html>

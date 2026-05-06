@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>DNET. The Sync Selling System</title>
+<meta name="description" content="A complete sales system diagnosed, built, and coached into DNET." />
+
+<!-- Social preview -->
+<meta property="og:title" content="DNET. The Sync Selling System" />
+<meta property="og:description" content="Proposal for DNET. Prepared by Revitk." />
+<meta property="og:type" content="website" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&display=swap" rel="stylesheet" />
+
+<!-- Wistia player (loaded once, individual embeds reference by media-id below) -->
+<script src="https://fast.wistia.com/player.js" async></script>
+
+<style>
+  :root {
+    --navy: #0F1923;
+    --black: #0B1120;
+    --red: #E63946;
+    --gold: #C5A572;
+    --warm: #F5F0EB;
+    --ink: #0F1923;
+    --muted: #4B5968;
+    --rule: rgba(197, 165, 114, 0.25);
+    --shadow: 0 24px 60px rgba(11, 17, 32, 0.12);
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--warm);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.4em;
+    color: var(--ink);
+  }
+
+  h1 { font-size: 3rem; line-height: 1.1; }
+  h2 { font-size: 2.25rem; line-height: 1.15; }
+  h3 { font-size: 1.4rem; line-height: 1.25; margin-top: 1.6em; }
+  h4 { font-size: 1.1rem; line-height: 1.3; }
+
+  /* Gold italic = inline word-level highlight ONLY. Never apply to full lines or whole headlines. */
+  .gold-italic {
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  p { margin: 0 0 1em; }
+  p + p { margin-top: 0; }
+
+  ul, ol { padding-left: 1.3em; margin: 0 0 1em; }
+  li { margin-bottom: 0.5em; }
+
+  blockquote {
+    border-left: 3px solid var(--gold);
+    background: rgba(197, 165, 114, 0.08);
+    padding: 1em 1.2em;
+    margin: 1.5em 0;
+    font-style: italic;
+    color: var(--ink);
+    border-radius: 0 6px 6px 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  th, td {
+    padding: 0.8em 1em;
+    text-align: left;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  th {
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: var(--navy);
+    color: var(--warm);
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  a { color: var(--red); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 120ms; }
+  a:hover { border-bottom-color: var(--red); }
+
+  /* Sections */
+  section {
+    padding: 5rem 0;
+    position: relative;
+  }
+
+  section.dark {
+    background: var(--navy);
+    color: var(--warm);
+  }
+  section.dark h1,
+  section.dark h2,
+  section.dark h3,
+  section.dark h4 {
+    color: var(--warm);
+  }
+  section.dark th { background: var(--black); }
+  section.dark td { border-bottom-color: rgba(245, 240, 235, 0.15); }
+  section.dark table { background: rgba(245, 240, 235, 0.04); }
+  section.dark blockquote {
+    background: rgba(197, 165, 114, 0.1);
+    color: var(--warm);
+    border-left-color: var(--gold);
+  }
+  section.dark a { color: var(--gold); }
+  section.dark a:hover { border-bottom-color: var(--gold); }
+
+  /* Section label (tiny uppercase above section headline) */
+  .eyebrow {
+    font-family: 'DM Sans';
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1em;
+    display: block;
+  }
+
+  /* Subhead = DM Sans, italic, muted. Not Playfair. Not gold. */
+  .subhead {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.15rem;
+    color: var(--muted);
+    margin: 0 0 2rem;
+    line-height: 1.45;
+    max-width: 640px;
+  }
+  section.dark .subhead { color: rgba(245, 240, 235, 0.75); }
+
+  /* Cover */
+  .cover {
+    background: var(--black);
+    color: var(--warm);
+    padding: 6rem 0 5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .cover h1 {
+    color: var(--warm);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-style: normal;
+  }
+  .cover .tag {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    display: block;
+  }
+  .cover .prepared {
+    font-family: 'DM Sans';
+    font-size: 0.95rem;
+    color: rgba(245, 240, 235, 0.7);
+    margin-top: 2rem;
+    letter-spacing: 0.02em;
+  }
+  .cover .line {
+    max-width: 520px;
+    color: rgba(245, 240, 235, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  /* Callout blocks (for guarantee, pricing) */
+  .callout {
+    background: rgba(197, 165, 114, 0.08);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+  section.dark .callout {
+    background: rgba(197, 165, 114, 0.1);
+  }
+  .callout h3 {
+    color: var(--ink);
+    margin-top: 0;
+  }
+  section.dark .callout h3 { color: var(--warm); }
+  .callout .big-number {
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--gold);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Price block */
+  .price-block {
+    background: var(--black);
+    color: var(--warm);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+  }
+  section.dark .price-block { background: rgba(245, 240, 235, 0.06); }
+  .price-block .label {
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .price-block .amount {
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--warm);
+    line-height: 1;
+    margin: 0.5rem 0;
+  }
+  .price-block .terms {
+    color: rgba(245, 240, 235, 0.8);
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* CTA button */
+  .cta-wrap { text-align: center; padding: 1rem 0; }
+  .cta {
+    display: inline-block;
+    background: var(--red);
+    color: var(--warm) !important;
+    padding: 1.1rem 2.4rem;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 6px;
+    border: none;
+    border-bottom: none !important;
+    box-shadow: 0 10px 30px rgba(230, 57, 70, 0.35);
+    transition: transform 150ms, box-shadow 150ms;
+  }
+  .cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 40px rgba(230, 57, 70, 0.45);
+    border-bottom: none !important;
+  }
+
+  /* Video embed wrapper */
+  .video-embed {
+    margin: 2rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  wistia-player { display: block; width: 100%; }
+
+  /* Gold divider */
+  .divider {
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.4;
+    margin: 3rem 0;
+    max-width: 60px;
+  }
+
+  /* FAQ item */
+  .faq-item {
+    border-bottom: 1px solid var(--rule);
+    padding: 1.5rem 0;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-item h4 {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+  }
+  section.dark .faq-item h4 { color: var(--warm); }
+  .faq-item p { color: inherit; }
+
+  /* Phase cards in What's Included */
+  .phase {
+    margin: 1.5rem 0 2rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--gold);
+  }
+  .phase h4 {
+    color: var(--gold);
+    font-family: 'DM Sans';
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--black);
+    color: rgba(245, 240, 235, 0.6);
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+  footer .mark {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    color: var(--warm);
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  /* Print styles */
+  @media print {
+    body { font-size: 11pt; }
+    section { padding: 2rem 0; page-break-inside: avoid; }
+    .cover, section.dark { background: white !important; color: var(--ink) !important; }
+    section.dark h1, section.dark h2, section.dark h3, section.dark h4, .cover h1 { color: var(--ink) !important; }
+    section.dark .subhead, .cover .tag, .eyebrow, .price-block .label, .callout h3 { color: var(--ink) !important; }
+    .price-block { background: #f5f0eb !important; color: var(--ink) !important; }
+    .price-block .amount { color: var(--ink) !important; }
+    .cta { display: none; }
+    .video-embed { display: none; }
+    footer { background: white; color: var(--ink); }
+    a { color: var(--ink); border-bottom: 1px solid var(--ink); }
+    @page { margin: 2cm; }
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.25rem; }
+    .cover h1 { font-size: 2.4rem; }
+    .cover .tag { font-size: 1.15rem; }
+    section { padding: 3.5rem 0; }
+    .callout, .price-block { padding: 1.5rem; }
+    .price-block .amount { font-size: 2.2rem; }
+    table { font-size: 0.85rem; }
+    th, td { padding: 0.6em 0.7em; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- COVER                                                         -->
+<!-- ============================================================ -->
+<section class="cover">
+  <div class="wrap">
+    <span class="tag">The Sync Selling System</span>
+    <h1>How DNET Can<br /><span class="gold-italic">Add £1M+ in SME Direct Revenue</span><br />Without Famine and Feast</h1>
+    <p class="line">A complete sales system diagnosed, built, and coached into your business.</p>
+    <p class="prepared">Prepared for <strong>Matthew Robinson</strong> · May 2026</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 01 WHAT WE UNDERSTAND (warm white)                            -->
+<!-- ============================================================ -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">01 · Context</span>
+    <h2>What We Understand</h2>
+    <p class="subhead">Twenty years of distribution built DNET. The next channel needs a different engine.</p>
+    <p>DNET has been the UK fog-security category for two decades. Big national accounts won through ADT, Chubb, and the partner channel: ASDA, Co-op, Sainsbury's, Tesco, Boots, the banks. The product works. The 97% theft reduction at Argos in six months is the proof.</p>
+<p>The channel is the bottleneck. You said it on the call: <em>"It's all famine and feast. We get big contracts in and then we're fighting for the next one."</em> When ADT walks DNET into a Tesco, they pivot the buyer to CCTV because their margin lives there. DNET becomes the door-opener for someone else's higher-margin install.</p>
+<p>The SME market has stayed shut for the same reason. The distribution motion can't reach a small jeweller, a high-street shop, or an independent warehouse economically. And DNET has never had the direct-to-end-user infrastructure to go after them.</p>
+<p>The goal you set on the call: 10 to 20 SME deals a week, sustained. £1M+ a year out of UK SME direct. A channel that runs without you or Dean. A business saleable because the revenue is predictable.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 02 THE PROBLEM (dark navy)                                    -->
+<!-- ============================================================ -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">02 · The Problem</span>
+    <h2>The Numbers Tell the Story</h2>
+    <p class="subhead">What the next eight weeks need to fix.</p>
+    <p>The gap sits between the lead arriving and the deal closing. The marketing engine is built to bring SME enquiries through the door. When the website goes live, more direct enquiries will arrive than DNET has ever handled.</p>
+<p>There is no documented sales process. No discovery questions written down. No proposal template that walks an SME owner from "I'm worried about break-ins" to "where do I sign?" No call scoring. No onboarding kit for the salesperson who will be answering those calls in eight weeks.</p>
+<p>You said it on the call: <em>"If I was to say, write down the sales process... it would need laying out for to bring somebody else into it all."</em></p>
+<p><strong>Root cause:</strong> DNET's commercial muscle was built for partners and procurement teams. The SME direct channel needs a different one, built specifically for it.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 03 WHAT ARE THE OPTIONS (warm white)                          -->
+<!-- ============================================================ -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">03 · Options</span>
+    <h2>What Are The Options</h2>
+    <p class="subhead">The fastest route to the second engine, with the least risk to what already works.</p>
+    <p>DNET is already a category leader. Twenty years of national accounts. A US arm doing seven figures. A direct mail test that pulled a 60% response rate before the website is even live. The market is there. The product is proven. The question is which path through the SME channel gets DNET to that £1M+ direct line quickest, without disrupting what's already running.</p>
+<h3>Build it yourself</h3>
+<p>Matt has built a successful business twice. The capability is there. The cost is timing. Working it out in real time, with leads arriving and a salesperson watching, costs months of guesswork at the moment when momentum matters most. Every wrong message tested against a live prospect is a deal lost. You said it yourself: <em>"There's a reason I responded to you. It could be worth a chat rather than reinvent the wheel."</em></p>
+<h3>Stay with distribution</h3>
+<p>ADT, Chubb, the SME divisions of the big alarm companies. Familiar territory and a real revenue stream. The limit is structural. They use DNET as the door-opener and pivot the buyer to CCTV because that's where their margin lives. Adding a direct channel beside the partner channel is what changes the famine-and-feast pattern.</p>
+<h3>Hire a salesperson and figure it out together</h3>
+<p>£40,000+ loaded for a UK B2B sales hire. Six months minimum to know if they can sell, twelve to know for sure. They walk into a blank slate. You become their full-time trainer and their full-time manager.</p>
+<p>The path that compresses the timeline, builds the asset, and de-risks the hire is to put the system in before the leads start arriving.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 04 WHAT YOU GET (dark navy)                                   -->
+<!-- ============================================================ -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">04 · Outcomes</span>
+    <h2>What You Get</h2>
+    <p class="subhead">A sales engine. A saleable business. A repeatable model.</p>
+    <p>You said the bottom-line goal: <em>"I need to find a system that works and brings in regular small business on a regular basis. When the supermarkets sign up, well, it's the cherry on the cake rather than the cake."</em></p>
+<p>Here's what changes:</p>
+<ul>
+<li>A documented sales process that turns an inbound enquiry from your estimating tool into a £2,500 close. In your language, on your team's schedule.</li>
+<li>The ability to hand a new salesperson the system and know within weeks whether they can sell it.</li>
+<li>A weekly dashboard scoring every call. You log in, see who asked the right questions and where deals stalled. Twenty minutes a week.</li>
+<li>A proposal process built for SME owners. Walked through with the buyer, with the next step booked before the call ends.</li>
+<li>A playbook Matt translates when DNET goes into India and the next territory. Same structure. Same scoring.</li>
+<li>Predictable, recurring SME revenue. The number you defend in front of an acquirer.</li>
+</ul>
+<p>One channel becomes two. The cherry stays on top. The cake comes from the SME engine.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 05 HOW WE DO IT (warm white)                                  -->
+<!-- ============================================================ -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">05 · Approach</span>
+    <h2>How We Do It</h2>
+    <p class="subhead">Build the track before you ask anyone to run on it.</p>
+    <p>Most companies cracking a new channel try the same three plays. They run more ads, hoping volume fixes conversion. They hire a salesperson, hoping a strong individual fixes the system. They book a sales training course, hoping a workshop fixes a process gap.</p>
+<p>Each one fails for the same reason. There is no track underneath. Faster reps on a broken track produce the same outcome with more confidence and more wasted spend.</p>
+<p>The Sync Selling System works backwards from your buyer. We diagnose how an SME owner actually decides to buy a £2,500 fog-security install. We build a step-by-step process around that decision. Then we coach you, Dean, and your first hire through live deals until the system runs without you. Specific to DNET's product, DNET's calls, and how a high-street retailer thinks about loss, insurance, and protection.</p>
+<h3>Famine and feast</h3>
+<p>No predictable demand engine outside the partner channel. The marketing engine fixes the top of the funnel. The sales system fixes everything below it. Lead arrives, qualified through the estimating tool, lands on a calendar, runs through a documented call structure, closes against a written playbook. Predictable revenue is what makes the business saleable.</p>
+<h3>Distributor drag</h3>
+<p>ADT and Chubb make more selling CCTV. The proposal playbook positions DNET against the alternative. Walks the buyer through why one fog unit replaces the steel doors, the shutters, and the extra cameras. The buyer chooses DNET because they understand it. When a partner comes into the deal, you control the price and the install path.</p>
+<h3>No SME traction</h3>
+<p>The distribution motion was built for procurement. The SME owner buys differently. The discovery playbook surfaces a £4K bundle from a buyer who came in for a £2,500 quote. The video assets lift show-up rates above 80%. The WhatsApp sequences bring "let me think about it" leads back into the diary.</p>
+<h3>Dean is technical</h3>
+<p>Joe said it on the call. Matt agreed: <em>"I know that now."</em> Dean is a brilliant technical specifier. The SME sale is a commercial conversation. The playbook splits the call. Commercial discovery first, in a structure Matt can run alone or with a future hire. Technical scope-out second, where Dean is unbeatable.</p>
+<h3>The hire</h3>
+<p>Today, you'd hire blind. After this, you hand a new salesperson a complete training course, a scored AI dashboard, and weekly group coaching from Joe. You know in three weeks whether they can sell it.</p>
+<p>The AI Sales Coach, AI Proposal Writer, and AI Dashboard sit underneath the playbooks. They are the visibility layer. Twenty minutes a week of dashboard review tells you who asked the right questions, who walked the proposal, and who needs coaching this week.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 06 PROOF (dark navy) — VIDEO EMBED                            -->
+<!-- ============================================================ -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">06 · Proof</span>
+    <h2>Vohkus Scaled to £1.2M Monthly Revenue in 12 Months</h2>
+
+    <div class="video-embed">
+      <script src="https://fast.wistia.com/embed/76232sa9wr.js" async type="module"></script>
+      <style>wistia-player[media-id='76232sa9wr']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/76232sa9wr/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
+      <wistia-player media-id="76232sa9wr" aspect="1.7777777777777777"></wistia-player>
+    </div>
+
+    <p>Vohkus came in with graduate sales reps, no experience, no playbook, and a founder who was on every deal. The team couldn't operate independently. There was no system underneath.</p>
+<p>We built one. Graduates were given structure. Within twelve months, the team was running independently, scaling consistently, and had closed a £1M+ deal with an oil and gas company.</p>
+<blockquote><em>"The ROI comes. I have seen it with my own eyes."</em><br />Steve Williams, Vohkus</blockquote>
+<p>Different industry, identical pattern. A team that couldn't scale because no one had documented what good looked like. We built the system. The revenue followed.</p>
+
+    <div class="divider"></div>
+    <p><em>300+ founders coached. £185M+ in client revenue generated.</em></p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 07 WHAT'S INCLUDED (warm white)                               -->
+<!-- ============================================================ -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">07 · Deliverables</span>
+    <h2>What's Included</h2>
+    <p class="subhead">Everything you need. Nothing you don't.</p>
+    <p>The programme runs in two stages.</p>
+<div class="phase">
+<h4>Phase 01 · Clarity, Process, First Playbooks (4 weeks)</h4>
+<ul>
+<li>90-minute GTM Diagnostic Workshop with Joe, you, and Dean. Your commercial logic mapped end to end.</li>
+<li>Full Diagnostic Report. Every gap and lever, in writing. The artefact you walk Kerry and Daryl through.</li>
+<li>Market research on the SME buyer. Reddit, retail association forums, post-break-in news, so your messaging speaks to what the buyer is actually feeling.</li>
+<li>Inbound and Discovery Playbook. Exact questions, in the order that surfaces a full job rather than a one-room install.</li>
+<li>Proposal Playbook. So your two-and-a-half-grand quote walks the buyer through the decision.</li>
+<li>KPI tracking sheets specific to fog-security direct sales. The metrics you watch weekly and the lever to pull when each moves out of range.</li>
+<li>Two coaching sessions with Joe to put it into practice on live calls.</li>
+</ul>
+</div>
+<div class="phase">
+<h4>Phase 02 · Full Build, AI Toolkit, Hire Onboarding (8 weeks)</h4>
+<p>Triggered when you're ready to hire. Everything in Stage 1, plus:</p>
+<ul>
+<li>Six playbooks fully built for DNET: Discovery, Selling the Outcome, Proposal, Objection Handling, Follow-Up &amp; Lead Nurture, Triage &amp; Qualification.</li>
+<li>Sync Selling AI Sales Toolkit:
+<ul>
+<li><strong>AI Sales Coach.</strong> Drop a call recording in. Score against the DNET playbook in minutes. Exact feedback.</li>
+<li><strong>AI Proposal Writer.</strong> Call transcript in. Positioned DNET proposal out, ready to walk through.</li>
+<li><strong>AI Email Writer.</strong> Follow-up sequences in DNET's voice and against DNET's case studies.</li>
+</ul>
+</li>
+<li><strong>AI Sales Dashboard.</strong> Every call from the new hire scored automatically. Twenty minutes a week of review.</li>
+<li>Hire onboarding programme. Training videos covering every section of the playbook. Self-serve foundation, coached nuance.</li>
+<li>16 live group coaching sessions across 8 weeks. Q&amp;A, deal clinics, objection drills.</li>
+<li>Direct WhatsApp access to Joe across the full programme.</li>
+</ul>
+</div>
+<p>You own everything permanently. India can use it next year.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 08 THE NUMBERS (dark navy) — PRICING                          -->
+<!-- ============================================================ -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">08 · The Numbers</span>
+    <h2>The Maths Works at Every Level</h2>
+    <p><em>By week 4 you'll have the diagnostic, the first two playbooks live, and the inbound process running against any leads already arriving. By week 8 of Stage 2 the new salesperson will be onboarded against the system, every call scored, and the dashboard giving you weekly visibility on the deals. That's how we'll both know it's working.</em></p>
+<p>Conservative target picture, twelve months in:</p>
+<table>
+<thead><tr><th>Metric</th><th>Now</th><th>Conservative 12-Month Target</th></tr></thead>
+<tbody>
+<tr><td>UK SME direct revenue</td><td>£0</td><td>£520K (5 deals/week × £2K avg × 52 weeks)</td></tr>
+<tr><td>SME direct deals/week</td><td>0</td><td>5 to 10</td></tr>
+<tr><td>Average install value</td><td>None today</td><td>£2,000 to £2,500</td></tr>
+<tr><td>Onboarding time to productive</td><td>None today</td><td>4 to 6 weeks</td></tr>
+</tbody>
+</table>
+<p>Five deals a week at £2,000 puts £520K on the board in year one. Stretch case at ten deals at £2,500 is £1.3M. You said £1M was the line for "interesting." We're targeting the floor.</p>
+<p>The investment is split across the two phases. <strong>Stage 1 (£3,000 + VAT)</strong> covers the four-week diagnostic, market research, and first two playbooks. <strong>Stage 2 (£6,000 + VAT)</strong> only triggers when you're ready to onboard the first salesperson. No payment due until you say go.</p>
+<p>Optional ongoing support after Stage 2: £600/month for one rep, £800/month up to five, payable quarterly. Continuation is optional.</p>
+<p><strong>Payback:</strong> under five SME deals.</p>
+<p><strong>What's required from you and Dean:</strong> 90-minute diagnostic, two coaching calls in Stage 1, and 20 minutes a week reviewing the dashboard once Stage 2 is live.</p>
+
+    <div class="price-block">
+      <div class="label">Investment</div>
+      <div class="amount">£9,000 + VAT</div>
+      <div class="terms">£3,000 Stage 1 (kickoff) &middot; £6,000 Stage 2 (when you hire)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 09 WORST CASE SCENARIO (warm white) — GUARANTEE               -->
+<!-- ============================================================ -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">09 · Risk Reversal</span>
+    <h2>Worst Case Scenario</h2>
+    <p>For this not to work, the diagnostic would have to surface zero gaps in DNET's direct-sale process. You said it yourself on the call: <em>"It would need laying out for to bring somebody else into it all."</em></p>
+<p>The realistic worst case: Stage 1 surfaces the gaps, the playbooks land, but the timing doesn't suit DNET. You stop. You keep everything Stage 1 produced. Stage 2 never gets invoiced.</p>
+<p>Stage 2 triggers only when you say go. There's never a £6,000 invoice waiting for a salesperson you haven't found.</p>
+
+    <div class="callout">
+      <h3>The 14-Day Risk-Free Guarantee</h3>
+      <p>You have 14 days to decide this is the right fit. If it isn't, you get a full refund of anything paid. You keep everything we've built so far. No questions. No forms. No friction.</p>
+      <p style="margin-top: 1rem;"><em>Stage 2 only triggers when you say go. The £3,000 deposit covers the diagnostic and first playbooks. The £6,000 is only due when you’re ready to onboard the first salesperson.</em></p>
+    </div>
+
+    <p><em>We carry the risk because we've seen this work 300+ times.</em></p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 10 FAQs (dark navy)                                           -->
+<!-- ============================================================ -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">10 · FAQs</span>
+    <h2>Questions You Might Be Asking</h2>
+    <div class="faq-item">
+<h4>The website and marketing engine aren't live yet. Why not wait until they are?</h4>
+<p>Because the system needs to be in place before the leads arrive. When the marketing switches on, every conversion gap becomes a paid lesson. Stage 1 is four weeks. It runs in parallel with the website build. The first leads that hit your inbox land in a documented process.</p>
+</div>
+<div class="faq-item">
+<h4>Matt is the only seller right now. Is this overkill until we hire?</h4>
+<p>The opposite. Hiring without a documented system is the most expensive thing a business can do. £40K+ of salary. Six months minimum to know if they can sell. With the system, you know in weeks. The £6,000 Stage 2 investment is less than two weeks of a wrong hire's salary.</p>
+</div>
+<div class="faq-item">
+<h4>We've always done distribution. How do you know direct works in our market?</h4>
+<p>You don't yet, and that's why Stage 1 is structured as a 14-day risk-free diagnostic. You see the playbook, the questions, and the proposal walkthrough structure before committing to Stage 2. If the diagnostic surfaces nothing useful, you walk and keep everything we've built.</p>
+</div>
+<div class="faq-item">
+<h4>Joe doesn't have a fog-security background. Does this still apply?</h4>
+<p>Vohkus had the same concern. Different industry, same pattern. The principles of how a buyer decides hold across security, IT, music PR, or anything else where you're selling a £2,500+ install to an owner-operator. The execution is always specific to your market. That's what Stage 1 delivers.</p>
+</div>
+<div class="faq-item">
+<h4>How does the payment work?</h4>
+<p>£3,000 + VAT on the kickoff call to start Stage 1. £6,000 + VAT due only when you confirm you're ready to hire and Stage 2 begins. 14-day risk-free window from the start of Stage 1.</p>
+</div>
+<div class="faq-item">
+<h4>What happens after Stage 2?</h4>
+<p>You own everything permanently. Playbooks, AI tools, dashboard, templates. India and the next territory get the same. If you want ongoing support, coaching continues at £600/month for one rep or £800/month for up to five reps, payable quarterly excl. VAT. AI Sales Coach access, weekly Q&amp;A calls with Joe, two quarterly strategy sessions a year.</p>
+</div>
+<div class="faq-item">
+<h4>How much of Matt and Dean's time does this take?</h4>
+<p>A 90-minute workshop at the start. Two coaching calls in Stage 1, 60 minutes each. A team session when you hire. After that, 20 minutes a week reviewing the dashboard.</p>
+</div>
+<div class="faq-item">
+<h4>What if Kerry and Daryl want more detail before signing off?</h4>
+<p>Joe will join a call with all three shareholders to walk through the diagnostic findings and the build plan.</p>
+</div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 11 NEXT STEPS (deep black) — RED CTA                          -->
+<!-- ============================================================ -->
+<section class="dark" style="background: var(--black);">
+  <div class="wrap" style="text-align: center;">
+    <span class="eyebrow">11 · Next Steps</span>
+    <h2>One Decision</h2>
+    <p>Lock in Stage 1. £3,000 + VAT. We schedule the diagnostic with you and Dean within ten days. You'll have the diagnostic report, the first playbooks, and a tested process before your website goes live.</p>
+<p>The marketing engine switches on in four to eight weeks. Every week without a documented sales process underneath it is a week of leads worked on muscle memory. Those weeks don't come back.</p>
+<p>You said it on the call: <em>"It's worth a chat. It's not a direction I've been working in for many, many years."</em> Twenty years of distribution built DNET. The next twenty start with a process you can hand to anyone.</p>
+<p style="margin-top: 2rem; font-size: 1.15rem;"><strong>One decision. Four weeks. Full refund inside fourteen days.</strong></p>
+
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- FOOTER                                                        -->
+<!-- ============================================================ -->
+<footer>
+  <div class="wrap">
+    <span class="mark">Revitk</span>
+    <p>Prepared for DNET · May 2026</p>
+    <p>This proposal is confidential and prepared specifically for the named recipient.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Rosenfield Health · One Page Business Case</title>
+<meta name="description" content="A one page business case for Rosenfield Health. Prepared by Revitk." />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --navy: #0F1923;
+    --black: #0B1120;
+    --red: #E63946;
+    --gold: #C5A572;
+    --warm: #F5F0EB;
+    --ink: #0F1923;
+    --muted: #4B5968;
+    --rule: rgba(197, 165, 114, 0.25);
+    --shadow: 0 24px 60px rgba(11, 17, 32, 0.12);
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--warm);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .wrap {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    margin: 0 0 0.4em;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  h1 { font-size: 3rem; line-height: 1.08; }
+  h2 { font-size: 2.1rem; line-height: 1.15; margin-bottom: 0.5em; }
+  h3 { font-size: 1.35rem; line-height: 1.25; margin-top: 1.4em; }
+  h4 { font-size: 1.05rem; line-height: 1.3; }
+
+  .gold-italic {
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  p { margin: 0 0 1em; }
+  ul, ol { padding-left: 1.3em; margin: 0 0 1em; }
+  li { margin-bottom: 0.45em; }
+
+  strong { font-weight: 700; }
+
+  /* Sections */
+  section { padding: 4.5rem 0; position: relative; }
+  section.dark {
+    background: var(--navy);
+    color: var(--warm);
+  }
+  section.dark h1, section.dark h2, section.dark h3, section.dark h4 { color: var(--warm); }
+  section.darker { background: var(--black); color: var(--warm); }
+  section.darker h1, section.darker h2, section.darker h3, section.darker h4 { color: var(--warm); }
+
+  /* Eyebrow */
+  .eyebrow {
+    font-family: 'DM Sans';
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1em;
+    display: block;
+  }
+
+  .subhead {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--muted);
+    margin: 0 0 2rem;
+    line-height: 1.45;
+    max-width: 640px;
+  }
+  section.dark .subhead, section.darker .subhead { color: rgba(245, 240, 235, 0.75); }
+
+  /* Cover */
+  .cover {
+    background: var(--black);
+    color: var(--warm);
+    padding: 5.5rem 0 4.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .cover h1 {
+    color: var(--warm);
+    font-size: 3.2rem;
+    line-height: 1.08;
+    margin-bottom: 1.4rem;
+  }
+  .cover .tag {
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.6rem;
+    display: block;
+  }
+  .cover .line {
+    max-width: 600px;
+    color: rgba(245, 240, 235, 0.88);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 1.6rem;
+  }
+  .cover .prepared {
+    font-family: 'DM Sans';
+    font-size: 0.95rem;
+    color: rgba(245, 240, 235, 0.7);
+    margin-top: 2rem;
+    letter-spacing: 0.02em;
+  }
+
+  /* Number callouts */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  @media (max-width: 600px) {
+    .stat-grid { grid-template-columns: 1fr; }
+  }
+  .stat {
+    background: rgba(197, 165, 114, 0.08);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 1.6rem 1.4rem;
+  }
+  section.dark .stat, section.darker .stat {
+    background: rgba(197, 165, 114, 0.1);
+  }
+  .stat .big {
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    font-size: 2.4rem;
+    color: var(--gold);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+  .stat .label {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+  section.dark .stat .label, section.darker .stat .label { color: rgba(245, 240, 235, 0.78); }
+
+  /* Path cards */
+  .path-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+  }
+  .path {
+    background: rgba(15, 25, 35, 0.04);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--muted);
+    border-radius: 10px;
+    padding: 1.4rem 1.6rem;
+  }
+  .path.recommended {
+    border-left-color: var(--red);
+    background: rgba(230, 57, 70, 0.04);
+  }
+  .path h4 {
+    margin: 0 0 0.4em;
+    color: var(--ink);
+    font-size: 1.15rem;
+  }
+  .path .pill {
+    display: inline-block;
+    font-family: 'DM Sans';
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    background: var(--red);
+    color: var(--warm);
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    margin-left: 0.6rem;
+    vertical-align: middle;
+  }
+  .path .pill.muted {
+    background: var(--muted);
+  }
+  .path p { margin: 0.4em 0 0; color: var(--muted); }
+
+  /* Tier comparison */
+  .tier-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+    margin: 2rem 0;
+  }
+  @media (max-width: 700px) {
+    .tier-grid { grid-template-columns: 1fr; }
+  }
+  .tier {
+    background: rgba(15, 25, 35, 0.03);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 1.8rem 1.6rem;
+  }
+  .tier.full {
+    background: rgba(197, 165, 114, 0.08);
+    border-color: var(--gold);
+  }
+  .tier h4 {
+    margin: 0 0 0.3em;
+    font-size: 1.2rem;
+  }
+  .tier .tier-eyebrow {
+    font-family: 'DM Sans';
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.4em;
+    display: block;
+  }
+  .tier ul { padding-left: 1.1em; margin-top: 0.8em; }
+  .tier li { font-size: 0.95rem; }
+
+  /* Included grid */
+  .included {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 2rem;
+    margin: 1.5rem 0 2rem;
+  }
+  @media (max-width: 600px) {
+    .included { grid-template-columns: 1fr; }
+  }
+  .included .item {
+    border-left: 2px solid var(--gold);
+    padding-left: 1rem;
+  }
+  .included .item h4 {
+    margin: 0 0 0.2em;
+    font-size: 1rem;
+    color: var(--ink);
+  }
+  section.dark .included .item h4, section.darker .included .item h4 { color: var(--warm); }
+  .included .item p { font-size: 0.92rem; color: var(--muted); margin: 0; }
+  section.dark .included .item p, section.darker .included .item p { color: rgba(245, 240, 235, 0.78); }
+
+  /* Price block */
+  .price-block {
+    background: var(--black);
+    color: var(--warm);
+    border-radius: 14px;
+    padding: 2.4rem 2rem;
+    margin: 1.5rem 0 2rem;
+    text-align: center;
+  }
+  section.dark .price-block, section.darker .price-block { background: rgba(245, 240, 235, 0.06); }
+  .price-block .label {
+    font-size: 0.8rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+  .price-block .amount {
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    font-size: 3.2rem;
+    color: var(--warm);
+    line-height: 1;
+    margin: 0.2rem 0 0.5rem;
+  }
+  .price-block .strike {
+    text-decoration: line-through;
+    color: rgba(245, 240, 235, 0.55);
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+  .price-block .terms {
+    color: rgba(245, 240, 235, 0.85);
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Callout */
+  .callout {
+    background: rgba(197, 165, 114, 0.08);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    padding: 1.8rem 1.8rem;
+    margin: 1.8rem 0;
+  }
+  section.dark .callout, section.darker .callout { background: rgba(197, 165, 114, 0.1); }
+  .callout h3 { margin-top: 0; }
+
+  /* CTA */
+  .cta-wrap { text-align: center; padding: 1rem 0 0; }
+  .cta {
+    display: inline-block;
+    background: var(--red);
+    color: var(--warm);
+    padding: 1.05rem 2.2rem;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(230, 57, 70, 0.32);
+    transition: transform 150ms, box-shadow 150ms;
+  }
+  .cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 38px rgba(230, 57, 70, 0.42);
+  }
+
+  /* Divider */
+  .divider {
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.4;
+    margin: 2.5rem 0;
+    max-width: 60px;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--black);
+    color: rgba(245, 240, 235, 0.6);
+    padding: 2.5rem 0;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+  footer .brand {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="wrap">
+    <span class="tag">One Page Business Case · May 2026</span>
+    <h1>Building Rosenfield's <span class="gold-italic">Commercial Engine</span></h1>
+    <p class="line">A focused three-month engagement to design the sales process, hiring system and pipeline visibility you need before the next person walks through the door.</p>
+    <p class="prepared">Prepared for Ahmed Adnan · Rosenfield Health</p>
+  </div>
+</section>
+
+<!-- THE PICTURE -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">01 · Where Rosenfield Is Now</span>
+    <h2>The picture in numbers</h2>
+    <p class="subhead">A great product. Real reference customers. A founder still personally responsible for every meaningful sale.</p>
+
+    <div class="stat-grid">
+      <div class="stat">
+        <span class="big">£1.5m</span>
+        <span class="label">Annual revenue today, almost all generated through you and the PACS partnerships.</span>
+      </div>
+      <div class="stat">
+        <span class="big">30+</span>
+        <span class="label">Live NHS trusts on Rosenfield solutions. Strong proof, no system to scale it.</span>
+      </div>
+      <div class="stat">
+        <span class="big">£300m</span>
+        <span class="label">Addressable market across UK, Europe, Middle East and beyond, largely untouched.</span>
+      </div>
+      <div class="stat">
+        <span class="big">3</span>
+        <span class="label">Senior commercial hires in three years. None of them built you a pipeline.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COST OF DOING NOTHING -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">02 · The Maths of Doing Nothing Again</span>
+    <h2>£100k already lost. <span class="gold-italic">£1-2m a year still on the table.</span></h2>
+    <p class="subhead">The cost is not just the senior hires that did not work. It is the year you lose every time you try to solve this without a system underneath the role.</p>
+
+    <div class="stat-grid">
+      <div class="stat">
+        <span class="big">£100k+</span>
+        <span class="label">Cumulative cost of three senior commercial hires that never produced pipeline.</span>
+      </div>
+      <div class="stat">
+        <span class="big">£1-2m</span>
+        <span class="label">Annual revenue gap between staying at ~£2m and the £3-4m you believe is realistic.</span>
+      </div>
+      <div class="stat">
+        <span class="big">12 mo</span>
+        <span class="label">The window you are about to spend testing another hire without changing the underlying system.</span>
+      </div>
+      <div class="stat">
+        <span class="big">0</span>
+        <span class="label">Ways to tell, in month two or three, whether the next hire is actually any good.</span>
+      </div>
+    </div>
+
+    <p>Doing nothing is not free. It is choosing to leave that £1m to £2m a year with competitors, or unserved, while you continue to be the bottleneck for every meaningful new opportunity.</p>
+  </div>
+</section>
+
+<!-- THREE PATHS -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">03 · Three Paths From Here</span>
+    <h2>Pick the one you can defend in 12 months' time</h2>
+    <p class="subhead">Every option below answers the same question: how do you go from founder-led selling to a commercial engine you actually trust?</p>
+
+    <div class="path-grid">
+
+      <div class="path">
+        <h4>Path 1 · Hire another senior leader <span class="pill muted">High risk</span></h4>
+        <p>Bring in a CCO or sales director at £8k to £10k a month. Trust them to design the process, hire the team and run it. The risk you raised on the call: you still cannot define the role, interview for hunter versus gatherer, or measure in the first 90 days whether they are building the right system. Twelve months later you could be founder-led and no closer to a playbook, with another £100k spent.</p>
+      </div>
+
+      <div class="path">
+        <h4>Path 2 · Pause and stay reactive <span class="pill muted">Lock-in</span></h4>
+        <p>Let GE, Philips, Fujifilm and a future Saudi hire dictate your pace. No short-term cost. Locks in the current state. Revenue stays around £2m, the global opportunity stays untouched, and you stay the only person carrying the company commercially.</p>
+      </div>
+
+      <div class="path recommended">
+        <h4>Path 3 · Build the foundations first, then hire on top <span class="pill">Recommended</span></h4>
+        <p>A focused three-month engagement to map the roles, design the outbound and partnership playbooks, build the hiring and interview process, and put in place an evaluation system so you can see in weeks (not years) whether anyone you bring in is actually moving the business. Then we recruit and onboard a hunter BDM straight onto a proven track. £7k total, structured to de-risk the decision.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">04 · What Path 3 Includes</span>
+    <h2>The three-month foundation engagement</h2>
+    <p class="subhead">Everything you need to stop guessing about sales hires, partner outreach and pipeline quality. Customer success process bundled in if we move forward this week.</p>
+
+    <div class="included">
+      <div class="item">
+        <h4>Diagnostic & strategy</h4>
+        <p>Workshop to map the roles you need, the partner tiering, the priority personas in NHS, GCC and EU.</p>
+      </div>
+      <div class="item">
+        <h4>Outbound playbook</h4>
+        <p>Direct-to-customer process: channels, messaging, verified contact data, scripts, sequences.</p>
+      </div>
+      <div class="item">
+        <h4>Partnership playbook</h4>
+        <p>Process to expand GE, Philips and Fujifilm partnerships, plus Agfa and Sectra entry plans.</p>
+      </div>
+      <div class="item">
+        <h4>Customer success process</h4>
+        <p>Account review and upsell motion across the 30+ live NHS trusts. Bundled in if we move this week.</p>
+      </div>
+      <div class="item">
+        <h4>AI sales dashboard</h4>
+        <p>Every BDM call scored automatically. You see, at a glance, whether they are asking the right questions and moving deals forward.</p>
+      </div>
+      <div class="item">
+        <h4>Hiring & interview playbook</h4>
+        <p>Role spec, interview tests, hunter-versus-gatherer assessment, recruiter partners (most discounted or free).</p>
+      </div>
+      <div class="item">
+        <h4>Training videos & assets</h4>
+        <p>Step-by-step walkthroughs of every play, so a new BDM can self-serve from day one.</p>
+      </div>
+      <div class="item">
+        <h4>90 days of fractional support</h4>
+        <p>Joe embedded as your fractional commercial officer through hire, onboarding and first weeks of activity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TWO TIERS -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">05 · Two Ways To Deploy</span>
+    <h2>Lean or full. Same engagement, different hire footprint.</h2>
+    <p class="subhead">The £7k engagement is identical in both cases. The choice is how many BDMs you put on the new track on day one. Joe's recommendation, given the budget you described, is the full deployment.</p>
+
+    <div class="tier-grid">
+
+      <div class="tier">
+        <span class="tier-eyebrow">Option A · Lean</span>
+        <h4>1 BDM (UK)</h4>
+        <p>Build the system, recruit and onboard one hunter into the UK market. Lowest payroll exposure. Proves the system end-to-end before scaling.</p>
+        <ul>
+          <li>Single BDM hired and trained on the new playbooks.</li>
+          <li>You attend qualified meetings while system beds in.</li>
+          <li>Add a second BDM (and Saudi) once UK pipeline is producing.</li>
+          <li>Lowest monthly payroll commitment.</li>
+        </ul>
+      </div>
+
+      <div class="tier full">
+        <span class="tier-eyebrow">Option B · Full <span style="color: var(--red); margin-left: 0.4rem;">(Recommended)</span></span>
+        <h4>2 BDMs (UK) + Customer Success motion</h4>
+        <p>Same engagement. Two BDMs onboarded together. Same training cost, double the activity, internal benchmarking from week one. Resilient if one does not work out.</p>
+        <ul>
+          <li>Two BDMs trained side-by-side, each measurable against the other.</li>
+          <li>Internal performance comparison removes guesswork on hire quality.</li>
+          <li>Customer success motion activated across the 30+ NHS trusts.</li>
+          <li>If one underperforms, the system and pipeline survive.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <p style="font-size: 0.95rem; color: var(--muted);">Saudi expansion sits naturally in Phase 2, once the UK system is producing. Same playbooks, localised. We will scope this together at the end of month three.</p>
+  </div>
+</section>
+
+<!-- INVESTMENT -->
+<section class="darker">
+  <div class="wrap">
+    <span class="eyebrow">06 · The Investment</span>
+    <h2>£7,000 total. <span class="gold-italic">Structured so the first phase has to prove its value.</span></h2>
+    <p class="subhead">Founder rate, locked at £500 below standard list. Split into two payments so you do not commit the full amount until a BDM is actually in seat and working.</p>
+
+    <div class="price-block">
+      <div class="label">Total Investment</div>
+      <div class="strike">£7,500 + VAT</div>
+      <div class="amount">£7,000 + VAT</div>
+      <div class="terms">
+        <strong>£3,000</strong> on kickoff, refundable inside the first 14 days.<br />
+        <strong>£4,000</strong> only once your BDM is in seat and we are training them.
+      </div>
+    </div>
+
+    <p>Anchored against £100k already lost on senior hires that produced no pipeline, this is roughly 6.5% of that figure to remove the underlying cause of the loss. Anchored against the £1-2m a year of revenue gap, it pays for itself with the first deal closed off the new system.</p>
+  </div>
+</section>
+
+<!-- WORST CASE -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">07 · Worst Case Scenario</span>
+    <h2>You see the work, then decide</h2>
+
+    <div class="callout">
+      <h3>14-day risk-free guarantee</h3>
+      <p>You have 14 days from kickoff to decide this is the right fit. If it is not, you get a full refund of the £3,000 paid. You keep every asset built so far. No questions, no forms, no friction.</p>
+      <p style="margin: 0;"><em>The £4,000 balance is not requested until a BDM is in seat. You are never asked to commit on faith for work that has not yet been delivered.</em></p>
+    </div>
+
+    <p style="color: var(--muted);">For Path 3 not to pay back, almost nothing would have to change. One additional closed deal across UK, Europe or the Gulf, off the new system, covers the engagement many times over.</p>
+  </div>
+</section>
+
+<!-- NEXT STEP -->
+<section class="darker">
+  <div class="wrap" style="text-align: center;">
+    <span class="eyebrow">08 · Next Step</span>
+    <h2>One reply. One decision.</h2>
+    <p class="subhead" style="margin: 0 auto 2rem;">Reply to the email with the path you want to take. If it is Path 3 (lean or full), Joe will send a short agreement and the payment link for the initial £3,000 the same day.</p>
+
+    <p style="margin-top: 1rem; color: rgba(245, 240, 235, 0.85); font-size: 1rem;">Reply directly to Joe at <strong style="color: var(--gold);">joe@revitk.com</strong> or on <strong style="color: var(--gold);">[phone]</strong>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="brand">REVITK</span>
+    The Sync Selling System · 300+ founders coached · £185m+ in client revenue generated<br />
+    Prepared for Rosenfield Health · May 2026
+  </div>
+</footer>
+
+</body>
+</html>

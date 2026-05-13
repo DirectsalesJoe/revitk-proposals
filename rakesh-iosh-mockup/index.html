@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<title>Executive Safety Strategy Recommendation — Mockup</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #f5f7fa;
+    color: #1a2332;
+    margin: 0;
+    padding: 0;
+    line-height: 1.55;
+  }
+  .page {
+    max-width: 920px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 0;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  }
+  .mockup-note {
+    background: #fff4d6;
+    border-left: 4px solid #d4a017;
+    padding: 14px 22px;
+    font-size: 13px;
+    color: #6b4e00;
+  }
+  .mockup-note strong { color: #6b4e00; }
+  .cover {
+    background: linear-gradient(135deg, #0d2847 0%, #1d4d8c 100%);
+    color: #ffffff;
+    padding: 48px 56px 44px 56px;
+  }
+  .cover .eyebrow {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #a8c7ed;
+    margin-bottom: 14px;
+  }
+  .cover h1 {
+    font-size: 32px;
+    margin: 0 0 12px 0;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .cover .sub {
+    font-size: 16px;
+    color: #c5d8ee;
+    margin-bottom: 28px;
+  }
+  .cover .meta {
+    display: flex;
+    gap: 36px;
+    font-size: 13px;
+    color: #a8c7ed;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 18px;
+  }
+  .cover .meta strong { color: #ffffff; display: block; font-size: 15px; margin-bottom: 2px; }
+  .section {
+    padding: 38px 56px;
+    border-top: 1px solid #e8edf3;
+  }
+  .section:first-of-type { border-top: none; }
+  .section-number {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #1d4d8c;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .section-title {
+    font-size: 22px;
+    margin: 0 0 18px 0;
+    font-weight: 600;
+    color: #0d2847;
+  }
+  .section-lead {
+    font-size: 15px;
+    color: #4a5868;
+    margin-bottom: 22px;
+  }
+  p { margin: 0 0 12px 0; }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 20px 0 4px 0;
+  }
+  .stat-tile {
+    background: #f0f5fb;
+    padding: 18px;
+    border-radius: 6px;
+    text-align: center;
+  }
+  .stat-tile .n {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1d4d8c;
+    line-height: 1;
+  }
+  .stat-tile .lbl {
+    font-size: 12px;
+    color: #4a5868;
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  .pillar-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 16px;
+  }
+  .pillar {
+    background: #f0f5fb;
+    border-left: 4px solid #1d4d8c;
+    padding: 14px 18px;
+  }
+  .pillar .pct {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1d4d8c;
+    line-height: 1;
+  }
+  .pillar .name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0d2847;
+    margin: 4px 0 0 0;
+  }
+
+  .benchmark {
+    margin-top: 18px;
+  }
+  .bench-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 14px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eef2f7;
+  }
+  .bench-row:last-child { border-bottom: none; }
+  .bench-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0d2847;
+  }
+  .bench-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .bar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+  }
+  .bar-tag {
+    width: 90px;
+    color: #4a5868;
+    font-size: 11px;
+  }
+  .bar-track {
+    flex: 1;
+    height: 14px;
+    background: #eef2f7;
+    border-radius: 7px;
+    overflow: hidden;
+    position: relative;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 7px;
+  }
+  .bar-cohort { background: #f5b76b; }
+  .bar-bench { background: #1d4d8c; }
+  .bar-val {
+    width: 44px;
+    text-align: right;
+    font-weight: 600;
+    color: #1a2332;
+  }
+
+  .gap-card {
+    background: #fbf3ef;
+    border-left: 4px solid #c75a3a;
+    padding: 18px 22px;
+    margin-bottom: 14px;
+  }
+  .gap-card h3 {
+    margin: 0 0 6px 0;
+    font-size: 16px;
+    color: #8b3a1f;
+  }
+  .gap-card .gap-stat {
+    display: inline-block;
+    background: #c75a3a;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .gap-card p { margin: 8px 0 0 0; font-size: 14px; color: #4a3a30; }
+  .gap-card .cost {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #6b4e00;
+    background: #fff4d6;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  .reco-list {
+    margin-top: 14px;
+  }
+  .reco-item {
+    display: grid;
+    grid-template-columns: 80px 1fr 160px;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eef2f7;
+    align-items: flex-start;
+  }
+  .reco-item:last-child { border-bottom: none; }
+  .reco-window {
+    font-size: 12px;
+    font-weight: 700;
+    color: #1d4d8c;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  .reco-body { font-size: 14px; }
+  .reco-body strong { color: #0d2847; }
+  .reco-tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .tag-internal {
+    background: #e3eee0;
+    color: #2f6b1c;
+  }
+  .tag-specialist {
+    background: #1d4d8c;
+    color: #ffffff;
+  }
+
+  .offer-box {
+    background: linear-gradient(135deg, #0d2847 0%, #1d4d8c 100%);
+    color: #ffffff;
+    padding: 32px 36px;
+    border-radius: 8px;
+    margin-top: 18px;
+  }
+  .offer-box .eyebrow {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #a8c7ed;
+    margin-bottom: 8px;
+  }
+  .offer-box h3 {
+    margin: 0 0 12px 0;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .offer-box .stack {
+    margin: 18px 0 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .offer-box .stack li {
+    padding: 10px 0 10px 28px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    position: relative;
+    font-size: 14px;
+  }
+  .offer-box .stack li:last-child { border-bottom: none; }
+  .offer-box .stack li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #f5b76b;
+    font-weight: 700;
+  }
+  .offer-box .terms {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    font-size: 13px;
+    color: #c5d8ee;
+  }
+  .offer-box .terms strong { color: #ffffff; }
+  .offer-box .next {
+    margin-top: 18px;
+    padding: 14px 18px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  .halt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 18px;
+  }
+  .halt-phase {
+    background: #f0f5fb;
+    padding: 18px;
+    border-top: 3px solid #1d4d8c;
+  }
+  .halt-phase .ph {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #1d4d8c;
+    font-weight: 700;
+  }
+  .halt-phase .ph-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 6px 0 8px 0;
+    color: #0d2847;
+  }
+  .halt-phase p { font-size: 13px; color: #4a5868; margin: 0; }
+
+  .method-block {
+    background: #f5f7fa;
+    padding: 18px 22px;
+    border-radius: 4px;
+    margin-top: 14px;
+    font-size: 13px;
+    color: #4a5868;
+  }
+  .method-block h4 {
+    margin: 0 0 8px 0;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #1d4d8c;
+  }
+
+  .footer {
+    background: #0d2847;
+    color: #a8c7ed;
+    padding: 28px 56px;
+    font-size: 13px;
+  }
+  .footer strong { color: #ffffff; }
+
+  .illustrative {
+    font-size: 11px;
+    color: #c75a3a;
+    background: #fbf3ef;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-left: 6px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="mockup-note">
+    <strong>STRUCTURAL MOCKUP.</strong> This is the recommended shape for the post-programme deliverable. Figures tagged <span class="illustrative">illustrative</span> are placeholders. Replace with sector benchmark data, real cost-of-inaction figures, and Rakesh's contact details before sending. Branding and section ordering can be tuned to suit each client.
+  </div>
+
+  <div class="cover">
+    <div class="eyebrow">IOSH Safety for Senior Executives and Directors Programme</div>
+    <h1>Executive Safety Strategy Recommendation</h1>
+    <div class="sub">Encavis Group &amp; Stern Energy — February 2026 cohort</div>
+    <div class="meta">
+      <div><strong>14</strong>Executives engaged</div>
+      <div><strong>105</strong>Unique commitments analysed</div>
+      <div><strong>3</strong>Critical gaps identified</div>
+      <div><strong>1</strong>Recommended next step</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-number">01 / PROGRAMME OUTPUT</div>
+    <h2 class="section-title">What we measured</h2>
+    <p class="section-lead">Across the IOSH executive programme, your leadership team submitted 107 individual safety commitments. After deduplication, 105 unique commitments were classified across ten safety themes, four core pillars and three strategic time horizons.</p>
+    <div class="stat-row">
+      <div class="stat-tile"><div class="n">14</div><div class="lbl">Executives</div></div>
+      <div class="stat-tile"><div class="n">105</div><div class="lbl">Unique commitments</div></div>
+      <div class="stat-tile"><div class="n">10</div><div class="lbl">Strategic themes</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-number">02 / WHERE YOUR LEADERSHIP IS ALREADY ALIGNED</div>
+    <h2 class="section-title">Four pillars your executives have committed to</h2>
+    <p class="section-lead">These are the themes appearing in more than 24% of commitments. Your leadership team has already declared intent in these areas. Implementation rigour will determine whether intent becomes performance.</p>
+    <div class="pillar-grid">
+      <div class="pillar"><div class="pct">29.5%</div><div class="name">Process &amp; Systems Maturity</div></div>
+      <div class="pillar"><div class="pct">26.7%</div><div class="name">Workforce Engagement &amp; Competency</div></div>
+      <div class="pillar"><div class="pct">24.8%</div><div class="name">Risk Assessment &amp; Management</div></div>
+      <div class="pillar"><div class="pct">24.8%</div><div class="name">Performance Monitoring &amp; Assurance</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-number">03 / BENCHMARK</div>
+    <h2 class="section-title">Where you sit against top European renewables operators</h2>
+    <p class="section-lead">We benchmarked your cohort's commitment profile against the top five European renewables operators by safety performance over the last 36 months <span class="illustrative">illustrative</span>. The picture is mixed. You are aligned with sector leaders in the four pillars above. You are materially under-indexed in three areas where the most expensive incidents originate.</p>
+
+    <div class="benchmark">
+      <div class="bench-row">
+        <div class="bench-label">Contractor &amp; Supplier Management</div>
+        <div class="bench-bars">
+          <div class="bar-wrap"><div class="bar-tag">Your cohort</div><div class="bar-track"><div class="bar-fill bar-cohort" style="width: 9.5%"></div></div><div class="bar-val">9.5%</div></div>
+          <div class="bar-wrap"><div class="bar-tag">Top operators</div><div class="bar-track"><div class="bar-fill bar-bench" style="width: 22%"></div></div><div class="bar-val">22%</div></div>
+        </div>
+      </div>
+      <div class="bench-row">
+        <div class="bench-label">Cross-Cultural &amp; Jurisdictional Capability</div>
+        <div class="bench-bars">
+          <div class="bar-wrap"><div class="bar-tag">Your cohort</div><div class="bar-track"><div class="bar-fill bar-cohort" style="width: 11.4%"></div></div><div class="bar-val">11.4%</div></div>
+          <div class="bar-wrap"><div class="bar-tag">Top operators</div><div class="bar-track"><div class="bar-fill bar-bench" style="width: 19%"></div></div><div class="bar-val">19%</div></div>
+        </div>
+      </div>
+      <div class="bench-row">
+        <div class="bench-label">Continuous Improvement &amp; Learning Systems</div>
+        <div class="bench-bars">
+          <div class="bar-wrap"><div class="bar-tag">Your cohort</div><div class="bar-track"><div class="bar-fill bar-cohort" style="width: 15.2%"></div></div><div class="bar-val">15.2%</div></div>
+          <div class="bar-wrap"><div class="bar-tag">Top operators</div><div class="bar-track"><div class="bar-fill bar-bench" style="width: 26%"></div></div><div class="bar-val">26%</div></div>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 13px; color: #4a5868;">Benchmark cohort: top five European renewables operators by combined lost-time injury rate, contractor incident rate and safety-critical event count <span class="illustrative">illustrative</span>. Methodology in Section 09.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">04 / CRITICAL GAPS</div>
+    <h2 class="section-title">Three gaps where the next safety-critical event is most likely to originate</h2>
+    <p class="section-lead">In our experience across European renewables, the most expensive safety failures of the last decade have not originated in the four areas your executives prioritised. They have originated in the three areas you under-indexed on. We've ranked them by exposure.</p>
+
+    <div class="gap-card">
+      <span class="gap-stat">Gap 1 · Highest exposure</span>
+      <h3>Contractor &amp; Supplier Safety Oversight</h3>
+      <p>Your cohort allocated 9.5% of executive commitments to contractor management. Top operators allocate ~22% <span class="illustrative">illustrative</span>. In renewables O&amp;M, contractor activity accounts for 60–70% of all safety-critical hours on site. The exposure is structural, not behavioural.</p>
+      <div class="cost"><strong>Cost-of-inaction signal:</strong> A single contractor-led safety-critical event in solar or wind O&amp;M typically results in €350k–€1.2m direct cost and 4–12 weeks of project delay <span class="illustrative">illustrative</span>.</div>
+    </div>
+
+    <div class="gap-card">
+      <span class="gap-stat">Gap 2 · Cross-border risk</span>
+      <h3>Cross-Cultural &amp; Jurisdictional Capability</h3>
+      <p>Your cohort allocated 11.4% of commitments to managing safety consistently across operating jurisdictions. With assets across multiple European countries, each with different H&amp;S regulators, cultural norms and reporting obligations, the variance in how safety is enacted on the ground is your largest hidden source of risk.</p>
+      <div class="cost"><strong>Cost-of-inaction signal:</strong> Regulatory enforcement actions in one jurisdiction now routinely trigger group-level audits across the EU. Average cost of a multi-country enforcement response: €600k+ <span class="illustrative">illustrative</span>.</div>
+    </div>
+
+    <div class="gap-card">
+      <span class="gap-stat">Gap 3 · Learning velocity</span>
+      <h3>Continuous Improvement &amp; Learning Systems</h3>
+      <p>Your cohort allocated 15.2% to systematic learning from incidents and near-misses. Top operators allocate ~26% <span class="illustrative">illustrative</span>. Without a structured learning loop, the same precursor conditions surface in three or four assets before the link is made. Each repeat costs you the same money twice.</p>
+      <div class="cost"><strong>Cost-of-inaction signal:</strong> Repeat-cause incidents are 2.4x more expensive than first-occurrence incidents once regulator scrutiny is factored in <span class="illustrative">illustrative</span>.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-number">05 / RECOMMENDATION</div>
+    <h2 class="section-title">A sequenced 90-day plan to close the gaps</h2>
+    <p class="section-lead">Most three-year safety roadmaps fail in the first 90 days because they front-load policy work and back-load behaviour change. This sequence inverts that. It moves on contractor management and cross-border capability first, builds the learning system in parallel, and only formalises the policy estate once the underlying behaviours are in place.</p>
+
+    <div class="reco-list">
+      <div class="reco-item">
+        <div class="reco-window">Days 0–30</div>
+        <div class="reco-body"><strong>Contractor oversight diagnostic.</strong> Audit your top 10 contractor relationships against a five-criterion safety qualification matrix. Identify the two relationships most likely to produce the next significant event.</div>
+        <div><span class="reco-tag tag-specialist">Specialist support</span></div>
+      </div>
+      <div class="reco-item">
+        <div class="reco-window">Days 0–30</div>
+        <div class="reco-body"><strong>Cross-jurisdictional risk map.</strong> Document where regulatory and cultural variance is highest across your operating countries, and which legal entities own each obligation.</div>
+        <div><span class="reco-tag tag-specialist">Specialist support</span></div>
+      </div>
+      <div class="reco-item">
+        <div class="reco-window">Days 0–60</div>
+        <div class="reco-body"><strong>Executive safety review cadence.</strong> Establish a monthly board-level review of leading indicators with a standardised pack. Tie it to the existing operations rhythm.</div>
+        <div><span class="reco-tag tag-internal">Internal capability</span></div>
+      </div>
+      <div class="reco-item">
+        <div class="reco-window">Days 30–60</div>
+        <div class="reco-body"><strong>Contractor safety standard rollout.</strong> Embed the qualification matrix into all new EPC and O&amp;M contracts, with retrospective gates for existing key contractors.</div>
+        <div><span class="reco-tag tag-specialist">Specialist support</span></div>
+      </div>
+      <div class="reco-item">
+        <div class="reco-window">Days 30–90</div>
+        <div class="reco-body"><strong>Learning loop activation.</strong> Stand up a cross-country near-miss and precursor capture system with shared taxonomy and weekly cross-asset review. This is the highest-leverage capability and the one most often deferred.</div>
+        <div><span class="reco-tag tag-specialist">Specialist support</span></div>
+      </div>
+      <div class="reco-item">
+        <div class="reco-window">Days 60–90</div>
+        <div class="reco-body"><strong>Three-year strategy ratification.</strong> Take the existing executive commitments and the gap-closing actions above and ratify them as a single board-approved safety strategy with named owners and quarterly review cycles.</div>
+        <div><span class="reco-tag tag-internal">Internal capability</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-number">06 / WHY THIS NEEDS SPECIALIST SUPPORT</div>
+    <h2 class="section-title">The four items tagged specialist are the four that will not happen internally</h2>
+    <p>Internal HSE teams in renewables operators are configured for compliance and incident response. They are not configured to challenge contractor relationships, write cross-jurisdictional risk maps, or stand up cross-country learning systems. These four workstreams require three things internal teams rarely have at the same time:</p>
+    <p style="padding-left: 18px;"><strong>Sector benchmark data</strong> — to set the standard credibly with contractors and operating-country leadership.</p>
+    <p style="padding-left: 18px;"><strong>Executive convening authority</strong> — to surface uncomfortable findings without internal political risk.</p>
+    <p style="padding-left: 18px;"><strong>Cross-jurisdictional regulatory fluency</strong> — to translate UK, German, Italian, Spanish and Nordic H&amp;S obligations into a single operating standard.</p>
+    <p>This is the operating territory of the HALT programme.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">07 / RECOMMENDED NEXT STEP</div>
+    <h2 class="section-title">Executive Safety Orientation</h2>
+    <p class="section-lead">We recommend a 60-minute Executive Safety Orientation as the next step, before any commitment to a wider programme. This is the working session where the findings above are walked through with your C-suite, contextualised against your operating realities and translated into a defensible decision on what to do next.</p>
+
+    <div class="offer-box">
+      <div class="eyebrow">For Encavis &amp; Stern Energy C-suite</div>
+      <h3>The Executive Safety Orientation</h3>
+      <p style="color: #c5d8ee; margin: 0 0 6px 0;">60 minutes. Virtual. Run by Rakesh Maharaj.</p>
+      <ul class="stack">
+        <li>Live walkthrough of your benchmark position against the top five European renewables operators, with the specific assets and operating countries where the variance is greatest.</li>
+        <li>The single highest-risk gap our analysis surfaced that is not currently covered in any of your three-year plans, with a cost-of-inaction estimate calibrated to your asset base.</li>
+        <li>A one-page 90-day implementation pathway tailored to where your organisation sits today, separating what your internal teams can run from what requires external support.</li>
+        <li>Q&amp;A with the C-suite on any commitment, risk or operating reality that came out of the executive programme.</li>
+      </ul>
+      <div class="terms"><strong>Normally a £6,000 chargeable engagement.</strong> Offered free of charge for organisations that have completed the IOSH Executive Programme in 2026. Slots limited to a maximum of six per quarter. Available windows: May and June 2026 only.</div>
+      <div class="next"><strong>To book:</strong> Reply to this email with one of the following slots, or propose an alternative.<br>
+        Option A — Wednesday 21 May, 4:00pm CET<br>
+        Option B — Friday 30 May, 10:00am CET<br>
+        Option C — Tuesday 10 June, 2:00pm CET
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-number">08 / BEYOND THE ORIENTATION</div>
+    <h2 class="section-title">The HALT Implementation Pathway</h2>
+    <p class="section-lead">For organisations that choose to move forward after the Executive Orientation, the HALT programme delivers the four specialist-tagged workstreams across a 12-month engagement. We have not included pricing here because the right scope is shaped during the orientation, not before. The three-phase structure below is indicative.</p>
+
+    <div class="halt-grid">
+      <div class="halt-phase">
+        <div class="ph">Phase 1 · Months 1–3</div>
+        <div class="ph-title">Diagnostic &amp; Mobilisation</div>
+        <p>Contractor oversight diagnostic, cross-jurisdictional risk map, board-level review cadence stood up, learning loop architecture designed.</p>
+      </div>
+      <div class="halt-phase">
+        <div class="ph">Phase 2 · Months 4–9</div>
+        <div class="ph-title">Embed &amp; Operate</div>
+        <p>Contractor standard rolled out, learning system live across all operating countries, executive review cadence operational, first ratified board-approved strategy.</p>
+      </div>
+      <div class="halt-phase">
+        <div class="ph">Phase 3 · Months 10–12</div>
+        <div class="ph-title">Transition &amp; Assure</div>
+        <p>Independent assurance audit, capability transfer to internal HSE team, three-year programme handover with success metrics agreed at board level.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-number">09 / METHODOLOGY &amp; LIMITATIONS</div>
+    <h2 class="section-title">How this analysis was built and where its limits lie</h2>
+
+    <div class="method-block">
+      <h4>Dataset</h4>
+      <p>107 raw commitments submitted by 14 executives across Encavis Group and Stern Energy during the IOSH Safety for Senior Executives and Directors Programme, February 2026. Two exact duplicates removed. 105 unique commitments analysed.</p>
+    </div>
+
+    <div class="method-block">
+      <h4>Classification</h4>
+      <p>Each commitment was tagged against one or more of ten themes using keyword-and-context matching. A single commitment may appear under multiple themes. Frequencies reflect the proportion of commitments addressing each theme.</p>
+    </div>
+
+    <div class="method-block">
+      <h4>Benchmark</h4>
+      <p>Top European renewables operators identified by combined lost-time injury rate, contractor incident rate and safety-critical event count over the prior 36 months <span class="illustrative">illustrative</span>. Comparator data drawn from published HSE reports, sector regulator publications and our own engagements.</p>
+    </div>
+
+    <div class="method-block">
+      <h4>Limits</h4>
+      <p>Self-selection bias in cohort (executives who attended). Methodological bias in keyword matching. Organisational skew toward Stern Energy (eight of fourteen executives). Frequency reflects intent at one point in time, not necessarily the most critical operational gaps. Lower-frequency themes may represent acute risk warranting disproportionate investment despite their ranking.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <strong>Rakesh Maharaj</strong><br>
+    [Insert organisation name] · [Insert direct line] · [Insert email]<br>
+    <span style="display: block; margin-top: 8px; font-size: 12px;">This recommendation has been prepared for Encavis Group and Stern Energy on the basis of commitments submitted during the IOSH Safety for Senior Executives and Directors Programme, February 2026. Confidential to the named recipients.</span>
+  </div>
+
+</div>
+</body>
+</html>
